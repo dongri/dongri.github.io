@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>app on D</title>
+    <link>https://dongri.github.io/tags/app/</link>
+    <description>Recent content in app on D</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 13 Nov 2018 17:50:13 +0900</lastBuildDate>
+    
+	<atom:link href="https://dongri.github.io/tags/app/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>中国旅行おすすめアプリ</title>
+      <link>https://dongri.github.io/2018/11/%E4%B8%AD%E5%9B%BD%E6%97%85%E8%A1%8C%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%82%A2%E3%83%97%E3%83%AA/</link>
+      <pubDate>Tue, 13 Nov 2018 17:50:13 +0900</pubDate>
+      
+      <guid>https://dongri.github.io/2018/11/%E4%B8%AD%E5%9B%BD%E6%97%85%E8%A1%8C%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%82%A2%E3%83%97%E3%83%AA/</guid>
+      <description>中国旅行時あると便利なアプリをちょっとまとめてみました。
+高德地图 - Gaode App Store / Play Store
+https://www.autonavi.com
+Google Mapが使えないので、これを使います。Baidu Mapもありますが、個人的にこっちのほうが好きです。
+ 日本語非対応 ユーザー登録必要なし  微信 - WeChat App Store / Play Store
+https://www.wechat.com
+よく中国版LINEと言われてますが、チャットだけではなく飲食店やタクシーでの支払いもできます。仕組みは個人間送金。
+ 日本語対応 チャージは中国の銀行口座が必要 クレジットカード登録して他人から送金してもらえば決済も可能  支付宝 - Alipay App Store / Play Store
+https://www.alipay.com
+ 日本語非対応 英語対応 Zhīfùbǎoと発音 日本国内ではOrigami Payが使えるところで使用可能  滴滴出行 - DiDi App Store / Play Store
+https://www.didiglobal.com
+中国版Uber
+ 日本語対応 日本の電話番号で登録可能 支払いはAlipay, Wechat Payで可能 Visa, Master, Amex, JCBも可能 Google, Facebookでログイン可能  ofo App Store / Play Store</description>
+    </item>
+    
+    <item>
+      <title>久しぶりにアプリをリリースした</title>
+      <link>https://dongri.github.io/2017/07/%E4%B9%85%E3%81%97%E3%81%B6%E3%82%8A%E3%81%AB%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%81%97%E3%81%9F/</link>
+      <pubDate>Fri, 28 Jul 2017 22:29:11 +0900</pubDate>
+      
+      <guid>https://dongri.github.io/2017/07/%E4%B9%85%E3%81%97%E3%81%B6%E3%82%8A%E3%81%AB%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%81%97%E3%81%9F/</guid>
+      <description>https://pingr.im
+ドメインから想像できるようにメッセージアプリです。LINEなどのように本格のメッセージアプリと比べられない完成度ですが、一家三人は楽しく使ってます。 pinyinもまともにわからない息子から仕事中に絵文字だけ送って来たり、昼間になると「パパごはん食べた？」のメッセージ来たり。
+なんでこんなの作ったの？ ある日から奥さんとの連絡手段であるLINEがPushが来なくなって、気付くのが遅くて電話までかけて来るする事故がありました。 その後WechatとKakao Talk考えてみたが、奥さんが既読機能が必須だと言ってKakao Talkにしました。それもPush notificationが若干おかしくて。。。 Kakao Talkはおそらく私のAndroidのせいかも知らないです。「これから帰る」「今日は飲み会」など奥さんとのやり取りぐらいなら自分で100% Push飛べるアプリ作れるんじゃないかと思い作り始めました。
+どんな機能あるの？ 一回目のApple審査で、「4.2 Minimum Functionality」でリジェクトされたレベルです。クソアプリだよと言ってますね。 二回目の審査では機能をリストしてdevelopサイトのURLも記入して真面目に出した結果審査通りました。 ユーザー名、パスワードでアカウント作れる。usernameでユーザーを自分の友達に追加できて、textのみ送れるクソアプリです。 それ以外は↑で言ったように「既読」という必須機能を付けてます。ちなみに自分用にBot作れるようにしました。 後は世の中のメッセージアプリのように1電話番号1アカウントみたいなことせず、電話番号持ってない子供にもiPodさえあればできるようにしてます。
+なにで作ったの？ nodejs, coffeescript, mongodb, swift, javaですね。 実はコード自体は3年前からあって当時一瞬Yoというアプリが流行ってた時にそれを真似してPush専用のアプリを作ってたがメンテしなくて、今回メッセージ送れる機能を付けた感じです。
+作ってみた感想 最近のPush notification機能はいろいろ変わったなと思いました。 iOSの毎年一回サーバーのp12ファイル更新しないといけない証明書方式から永久に変更不要なkey方式に変わっていたり、 AndroidもGCMからFirebaseのFCMにかわったりとガラッと変わった感じでした。</description>
+    </item>
+    
+  </channel>
+</rss>

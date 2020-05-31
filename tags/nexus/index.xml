@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nexus on D</title>
+    <link>https://dongri.github.io/tags/nexus/</link>
+    <description>Recent content in nexus on D</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 03 May 2016 01:36:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://dongri.github.io/tags/nexus/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nexus 5X クリーンインストール &amp; Root化</title>
+      <link>https://dongri.github.io/2016/05/nexus-5x-%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB-root%E5%8C%96/</link>
+      <pubDate>Tue, 03 May 2016 01:36:00 +0900</pubDate>
+      
+      <guid>https://dongri.github.io/2016/05/nexus-5x-%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB-root%E5%8C%96/</guid>
+      <description>Factory Image Googleが公開しているNexus端末向けの初期ROMデータのことを言います。 Factory Imageには、「system・boot（Kernel）・recovery・bootloader・radio・userdata・cache」などの各領域のイメージが含まれており、 それらを端末に書き込むことで領域を完全に初期化することが出来ます。
+https://developers.google.com/android/nexus/images
+nexus5xのところの最新のものをダウンロードして解凍する
+OEMロック解除 開発者向けオプションで「OEMロック解除を有効にする」にチェックを入れる
+ブートローダーをアンロック $ adb reboot bootloader // もしくは、電源ボタンとボリュームダウンボタンを同時に長押し $ fastboot oem unlock ... OKAY [ 20.966s] finished. total time: 20.966s これでbootloaderがunlockの状態になる
+DEVICE STATE - locked
+↓
+DEVICE STATE - unlocked
+flash-all $ cd bullhead-mhc19q $ ./flash-all.sh ... OKAY [ 0.214s] writing &#39;cache&#39;... OKAY [ 0.061s] rebooting... finished. total time: 86.174s カスタムリカバリの導入 https://twrp.me/devices/lgnexus5x.html
+Download Links で 最新のimgファイルダウンロードする。
+$ fastboot flash recovery twrp-3.0.2-0-bullhead.img ブートローダー画面から「Recovery mode」を選択すると導入したTWRPを起動できるようなりました。</description>
+    </item>
+    
+    <item>
+      <title>Nexus5 Lollipop</title>
+      <link>https://dongri.github.io/2014/11/nexus5-lollipop/</link>
+      <pubDate>Thu, 13 Nov 2014 11:28:57 +0900</pubDate>
+      
+      <guid>https://dongri.github.io/2014/11/nexus5-lollipop/</guid>
+      <description>数ヶ月間ずっとAndroid L Preview版入れて使ってたけど、今日やっとGoogleのデベロッパーサイトにNexus5のLollipop Factory Imageが現れたので、手動で入れてみた。
+Factory Images for Nexus Devices アクセスして、Nexus5用のimageファイルダウンロード。5.0 (LRX21O)
+$ tar -zxvf hammerhead-lrx21o-factory-01315e08.tgz $ cd hammerhead-lrx21o $ adb reboot bootloader $ fastboot oem unlock $ ./flash-all.sh 以上！</description>
+    </item>
+    
+    <item>
+      <title>Pull APK</title>
+      <link>https://dongri.github.io/2014/11/pull-apk/</link>
+      <pubDate>Thu, 13 Nov 2014 11:28:57 +0900</pubDate>
+      
+      <guid>https://dongri.github.io/2014/11/pull-apk/</guid>
+      <description>Androidにあるapkファイルを取り出す方法紹介。
+PlayStoreに「apk 抽出」アプリたくさんあるけど、あえてadb shellで取り出す。
+$ adb shell pm list packages -f | grep package:/data/app/jp.naver.line.android-1/base.apk=jp.naver.line.android package:/data/app/jp.linecorp.LINEMAPS-1/base.apk=jp.linecorp.LINEMAPS $ adb pull /data/app/jp.naver.line.android-1/base.apk ~/Desktop 取り出したapkファイルをインストールしてみる。
+$ adb install base.apk 7522 KB/s (22969465 bytes in 2.981s) pkg: /data/local/tmp/base.apk Success $ adb shell pm list packages -f | grep line package:/data/app/jp.naver.line.android-1/base.apk=jp.naver.line.android package:/data/app/jp.linecorp.LINEMAPS-1/base.apk=jp.linecorp.LINEMAPS ※ Lollipopからはroot化が困難になった模様</description>
+    </item>
+    
+  </channel>
+</rss>
