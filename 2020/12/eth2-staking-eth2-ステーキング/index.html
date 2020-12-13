@@ -63,7 +63,7 @@
         },
         "datePublished": "2020-12-13",
         "description": "",
-        "wordCount":  145 
+        "wordCount":  140 
     }
     </script>
     
@@ -148,7 +148,7 @@ $ curl https://raw.githubusercontent.com/prysmaticlabs/prysm/master/prysm.sh --o
 </code></pre><p>自前のETH1ノード使いたくなかったので、infuraを使うようにしました。もちろん自前のETHノードでも問題ないです。</p>
 <h3 id="import-validator-account">Import validator account</h3>
 <pre><code>$ ./prysm.sh validator accounts import --keys-dir=$HOME/prysm/validator_keys
-</code></pre><p>validator_keysディレクトリはデポジットした後取得したvalidator_keysになります。中に <code>deposit_data_***.json</code> と <code>keystore-m_***.json</code> ありますが、<code>deposit_data_***.json</code> だけあれば大丈夫そうです。</p>
+</code></pre><p>validator_keysディレクトリはデポジットした後取得したvalidator_keysになります。</p>
 <h3 id="run-validator">Run validator</h3>
 <pre><code>$ ./prysm.sh validator
 </code></pre><h3 id="検証">検証</h3>
