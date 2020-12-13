@@ -6,10 +6,46 @@
     <description>Recent content in Tags on D</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Jun 2020 09:15:49 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 13 Dec 2020 09:46:43 +0900</lastBuildDate>
     
 	<atom:link href="https://dongri.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>eth2</title>
+      <link>https://dongri.github.io/tags/eth2/</link>
+      <pubDate>Sun, 13 Dec 2020 09:46:43 +0900</pubDate>
+      
+      <guid>https://dongri.github.io/tags/eth2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ethereum</title>
+      <link>https://dongri.github.io/tags/ethereum/</link>
+      <pubDate>Sun, 13 Dec 2020 09:46:43 +0900</pubDate>
+      
+      <guid>https://dongri.github.io/tags/ethereum/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>prysm</title>
+      <link>https://dongri.github.io/tags/prysm/</link>
+      <pubDate>Sun, 13 Dec 2020 09:46:43 +0900</pubDate>
+      
+      <guid>https://dongri.github.io/tags/prysm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>staking</title>
+      <link>https://dongri.github.io/tags/staking/</link>
+      <pubDate>Sun, 13 Dec 2020 09:46:43 +0900</pubDate>
+      
+      <guid>https://dongri.github.io/tags/staking/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Origami</title>
@@ -53,15 +89,6 @@
       <pubDate>Sun, 31 May 2020 00:42:14 +0900</pubDate>
       
       <guid>https://dongri.github.io/tags/eth/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ethereum</title>
-      <link>https://dongri.github.io/tags/ethereum/</link>
-      <pubDate>Sun, 31 May 2020 00:42:14 +0900</pubDate>
-      
-      <guid>https://dongri.github.io/tags/ethereum/</guid>
       <description></description>
     </item>
     

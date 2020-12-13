@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>eth2 on D</title>
+    <link>https://dongri.github.io/tags/eth2/</link>
+    <description>Recent content in eth2 on D</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 13 Dec 2020 09:46:43 +0900</lastBuildDate>
+    
+	<atom:link href="https://dongri.github.io/tags/eth2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ETH2 Staking (ETH2 ステーキング)</title>
+      <link>https://dongri.github.io/2020/12/eth2-staking-eth2-%E3%82%B9%E3%83%86%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0/</link>
+      <pubDate>Sun, 13 Dec 2020 09:46:43 +0900</pubDate>
+      
+      <guid>https://dongri.github.io/2020/12/eth2-staking-eth2-%E3%82%B9%E3%83%86%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0/</guid>
+      <description>ETH2のステーキング方法について、まともな日本語記事がなかったり、あっても会員登録必要だったり、逆にわかりにくかったりしたので、自分がやった手順を書こうと思います。
+Staking ステーキングとはPoS（Proof of Stake）において、仮想通貨を自由に動かせない状態（ロック状態）にしてブロックに追加するデータの承認などの面でネットワークの維持に関わる見返りとして、その報酬を仮想通貨で受け取る仕組みです。 ETH2のステーキングだと年利4.9% ~ 21.6%ですが、stakeするETHが多ければ多いほど下がります。12月12日時点で13%程度です。 デポジットに関しても始まった時の進捗では524,288 ETHまで間に合うか心配してたが、後半になって一気に増えて予定した12月1日のローンチに間に合いました。
+Deposit https://launchpad.ethereum.org/ で32ETHをデポジットします。（注意: デポジットされた32ETHは今のところ2年間ロックされるので注意が必要） デポジット方法は、 https://launchpad.ethereum.org/overview ここの手順のまま進めばできるかと思います。 特に難しいことはありませんでしたが、ETH1とETH2のクライアント選ぶ時もしかすると注意が必要です。後ほどBeacon node起動する時のクライアントと関係してるので。 自分の場合はどっちもGo言語実装のGethとPrysmを選択しました。 デポジットが完了すると、validator_keysファイルを取得できるので、安全な場所に保管します。
+Prysm 環境 https://docs.prylabs.network/docs/install/install-with-script#system-requirements
+Recommended specifications * Processor: Intel Core i7–4770 or AMD FX-8310 or better * Memory: 16GB RAM * Storage: 100GB available space SSD * Internet: Broadband connection ラズパイとかでやってみようかと思ってたけど、このスペックは難しいのでペナルティ受ける可能性のあるawsにしました。 aws, gcp, azureなど大手クラウドサービスだと障害が起きた時大規模のノードが止まる可能性があるので、ペナルティがあるようです。
+EC2インスタンス
+Memory: 16GB Storage: 100GB Beacon node 続いてbeacon chainのnodeを起動する必要あります。 https://docs.prylabs.network/docs/install/install-with-script/ こちらからprysm.shをダウンロードします。 続いて https://docs.prylabs.network/docs/mainnet/joining-eth2 こちらに書いてあるStepでbeacon nodeの起動、validator accountのインポート、validatorの起動順にやっていきます。</description>
+    </item>
+    
+  </channel>
+</rss>
