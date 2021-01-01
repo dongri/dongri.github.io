@@ -112,7 +112,7 @@
 <p>ICOしてる企業は自分独自のブロックチェーンを作ってその上に新しい仮想通貨を発行してる、ずっとそう思って来たが、
 それがちょっと違ったみたいでした。そういう企業もあれば、既存のプラットフォーム（Ethereum）でコインを発行するのが普通だったみたいです。</p>
 <p>以下、実際新しいトークンをEthereum上に作ってみた記事になります。</p>
-<p>GitHub: <a href="https://github.com/dongri/DongriToken">https://github.com/dongri/DongriToken</a></p>
+<p>GitHub: <a href="https://github.com/dongri/DongriCoin">https://github.com/dongri/DongriCoin</a></p>
 <p>まず、今回の記事で使う用語、ソフトウェア、ツールをまとめます。</p>
 <h3 id="ethereum-イーサリアム">Ethereum (イーサリアム)</h3>
 <ul>
@@ -163,8 +163,8 @@ v8.9.4
 </code></pre><h2 id="truffleインストール">truffleインストール</h2>
 <pre><code>$ npm instal -g truffle
 </code></pre><h2 id="プロジェクト作成">プロジェクト作成</h2>
-<pre><code>$ mkdir DongriToken
-$ cd DongriToken
+<pre><code>$ mkdir DongriCoin
+$ cd DongriCoin
 
 $ truffle init
 $ ls -l
@@ -173,17 +173,17 @@ $ npm -f init
 $ npm install zeppelin-solidity --save
 $ npm install truffle-hdwallet-provider --save
 </code></pre><h2 id="contract作成">contract作成</h2>
-<pre><code>$ vim contracts/DongriToken.sol
+<pre><code>$ vim contracts/DongriCoin.sol
 
 pragma solidity ^0.4.18;
 import 'zeppelin-solidity/contracts/token/ERC20/MintableToken.sol';
 
-contract DongriToken is StandardToken {
-  string public name = &quot;DongriToken&quot;;
+contract DongriCoin is StandardToken {
+  string public name = &quot;DongriCoin&quot;;
   string public symbol = &quot;DON&quot;;
   uint public decimals = 18;
 
-  function DongriToken(uint initialSupply) public {
+  function DongriCoin(uint initialSupply) public {
     totalSupply_ = initialSupply;
     balances[msg.sender] = initialSupply;
   }
@@ -191,11 +191,11 @@ contract DongriToken is StandardToken {
 </code></pre><h2 id="migrate作成">migrate作成</h2>
 <pre><code>$ vim migrations/2_deploy_dongri_token.js
 
-const DongriToken = artifacts.require('./DongriToken.sol')
+const DongriCoin = artifacts.require('./DongriCoin.sol')
 
 module.exports = (deployer) =&gt; {
   let initialSupply = 1000000e18 // 100万(初期発行量)
-  deployer.deploy(DongriToken, initialSupply)
+  deployer.deploy(DongriCoin, initialSupply)
 }
 </code></pre><h2 id="develop環境にデプロイ送金確認">develop環境にデプロイ、送金確認</h2>
 <pre><code>$ truffle compile
@@ -203,10 +203,10 @@ $ truffle develop
 
 truffle(develop)&gt; migrate
 
-truffle(develop)&gt; token = DongriToken.at(DongriToken.address)
+truffle(develop)&gt; token = DongriCoin.at(DongriCoin.address)
 
 truffle(develop)&gt; token.name()
-'DongriToken'
+'DongriCoin'
 truffle(develop)&gt; token.symbol()
 'DON'
 truffle(develop)&gt; token.totalSupply()
@@ -265,19 +265,19 @@ module.exports = {
 <pre><code>$ truffle migrate --network live
 </code></pre><p>gasPrice, gasによって違うが30分前後でデプロイできるかと思います。</p>
 <p>トークンアドレス:
-<a href="https://etherscan.io/token/0xd1d45e794adeb5f0d6f936cb776d76c7b27cc61b">https://etherscan.io/token/0xd1d45e794adeb5f0d6f936cb776d76c7b27cc61b</a></p>
+<a href="https://etherscan.io/token/0x3CD3Ca5b1149E4AcB964Ed1B261478049eCdd9d6">https://etherscan.io/token/0x3CD3Ca5b1149E4AcB964Ed1B261478049eCdd9d6</a></p>
 <pre><code>$ truffle console --network live
-truffle(live)&gt; token = DongriToken.at(&quot;0xd1d45e794adeb5f0d6f936cb776d76c7b27cc61b&quot;)
+truffle(live)&gt; token = DongriCoin.at(&quot;0x3CD3Ca5b1149E4AcB964Ed1B261478049eCdd9d6&quot;)
 
 truffle(live)&gt; token.name()
-'DongriToken'
+'DongriCoin'
 truffle(live)&gt; token.symbol()
 'DON'
 truffle(live)&gt; token.totalSupply()
 BigNumber { s: 1, e: 24, c: [ 10000000000 ] }
 truffle(live)&gt;
 
-truffle(live)&gt; token.balanceOf(&quot;0xd1d45e794adeb5f0d6f936cb776d76c7b27cc61b&quot;)
+truffle(live)&gt; token.balanceOf(&quot;0x3CD3Ca5b1149E4AcB964Ed1B261478049eCdd9d6&quot;)
 BigNumber { s: 1, e: 24, c: [ 10000000000 ] }
 truffle(live)&gt;
 </code></pre><h3 id="ethersanから名前で検索できるようにする">Ethersanから名前で検索できるようにする</h3>
