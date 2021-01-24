@@ -6,11 +6,7 @@
     <description>Recent content in documentdb on D</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Jan 2019 21:42:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://dongri.github.io/tags/documentdb/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 14 Jan 2019 21:42:00 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/documentdb/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Amazon DocumentDBを試してみた</title>
       <link>https://dongri.github.io/2019/01/amazon-documentdb%E3%82%92%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/</link>

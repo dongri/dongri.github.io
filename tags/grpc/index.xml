@@ -6,11 +6,7 @@
     <description>Recent content in grpc on D</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Dec 2017 23:36:27 +0900</lastBuildDate>
-    
-	<atom:link href="https://dongri.github.io/tags/grpc/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 14 Dec 2017 23:36:27 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/grpc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SwiftでgRPC対応する</title>
       <link>https://dongri.github.io/2017/12/swift%E3%81%A7grpc%E5%AF%BE%E5%BF%9C%E3%81%99%E3%82%8B/</link>

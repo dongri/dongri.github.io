@@ -6,11 +6,7 @@
     <description>Recent content in Ubuntu on D</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Jan 2017 23:25:44 +0900</lastBuildDate>
-    
-	<atom:link href="https://dongri.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 14 Jan 2017 23:25:44 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>開発環境をLinuxにした</title>
       <link>https://dongri.github.io/2017/01/%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%82%92linux%E3%81%AB%E3%81%97%E3%81%9F/</link>

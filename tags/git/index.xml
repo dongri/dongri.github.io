@@ -6,11 +6,7 @@
     <description>Recent content in git on D</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Oct 2017 21:22:21 +0900</lastBuildDate>
-    
-	<atom:link href="https://dongri.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 03 Oct 2017 21:22:21 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>atomからvscodeに浮気</title>
       <link>https://dongri.github.io/2017/10/atom%E3%81%8B%E3%82%89vscode%E3%81%AB%E6%B5%AE%E6%B0%97/</link>
