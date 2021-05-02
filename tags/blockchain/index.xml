@@ -25,7 +25,7 @@ https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1155.md
 FTはトークンアドレスと発行枚数で誰が何枚持ってるか？みんな持ってるものは同じで、枚数が違うだけです。
 NFT（ERC721）はトークンアドレスとインデックスがあって、各インデックスの発行枚数は1つだけ、人それぞれ持ってるインデックスが違うので、アドレスとインデックスを組み合わせばユニークになるわけです。
 NFT（ERC1155）はトークンアドレスとインデックスで構成されてるところはERC721と同じだが、あるインデックスに対して発行枚数を指定できます。なので、わたしが持ってる剣とあなたが持ってる剣は同じインデックスかもしらないです。（これってノンファンジブルと言えるのか？）
-NFTの中身 75億円の絵をみてみましょう。
+NFTの中身 75億円の絵を見てみましょう。
 https://osake.io/assets/0x2a46f2ffd99e19a89476e2f62270e0a35bbf0756/40913
 TokenURIの ipfs://ipfs/QmPAg1mjxcEQPPtqsLoEcauVedaeMH81WXDPvPx3VC5zUz がNFTのメタデータの場所です。実際オンチェーン（ブロックチェーン）に書き込まれるのはここまでです。 https://ipfs.io/ipfs/QmPAg1mjxcEQPPtqsLoEcauVedaeMH81WXDPvPx3VC5zUz 開いて見るとJSONファイルで、実際のイメージURLとその他プロパティが入ってます。
 imageUrlを見ると、 https://ipfsgateway.makersplace.com/ipfs/QmZ15eQX8FPjfrtdX3QYbrhZxJpbLpvDpsgb2p3VEH8Bqq これが画像のサムネイルみたいなものですね。
