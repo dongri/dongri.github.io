@@ -8,12 +8,12 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 02 May 2021 11:12:03 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/erc1155/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>NFT何もわからない</title>
-      <link>https://dongri.github.io/2021/05/nft%E4%BD%95%E3%82%82%E3%82%8F%E3%81%8B%E3%82%89%E3%81%AA%E3%81%84/</link>
+      <title>NFTの話</title>
+      <link>https://dongri.github.io/2021/05/nft%E3%81%AE%E8%A9%B1/</link>
       <pubDate>Sun, 02 May 2021 11:12:03 +0900</pubDate>
       
-      <guid>https://dongri.github.io/2021/05/nft%E4%BD%95%E3%82%82%E3%82%8F%E3%81%8B%E3%82%89%E3%81%AA%E3%81%84/</guid>
-      <description>NFT何もわからない、なんであの絵が75億円もするの？なんで初ツイートが3億円もするの？
+      <guid>https://dongri.github.io/2021/05/nft%E3%81%AE%E8%A9%B1/</guid>
+      <description>なんであの絵が75億円もするの？なんで初ツイートが3億円もするの？
 ちょうど一年ぐらい前からNFT関連の仕事して、NFT発行したり、NFTマーケット作ったりして、NFTそのものはわかってるつもりだけど、NFTは何もわからない状態です。
 NFTとは？ NFT（Non-fungible token）は非代替性トークンと言って、ファンジブルトークン（FT）と比較してみます。
 あなたの1BTCとわたしの1BTCは同じ、これがFT。
@@ -44,7 +44,8 @@ https://osake.io
 NFT発行で使う保管場所は http://pinata.cloud というIPFS pinning serviceを使ってます。自前でIPFSメンテナンスするよりかはこのような業者に任せて方がいいだろうと思いました。無料で似たようなサービスもありますが、いつサービス停止されてもおかしくないので、ここは課金しても比較的に安全な場所を選んだつもりです。
 サポートしてるチェーンもEthereum以外Polygon, Binance Smart Chainなどあります。
 お金がなくて（GasPriceが高くて）メインネットにはコントラクトデプロイしてない状態だが、Rinkebyなどのテストネットではいくらでも遊べます。
-以上でNFTそのものはなんとなくわかってるつもりだけど、NFTアートに付く価値は何もわからない。（今は）</description>
+以上でNFTそのものはなんとなくわかってるつもりだけど、NFTアートに付く価値は何もわからない。
+NFTのオンチェーン上の所有者情報をチェットの代わりになるとかの使い方はありだけど、なんの保証もないオフチェーンデータを信じて高い価値が付くNFTアートに関しては何もわからないです。（今は）</description>
     </item>
     
   </channel>
