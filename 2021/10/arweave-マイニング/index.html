@@ -174,7 +174,7 @@ $ sudo apt upgrade
 $ sudo apt install libncurses5
 </code></pre><h4 id="daemon化">Daemon化</h4>
 <p>nohupでEC2ターミナル閉じても、ログアウトして実行されるようにします。</p>
-<pre><code>$ onhup ./bin/start mine mining_addr YOUR-MINING-ADDRESS peer 188.166.200.45 peer 188.166.192.169 peer 163.47.11.64 peer 139.59.51.59 peer 138.197.232.192 2&gt;&gt; ./log/mining.log &amp;
+<pre><code>$ onhup ./bin/start mine mining_addr YOUR-MINING-ADDRESS peer 188.166.200.45 peer 188.166.192.169 peer 163.47.11.64 peer 139.59.51.59 peer 138.197.232.192 &gt;&gt; ./log/mining.log &amp;
 </code></pre><h3 id="5-logs">5. logs</h3>
 <pre><code>$ ./bin/logs -f
  [info] /opt/arweave/apps/arweave/src/ar_meta_db.erl:97 event: ar_meta_db_start

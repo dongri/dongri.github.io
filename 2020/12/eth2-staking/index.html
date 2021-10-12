@@ -165,9 +165,9 @@ $ curl https://raw.githubusercontent.com/prysmaticlabs/prysm/master/prysm.sh --o
 public keyは <code>deposit_data_***.json</code> 中に書いてあるのでそれを使用します。</p>
 <h3 id="daemon化">Daemon化</h3>
 <p>nohupでEC2ターミナル閉じても、ログアウトして実行されるようにします。</p>
-<pre><code>$ nohup ./prysm.sh beacon-chain --http-web3provider=https://mainnet.infura.io/v3/****** 2&gt;&gt; ./log/beacon-chain.log &amp;
+<pre><code>$ nohup ./prysm.sh beacon-chain --http-web3provider=https://mainnet.infura.io/v3/****** &gt;&gt; ./log/beacon-chain.log &amp;
 
-$ nohup ./prysm.sh validator --wallet-password-file $HOME/.eth2validators/prysm-wallet-v2/password.txt 2&gt;&gt; ./log/validator.log &amp;
+$ nohup ./prysm.sh validator --wallet-password-file $HOME/.eth2validators/prysm-wallet-v2/password.txt &gt;&gt; ./log/validator.log &amp;
 </code></pre><p>(password.txt にはアカウントインポートした時のパスワードをplain textで記載します)</p>
 <p>以上で、ETH2ステーキングに参加できました。</p>
 
