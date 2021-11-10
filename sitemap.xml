@@ -3,6 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://dongri.github.io/</loc>
+    <lastmod>2021-11-10T10:16:22+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dongri.github.io/tags/nft/</loc>
+    <lastmod>2021-11-10T10:16:22+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dongri.github.io/tags/on-chain/</loc>
+    <lastmod>2021-11-10T10:16:22+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dongri.github.io/post/</loc>
+    <lastmod>2021-11-10T10:16:22+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dongri.github.io/tags/</loc>
+    <lastmod>2021-11-10T10:16:22+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dongri.github.io/2021/11/%E3%83%95%E3%83%AB%E3%82%AA%E3%83%B3%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3nft%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88-permavatar/</loc>
+    <lastmod>2021-11-10T10:16:22+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://dongri.github.io/tags/arweave/</loc>
     <lastmod>2021-10-11T11:49:39+09:00</lastmod>
   </url>
@@ -18,22 +48,7 @@
   </url>
   
   <url>
-    <loc>https://dongri.github.io/</loc>
-    <lastmod>2021-10-11T11:49:39+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://dongri.github.io/tags/mining/</loc>
-    <lastmod>2021-10-11T11:49:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dongri.github.io/post/</loc>
-    <lastmod>2021-10-11T11:49:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dongri.github.io/tags/</loc>
     <lastmod>2021-10-11T11:49:39+09:00</lastmod>
   </url>
   
@@ -44,11 +59,6 @@
   
   <url>
     <loc>https://dongri.github.io/tags/erc721/</loc>
-    <lastmod>2021-05-02T11:12:03+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dongri.github.io/tags/nft/</loc>
     <lastmod>2021-05-02T11:12:03+09:00</lastmod>
   </url>
   

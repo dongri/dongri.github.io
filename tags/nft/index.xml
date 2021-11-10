@@ -6,7 +6,27 @@
     <description>Recent content in NFT on D</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 May 2021 11:12:03 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/nft/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 Nov 2021 10:16:22 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/nft/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>フルオンチェーンNFTプロジェクト Permavatar</title>
+      <link>https://dongri.github.io/2021/11/%E3%83%95%E3%83%AB%E3%82%AA%E3%83%B3%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3nft%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88-permavatar/</link>
+      <pubDate>Wed, 10 Nov 2021 10:16:22 +0900</pubDate>
+      
+      <guid>https://dongri.github.io/2021/11/%E3%83%95%E3%83%AB%E3%82%AA%E3%83%B3%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3nft%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88-permavatar/</guid>
+      <description>数週間前にフルオンチェーンNFTを作ってみたくて、Permavatarというプロジェクトを始めました。 自分一人でやるのも面白くなかったので、Twitterで募集しました。
+https://twitter.com/dongrify/status/1449698160817803278
+ありがたいことにいろんな方から連絡が来てちょっとびっくりしました。
+この辺の経緯は shingofushimi.eth の記事を見れば雰囲気が分かるかと思います。
+shingofushimi.eth の medium : 残り続けるモノを創ってみたかったから、NFT Projectを立ち上げてみました。
+ここではスマートコントラクトなど技術面の話を少ししようかと思います。
+フルオンチェーンの難しいところ フルオンチェーンはすべてのデータをEthereum上に保存するので、データの量でいろんな制約に引っかかりました。
+1. 一つのfunctionで変数定義オーバー問題 CompilerError: Stack too deep, try removing local variables. 一つのsolidity functionで変数の定義が一定数超えるとエラーが発生します。 対応策としては、functionを分割して処理を分けるか、ブロックを定義して、それぞれのブロックで変数を定義することで回避できます。
+2. スマートコントラクトコードサイズ問題 &amp;quot;Permavatar&amp;quot; ran out of gas. Something in the constructor (ex: infinite loop) caused gas estimation to fail. Try: solidityのビルドはうまくいきますが、デプロイすると上のようなエラーが発生しました。 Gasが足りないようなエラーメッセージですが、実はこのエラーはスマートコントラクトコードサイズが大きすぎたのが問題でした。 調べて知ったのですが、EIP-170という制約があるらしいです。 https://github.com/ethereum/EIPs/blob/master/EIPS/eip-170.md
+Gas fee 節約対策 普通にコントラクト書くとERC721の setTokenURI にsvgのデータを渡してセットすると思いますが、それだとデータサイズが大きくなるので、Permavatarでは setTokenURI を使用せず、tokenIDを呼び出す時に使われる tokenURI でsvgを生成して返すようにしてます。これによってmint時のGas feeを最小限に抑えることができました。
+拘ったこと フルオンチェーン + Decentralized
+これを守りたくて、NFTのmint画面も特定のサーバーで構築するのではなく、IPFSに配置するようにしました。 https://app.uniswap.org/#/swap と同じ方式です。</description>
+    </item>
+    
     <item>
       <title>NFTの話</title>
       <link>https://dongri.github.io/2021/05/nft%E3%81%AE%E8%A9%B1/</link>
