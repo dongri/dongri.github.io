@@ -72,7 +72,7 @@
         },
         "datePublished": "2020-12-13",
         "description": "",
-        "wordCount":  164 
+        "wordCount":  218 
     }
     </script>
     
@@ -171,11 +171,40 @@ $ nohup ./prysm.sh validator --wallet-password-file $HOME/.eth2validators/prysm-
 </code></pre><p>(password.txt にはアカウントインポートした時のパスワードをplain textで記載します)</p>
 <p>以上で、ETH2ステーキングに参加できました。</p>
 <h3 id="the-merge">The Merge</h3>
-<p>マージ後infuraのエンドポイントでエラーが出るようになったので、ETH2で新しいエンドポイントを使うようにした。</p>
-<pre><code>$ cd prysm
-$ nohup ./prysm.sh beacon-chain --execution-endpoint=https://xxx:xxxx@eth2-beacon-mainnet.infura.io --suggested-fee-recipient=0x9D7Fa65552609eDF74417485D80613da5eC09Fe5 2&gt;&gt; ./log/beacon-chain.log &amp;
+<p>マージ後はinfura, alchemyなどのプロバイダーが使えなくなった
+<a href="https://docs.prylabs.network/docs/prepare-for-merge#the-merge-before-and-now">https://docs.prylabs.network/docs/prepare-for-merge#the-merge-before-and-now</a></p>
+<p>自前でnodeクライアントを建てる、SSDは2TBに変更</p>
+<pre><code>$ go install github.com/ethereum/go-ethereum/cmd/geth
 
-$ nohup ./prysm.sh validator --wallet-password-file=$HOME/.eth2validators/prysm-wallet-v2/password.txt 2&gt;&gt; ./log/validator.log &amp;
+$ geth version
+Geth
+Version: 1.11.0-unstable
+Architecture: amd64
+Go Version: go1.18.3
+Operating System: linux
+GOPATH=
+GOROOT=/usr/lib/golang
+$ 
+</code></pre><p>Geth</p>
+<pre><code>$ cd prysm
+
+$ ./prysm.sh beacon-chain generate-auth-secret
+
+$ vim run-geth.sh
+#!/bin/sh
+nohup geth --http --http.api eth,net,engine,admin --authrpc.jwtsecret $HOME/prysm/jwt.hex 2&gt;&gt; ./log/geth.log &amp;
+
+$ ./run-geth.sh
+</code></pre><p>prysm</p>
+<pre><code>$ cd prysm
+
+$ vim run-prysm.sh
+#!/bin/sh
+nohup ./prysm.sh beacon-chain --execution-endpoint=http://localhost:8551 --jwt-secret=$HOME/prysm/jwt.hex --suggested-fee-recipient=0x9D7Fa65552609eDF74417485D80613da5eC09Fe5 2&gt;&gt; ./log/beacon-chain.log &amp;
+
+nohup ./prysm.sh validator --wallet-password-file=$HOME/prysm/password.txt 2&gt;&gt; ./log/validator.log &amp;
+
+$ ./run-prysm.sh
 </code></pre>
     
 
