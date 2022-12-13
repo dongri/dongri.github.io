@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>shortener on D</title>
+    <link>https://dongri.github.io/tags/shortener/</link>
+    <description>Recent content in shortener on D</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 14 Apr 2018 03:13:44 +0800</lastBuildDate><atom:link href="https://dongri.github.io/tags/shortener/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>短縮URLサービスを作ってみた</title>
+      <link>https://dongri.github.io/2018/04/%E7%9F%AD%E7%B8%AEurl%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</link>
+      <pubDate>Sat, 14 Apr 2018 03:13:44 +0800</pubDate>
+      
+      <guid>https://dongri.github.io/2018/04/%E7%9F%AD%E7%B8%AEurl%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
+      <description>goo.glサービス終了のニュースで「短縮URLサービス作ってみた」の記事見かけで、ちょうど自分も一ヶ月ほど前に作ったものがあってその解説をしようと思います。 作ってみたきっかけはサイドプロジェクトでSMS送信する必要があったのですが、140文字の制限で長いURLは送れませんでした。それでGo言語用の go-shortener というライブラリ？まで作りました。
+その後５日間の休みを取って海外旅行したので、飛行機の中と旅行先で自前の短縮URLサービスを作ってみたくなって作りました。
+https://shortener.hackerth.com
+clacky.org ドメインは旅行先のシンガポールClarke Quayから来てます。（ドメインは短くないですが）
+一定長さの文字列にする ハッシュ関数を使ってすべての文字列を一定長さにする方法もありますが、
+MD5 - 32文字 sha1 - 40文字 sha256 - 64文字 sha512 - 128文字 どれも短くありません。
+ランダム文字列にしてデータベースに保存 一定長さのランダム文字列を生成してデータベースに保存して、マッピング表を作ります。同じランダム文字列のキーがあったらもう一回ランダム文字列を生成して同じキーがないところまで処理を繰り返します。これは短い文字列生成の目的は達成できますが、データの量が多くなると一つの処理で数千、数万、データの数分データベースにクエリを発行することになります。データベースに対しての負荷が大きすぎるので、現実的ではありませんでした。
+データベースのIDを62進数に変換する 小文字、大文字アルファベット + 数字 = 62文字
+URLをデータベースに保存して発行される連番IDを62進数に変換して短縮URLのキーにします。100億件のデータも62進数に変換すると6桁（aUKYOA）だけなので十分短いです。
+pythonコード chars = &amp;#34;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJELMNOPQRSTUVWXYZ&amp;#34; def encode62(num, chars=chars): base = len(chars) string = &amp;#34;&amp;#34; while True: string = chars[num % base] + string num = num // base if num == 0: break return string def decode62(string, chars=chars): base = len(chars) num = 0 for char in string: num = num * base + chars.</description>
+    </item>
+    
+  </channel>
+</rss>

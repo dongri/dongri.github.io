@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>heroku on D</title>
+    <link>https://dongri.github.io/tags/heroku/</link>
+    <description>Recent content in heroku on D</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 21 Apr 2019 14:40:34 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/heroku/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Haskellで自分のWebページをリニューアルした</title>
+      <link>https://dongri.github.io/2019/04/haskell%E3%81%A7%E8%87%AA%E5%88%86%E3%81%AEweb%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E3%83%AA%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%A2%E3%83%AB%E3%81%97%E3%81%9F/</link>
+      <pubDate>Sun, 21 Apr 2019 14:40:34 +0900</pubDate>
+      
+      <guid>https://dongri.github.io/2019/04/haskell%E3%81%A7%E8%87%AA%E5%88%86%E3%81%AEweb%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E3%83%AA%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%A2%E3%83%AB%E3%81%97%E3%81%9F/</guid>
+      <description>二週間前からHaskellにハマっており、当初は会社のあるサンプルコードをHaskellに書いてみようと思ったのがサーバーのスペックなど考えて諦めて自分のWebページをリニューアルに至ったところです。
+以下HaskellでWebページの開発、公開まで書いてみようと思います。 Webページ　\= Webシステム
+開発環境はMac OSXでのDocker for Macです。haskell, dockerのインストールなど省略させてください。
+HaskellでWeb開発？ 正気なの？と思う方もいるかと思います、意外とその辺のWebフレームワークは存在してました。
+Haskell Web Framework Yesod (https://www.yesodweb.com/) Scotty (https://github.com/scotty-web/scotty) Miso (https://github.com/dmjio/miso) Servant (https://www.servant.dev/) 今回はScottyを使うことにしました。Yesodと違ってScottyはWeb API向け軽量フレームワークでhtmlのレンダリングにはまた別のものを用意しなければなりませんでした。レンダリングエンジンもいろいろあるみたいですが、今回はblaze-htmlを使うことにしました。
+デプロイサーバー もともと自分のWebページはgoogle appengineの無料枠で動かしてました。今回もdockerでappengineでなんとかしようとしてみました。具体的にはgoogle container registryにimageをpushしてappengineからそれをデプロイする方法です。無料枠だとデプロイはやっと成功するが、ページにアクセスするとエラーが出ました。（「サーバーが一時的に停止、30秒後にもう一回試してみろ」のエラーだけどあてにならない）
+次は自分が持ってるvultr vpsでdocker-composeでなんとか動かせないかと。既にサーバーに別のものが動いていて残りメモリは700MBぐらいでした。そこでdocker-compose up (stack build) したらsshが反応しなくなり、ほかのdocker containerも不正終了されました。
+諦めようかと思ったが、最後にherokuで試してみようと思いました。調べてみたら、heroku container registryこいつが非常に優秀てgoogle container registryより使い勝手が良かったです。
+$ heroku container:push web $ heroku container:release web この2つのコマンドでデプロイ、リリースが完了です！
+herokuのプロセススリープ herokuの無料dynoでは一定時間アクセスがないとプロセスを殺して、再びアクセス来る時にプロセスを起動するので、最初の表示に非常に時間かかります。そこはheroku schedulerを使って10分おきにcurlコマンドでサイト起こしてあげることにしました。
+https化 herokuではカスタムドメインの設定できますが、httpsにするには有料プランのdynoを買わないと駄目ぽいです。そこはcloudflareを使うことにしました。 ネームサーバー変更して数時間待てば反映されます。しかもroot domainもサポートしていてwwwも消すことができます。
+感想 これで完全無料でHaskellでWebページ公開できました。
+https://dongri.org
+詳細はGitHubのRepo見ればわかるかと思います。
+https://github.com/dongri/iam</description>
+    </item>
+    
+    <item>
+      <title>Rust on Heroku with Docker</title>
+      <link>https://dongri.github.io/2016/08/rust-on-heroku-with-docker/</link>
+      <pubDate>Tue, 16 Aug 2016 00:42:53 +0900</pubDate>
+      
+      <guid>https://dongri.github.io/2016/08/rust-on-heroku-with-docker/</guid>
+      <description>Rustで書いたhello rustをherokuに載せてみた。 普通ならrust用のBuildpack使うのだが、今回はdockerを使うようにした。 Dockerfile、ソースコードなどはこちら
+https://github.com/dongri/hello-rust
+はじめはalpineで頑張ってみようかと思ったがrustのインストールがうまく行かなくて、ubuntuに変更。 Dockerfileは以下のようになっている。
+FROM ubuntu:latest # rust, cargo buildに必要なソフトウェアインストール RUN apt-get -y update RUN apt-get -y install curl file sudo gcc # rustのインストール RUN curl -sSf https://static.rust-lang.org/rustup.sh | sh RUN mkdir -p /app WORKDIR /app COPY . /app # ビルドして ./target/release/helloバイナリを作る RUN cargo build --release EXPOSE 8080 # 実行 CMD /app/target/release/hello readmeにも書いてあるがherokuはdockerをサポートしていて、pushするだけでローカルのdockerと 同じように動かせる。必要なのは、heroku-container-toolsというheroku plugin。
+$ heroku plugins:install heroku-container-tools $ heroku container:push web これでだけでherokuにアップされて動く。
+https://hello-rust.herokuapp.com/</description>
+    </item>
+    
+    <item>
+      <title>Goodbye Heroku</title>
+      <link>https://dongri.github.io/2015/05/goodbye-heroku/</link>
+      <pubDate>Mon, 11 May 2015 11:28:57 +0900</pubDate>
+      
+      <guid>https://dongri.github.io/2015/05/goodbye-heroku/</guid>
+      <description>これが2007年同時のherokuでした。エディタ使わずブラウザでコード書いてSaveするとRailsが動く！素晴らしい！
+その後gitが流行り始めgit pushでデプロイできるようになりましたね。heroku buttonも出てOne Clickでデプロイできるようになったり。
+2007年から今まで使ってて、Privateのプロジェクトも一時には会社のプロジェクトにも使いました。
+初めはRubyだけだったのが、今はjava, scala, php, python, nodejs, goまでサポートしてます。最近はdockerもサポートするので、言語問わなくデプロイできちゃいますね。
+herokuの特徴と言えばとりあえず動かせるを場を提供する。そのかわりファイルアップロードできない、一定時間でスリープ、などいろいろ制限されるけど、sandboxとしては十分で便利なプラットフォームです。
+自分のリポジトリ数えてみたらびっくりしました。50個近くのアプリがデプロイされてました。(ほとんどがゴミ w w w)
+https://blog.heroku.com/archives/2015/5/7/new-dyno-types-public-beta
+こんなので自分の遊びがなくなりました。$7 払えないわけではない。しかし昔みたいにとりあえずherokuみたいな感じにはなれない。
+herokuの代わりのものを Google Cloud, AWS も検討してみましたが、結局は DigitalOceanでサーバー立てて、dokku 入れて自分専用の遊び場を作ることにしました。
+今のところ4GBでnode, rails, goなど10個のcontainer立ち上げても問題なさそうです。
+heroku長い間お世話になりました！
+Goodbye! Heroku!</description>
+    </item>
+    
+    <item>
+      <title>Ghost On Heroku</title>
+      <link>https://dongri.github.io/2015/02/ghost-on-heroku/</link>
+      <pubDate>Tue, 17 Feb 2015 11:28:57 +0900</pubDate>
+      
+      <guid>https://dongri.github.io/2015/02/ghost-on-heroku/</guid>
+      <description>Ghostをherokuにデプロイしてみた。
+以下はあくまでの自分の環境で、nodeとpostgresなど一通りの開発環境は整った環境です。
+Ghostをローカルで動かしてみる $ cd /path/to/ghost/folder/ $ npm install --production $ npm start $ open http://localhost:2368 herokuにpg addon追加 $ heroku addons:add heroku-postgresql:dev $ heroku config DATABASE_URL: postgres://{username}:{password}@ec2-***.compute-1.amazonaws.com:5432/{database} HEROKU_POSTGRESQL_PURPLE_URL: postgres://{username}:{password}@ec2-***.compute-1.amazonaws.com:5432/{database} package.json 修正 package.jsonのdependenciesにpg追加。バージョンは固定にしたほうがいいかも。。。
+&amp;#34;dependencies&amp;#34;: { ...., &amp;#34;pg&amp;#34;: &amp;#34;4.2.0&amp;#34; } config.js 修正 以下の部分をproductionのところに設定する。databaseの部分は上のDATABASE_URLのところ参照
+database: { client: &amp;#39;postgres&amp;#39;, connection: { host: &amp;#39;ec2-***.compute-1.amazonaws.com&amp;#39;, user: &amp;#39;{username}&amp;#39;, password: &amp;#39;{password}&amp;#39;, database: &amp;#39;{database}&amp;#39;, port: &amp;#39;5432&amp;#39; } }, server: { host: &amp;#39;0.0.0.0&amp;#39;, port: process.env.PORT } Procfileファイル追加 herokuにnodejsアプリをデプロイした人にはわかると思うがProfileを作成
+$ vim Procfile web: node index.</description>
+    </item>
+    
+    <item>
+      <title>Migrating to Cedar-14 Stack</title>
+      <link>https://dongri.github.io/2015/01/migrating-to-cedar-14-stack/</link>
+      <pubDate>Sat, 10 Jan 2015 11:28:57 +0900</pubDate>
+      
+      <guid>https://dongri.github.io/2015/01/migrating-to-cedar-14-stack/</guid>
+      <description>bamboo-mri-1.9.2 stack 下岗了。
+Migrating to the Celadon Cedar-14 Stack
+$ heroku stack:set cedar-14 stack set, next release on production-app will use cedar-14 Run `git push heroku master` to create a new release on cedar-14 $ git commit --allow-empty -m &amp;#34;Upgrading to Cedar-14&amp;#34; [master 973c3f7] Upgrading to Cedar-14 $ git push heroku master </description>
+    </item>
+    
+    <item>
+      <title>Revel on Heroku</title>
+      <link>https://dongri.github.io/2014/12/revel-on-heroku/</link>
+      <pubDate>Thu, 11 Dec 2014 11:28:57 +0900</pubDate>
+      
+      <guid>https://dongri.github.io/2014/12/revel-on-heroku/</guid>
+      <description>RevelをHerokuにデプロイしてみる。
+事前確認 $ echo $GOPATH /Users/dongri/go Revelプロジェクト作成 $ revel new team ↑で $GOPATH/src/にteamフォルダが出来上がる
+ローカルで実行してみる $ revel run team $ open http://localhost:9000 herokuにbuildpackでデプロイ $ heroku create -b https://github.com/robfig/heroku-buildpack-go-revel.git heroku画面でアプリの名前を変更する。 $ git remote -v $ git retemo rm origin $ git remote add origin git@heroku.com:[app].git .godirファイル作成 $ pwd /Users/dongri/go/src/team $ echo &amp;#34;team&amp;#34; &amp;gt; .godir デプロイ $ git add . $ git commit -m &amp;#34;hoge&amp;#34; $ git push origin master 以上で完了</description>
+    </item>
+    
+    <item>
+      <title>Golang on heroku</title>
+      <link>https://dongri.github.io/2014/10/golang-on-heroku/</link>
+      <pubDate>Sat, 11 Oct 2014 11:28:57 +0900</pubDate>
+      
+      <guid>https://dongri.github.io/2014/10/golang-on-heroku/</guid>
+      <description>今までGolangプロジェクトはGoogle App Engineにデプロイしたが、管理画面がいまだに 使い慣れてないのとAppEngine特有の癖があるので、やめてherokuにデプロイしてみた。 herokuも公式にはGolang対応してなくて、buildpackを使わないとダメ。
+herokuサポート言語
+https://devcenter.heroku.com/categories/language-support
+buildpackはこちら
+https://github.com/kr/heroku-buildpack-go
+まずローカルでGoプロジェクトを作成して確認みる。 $ cd $GOPATH/src $ mkdir osakago $ cd osakago $ vim server.go package main import ( &amp;#34;fmt&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;os&amp;#34; ) func main() { http.HandleFunc(&amp;#34;/&amp;#34;, hello) fmt.Printf(&amp;#34;Server listening on port %v ...\n&amp;#34;, os.Getenv(&amp;#34;PORT&amp;#34;)) err := http.ListenAndServe(&amp;#34;:&amp;#34;+os.Getenv(&amp;#34;PORT&amp;#34;), nil) if err != nil { panic(err) } } func hello(res http.ResponseWriter, req *http.Request) { fmt.Fprintln(res, &amp;#34;hello, world&amp;#34;) } $ PORT=8080 go run server.go Server listening on port 8080 .</description>
+    </item>
+    
+  </channel>
+</rss>

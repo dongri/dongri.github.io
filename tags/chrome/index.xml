@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>chrome on D</title>
+    <link>https://dongri.github.io/tags/chrome/</link>
+    <description>Recent content in chrome on D</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Oct 2018 23:55:10 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/chrome/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chromeアドレスバー非表示</title>
+      <link>https://dongri.github.io/2018/10/chrome%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%83%90%E3%83%BC%E9%9D%9E%E8%A1%A8%E7%A4%BA/</link>
+      <pubDate>Sun, 14 Oct 2018 23:55:10 +0900</pubDate>
+      
+      <guid>https://dongri.github.io/2018/10/chrome%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%83%90%E3%83%BC%E9%9D%9E%E8%A1%A8%E7%A4%BA/</guid>
+      <description>ある案件でChromeのアドレスバーを隠す必要があって調べてみたが、以下どれも効かなかった。
+Javascriptでwindow.open時toolbar,locationなどをnoにする方法 Chromeのショートカットキー作成して、開く方法 フルスクリーンモード 2018年10月14日時点で、Windows, Macで確実に隠せる方法。
+Mac $ cd /Applications/Google\ Chrome.app/Contents/MacOS $ sudo ./Google\ Chrome --app=&amp;#34;https://google.com&amp;#34; --incognito Windows &amp;gt; cd &amp;#34;C:\Program Files (x86)\Google\Chrome\Application&amp;#34; &amp;gt; chrome.exe --app=&amp;#34;https://google.com&amp;#34; --incognito </description>
+    </item>
+    
+    <item>
+      <title>Progressive Web Apps</title>
+      <link>https://dongri.github.io/2018/01/progressive-web-apps/</link>
+      <pubDate>Wed, 10 Jan 2018 12:12:06 +0900</pubDate>
+      
+      <guid>https://dongri.github.io/2018/01/progressive-web-apps/</guid>
+      <description>PWA(Progressive Web Apps)とは、WebページをネイティブアプリのようなUXを提供するためのものです。
+なんでこれを思い出したかと言うと https://doper.io というWebサイトを開発していて、iOSクライアントは去年なんとか作りましたが、Androidはなかなか手が出せなくて、今年に入ってなんとかしようと思いPWAがいいんじゃないかと思いました。
+条件 Webサイトがhttps対応してること Android Chromeが必要 対応 manifest.json manifest.jsonファイル作成します。
+{ lang: &amp;#34;ja&amp;#34;, name: &amp;#34;Doper Lite&amp;#34;, short_name: &amp;#34;Doper Lite&amp;#34;, start_url: &amp;#34;/&amp;#34;, display: &amp;#34;standalone&amp;#34;, theme_color: &amp;#34;#24292e&amp;#34;, icons: [ { src: &amp;#34;/img/launcher-icon48.png&amp;#34;, sizes: &amp;#34;48x48&amp;#34;, type: &amp;#34;image/png&amp;#34; }, { src: &amp;#34;/img/launcher-icon-72.png&amp;#34;, sizes: &amp;#34;72x72&amp;#34;, type: &amp;#34;image/png&amp;#34; }, { src: &amp;#34;/img/launcher-icon-96.png&amp;#34;, sizes: &amp;#34;96x96&amp;#34;, type: &amp;#34;image/png&amp;#34; }, { src: &amp;#34;/img/launcher-icon-144.png&amp;#34;, sizes: &amp;#34;144x144&amp;#34;, type: &amp;#34;image/png&amp;#34; }, { src: &amp;#34;/img/launcher-icon-192.png&amp;#34;, sizes: &amp;#34;192x192&amp;#34;, type: &amp;#34;image/png&amp;#34; } ] } https://www.</description>
+    </item>
+    
+  </channel>
+</rss>

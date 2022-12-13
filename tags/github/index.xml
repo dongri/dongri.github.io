@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>github on D</title>
+    <link>https://dongri.github.io/tags/github/</link>
+    <description>Recent content in github on D</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Jan 2015 11:28:57 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Carthage</title>
+      <link>https://dongri.github.io/2015/01/carthage/</link>
+      <pubDate>Thu, 15 Jan 2015 11:28:57 +0900</pubDate>
+      
+      <guid>https://dongri.github.io/2015/01/carthage/</guid>
+      <description>OAuthSwiftをCarthageに対応したので、メモとして残します。
+Carthageってなんなの？ https://github.com/Carthage/Carthage
+「カルタゴ」と読んで、Swift対応したライブラリ管理ツールです。
+インストール、使い方はgithubページ見ればわかると思います。
+基本的な使い方は Cartfile 作成して使いたいgithubのライブラリをリストで書いてから 「carthage update」するとCarthage/Buildの下に ******.framework ファイルが出来上がるので それをプロジェクトにドラッグアンドドロップして入れる。
+$ vim Cartfile github &amp;#34;dongri/OAuthSwift&amp;#34; ~&amp;gt; 0.1.7 $ carthage update 既存のライブラリCarthage対応 Targets に 新しい Cocoa Touch Framework Schemeを作る。Shared になってること確認。
+既存ライブラリを新しいTargetに移す
+Swift Compiler設定
+Compile Sourcesに必要なSwiftファイル追加
+Schemeを新しいtargetにしてビルドする。（iOS Deviceにして） エラーになったら自己解決
+carthage buildしてみる。githubに上げる前に、ローカルでビルとして、正常に ******.framework が出来上がるのを確認。
+$ carthage build --no-skip-current githubに上げる。 $ git tag v0.1.0 $ git push origin v0.1.0 以上でcarthage対応完了。
+対応したプロジェクトがこれ。
+https://github.com/dongri/OAuthSwift</description>
+    </item>
+    
+    <item>
+      <title>github multiple accounts</title>
+      <link>https://dongri.github.io/2014/11/github-multiple-accounts/</link>
+      <pubDate>Tue, 18 Nov 2014 11:28:57 +0900</pubDate>
+      
+      <guid>https://dongri.github.io/2014/11/github-multiple-accounts/</guid>
+      <description>ある事情により、githubに公開アカウントと秘密アカウントが必要になって、複数のアカウントを扱うようになりました。
+まず、新しいSSHキーの生成 $ ssh-keygen -t rsa -C &amp;#34;yoda@gmail.com&amp;#34; -f id_rsa_secret ~/.ssh/config 設定 $ vim ~/.ssh/config ############ Github ############### Host github-secret User git Port 22 HostName github.com IdentityFile ~/.ssh/id_rsa_secret TCPKeepAlive yes IdentitiesOnly yes git clone SSH clone URL: git@github.com:user/project.git の場合
+$ git clone git@github-secret:user/project.git git config 確認してみる。
+$ git config --global user.name $ git config --global user.email SSHキー違ってもこのままだと複数プロジェクトのauthor, committerがglobal設定になるので、変更する。
+git clone したあとのプロジェクトに入って
+$ git config --local user.name &amp;#34;Yoda&amp;#34; $ git config --local user.</description>
+    </item>
+    
+  </channel>
+</rss>

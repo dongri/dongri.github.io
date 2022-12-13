@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ses on D</title>
+    <link>https://dongri.github.io/tags/ses/</link>
+    <description>Recent content in ses on D</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 09 Sep 2017 06:50:55 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/ses/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GoでAmazon SES送信テスト</title>
+      <link>https://dongri.github.io/2017/09/go%E3%81%A7amazon-ses%E9%80%81%E4%BF%A1%E3%83%86%E3%82%B9%E3%83%88/</link>
+      <pubDate>Sat, 09 Sep 2017 06:50:55 +0900</pubDate>
+      
+      <guid>https://dongri.github.io/2017/09/go%E3%81%A7amazon-ses%E9%80%81%E4%BF%A1%E3%83%86%E3%82%B9%E3%83%88/</guid>
+      <description>毎回ハマったりするのでメモ。GolangでAmazon SES送信テスト。
+package main import ( &amp;#34;errors&amp;#34; &amp;#34;log&amp;#34; &amp;#34;github.com/aws/aws-sdk-go/aws&amp;#34; &amp;#34;github.com/aws/aws-sdk-go/aws/credentials&amp;#34; &amp;#34;github.com/aws/aws-sdk-go/aws/session&amp;#34; &amp;#34;github.com/aws/aws-sdk-go/service/ses&amp;#34; ) func main() { from := &amp;#34;noreply@domain.com&amp;#34; to := &amp;#34;dongrify@gmail.com&amp;#34; title := &amp;#34;amazon ses&amp;#34; body := &amp;#34;hello, from ses&amp;#34; err := sendSESEmail(from, to, title, body) if err != nil { log.Println(&amp;#34;mail sending error&amp;#34;) } } func sendSESEmail(from string, to string, title string, body string) error { awsSession := session.New(&amp;amp;aws.Config{ Region: aws.String(&amp;#34;us-east-1&amp;#34;), Credentials: credentials.NewStaticCredentials(&amp;#34;AWS_ACCESS_KEY_ID&amp;#34;, &amp;#34;AWS_SECRET_KEY&amp;#34;, &amp;#34;&amp;#34;), }) svc := ses.</description>
+    </item>
+    
+  </channel>
+</rss>
