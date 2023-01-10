@@ -6,7 +6,43 @@
     <description>Recent content in Tags on D</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Mar 2022 09:53:02 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Jan 2023 18:15:43 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ethereum</title>
+      <link>https://dongri.github.io/tags/ethereum/</link>
+      <pubDate>Tue, 10 Jan 2023 18:15:43 +0900</pubDate>
+      
+      <guid>https://dongri.github.io/tags/ethereum/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>post-merge</title>
+      <link>https://dongri.github.io/tags/post-merge/</link>
+      <pubDate>Tue, 10 Jan 2023 18:15:43 +0900</pubDate>
+      
+      <guid>https://dongri.github.io/tags/post-merge/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>raspberry pi</title>
+      <link>https://dongri.github.io/tags/raspberry-pi/</link>
+      <pubDate>Tue, 10 Jan 2023 18:15:43 +0900</pubDate>
+      
+      <guid>https://dongri.github.io/tags/raspberry-pi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>staking</title>
+      <link>https://dongri.github.io/tags/staking/</link>
+      <pubDate>Tue, 10 Jan 2023 18:15:43 +0900</pubDate>
+      
+      <guid>https://dongri.github.io/tags/staking/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Japan</title>
       <link>https://dongri.github.io/tags/japan/</link>
@@ -107,29 +143,11 @@
     </item>
     
     <item>
-      <title>ethereum</title>
-      <link>https://dongri.github.io/tags/ethereum/</link>
-      <pubDate>Sun, 13 Dec 2020 09:46:43 +0900</pubDate>
-      
-      <guid>https://dongri.github.io/tags/ethereum/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>prysm</title>
       <link>https://dongri.github.io/tags/prysm/</link>
       <pubDate>Sun, 13 Dec 2020 09:46:43 +0900</pubDate>
       
       <guid>https://dongri.github.io/tags/prysm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>staking</title>
-      <link>https://dongri.github.io/tags/staking/</link>
-      <pubDate>Sun, 13 Dec 2020 09:46:43 +0900</pubDate>
-      
-      <guid>https://dongri.github.io/tags/staking/</guid>
       <description></description>
     </item>
     

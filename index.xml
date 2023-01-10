@@ -6,7 +6,37 @@
     <description>Recent content on D</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Mar 2022 09:53:02 +0900</lastBuildDate><atom:link href="https://dongri.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Jan 2023 18:15:43 +0900</lastBuildDate><atom:link href="https://dongri.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Merge後のEthereumステーキングの話</title>
+      <link>https://dongri.github.io/2023/01/the-merge%E5%BE%8C%E3%81%AEethereum%E3%82%B9%E3%83%86%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0%E3%81%AE%E8%A9%B1/</link>
+      <pubDate>Tue, 10 Jan 2023 18:15:43 +0900</pubDate>
+      
+      <guid>https://dongri.github.io/2023/01/the-merge%E5%BE%8C%E3%81%AEethereum%E3%82%B9%E3%83%86%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0%E3%81%AE%E8%A9%B1/</guid>
+      <description>2022年9月15日にマージが無事完了。 ステーキングに関してinfura,alchemyなどのRPCがマージ後は使えなくなった。 つまりノードを自分で建てないといけない。2TBのストレージ用意するのは結構なコスト。
+今まではawsで月1万円ちょっとでalexaアプリ開発のクレジット50ドル分があったので、実質5千円ぐらいでステーキングできたのが、2TBストレージのノードまで建てると月7万円まで膨らんだ。クリプトのこの冬にこれはやってられないと思って、自宅でノード建てようと思った。使ってないMacBookでやってみたが1TBストレージが10日間ぐらいでいっぱいになった。外部SSD接続してもよいが、どうせやるならRaspberry Piで遊んでみようと思ってRaspberry Piと4TBのSSDを買って構築。
+ハードウェア Raspberry Pi 4B 8GB 4TB SSD いろいろな問題 いろんな想定外の問題に遭遇したのでリストしてみた
+2TB以上のストレージマウント問題
+OSとデータを4TB SSDで動かそうとして、マウントで2TB以上だとマウントがうまく行かない問題。GPTフォーマットにしないといけない。
+Ethereum on Arm イメージ動かない問題
+https://ethereum-on-arm-documentation.readthedocs.io/en/latest/index.html インストールしたけど、ethereum/etehreumでログインできない。 諦めて自前でRaspberry Pi用のUbuntuを入れる
+4TBストレージが壊れた
+Gethの同期中突然書き込めなくなった。試しに修復コマンドで頑張ってみたがだめだった。
+Geth最後の100 blockぐらいで同期が終わらない問題
+最後の100 blockが12時間経っても同期が終わらない、ディスクI/Oか、bandwidthの問題
+USB 2が遅い問題
+SSDをUSB 2のところに挿してた。
+WiFiが遅い問題
+MacBookではWiFiで問題なくステーキングできたけど、Raspberry PiのWiFiは遅い、LANケーブルに変更
+電源問題
+Raspberry Pi買った時に付いて来た電源を使ってたが、しばらく動かすとsshできなくなり、Raspberry Piが無反応状態になる、PC用の電源に変更。
+Prysmがメモリ食う問題
+Go製のPrysmは8GBのメモリでGethと一緒に動かすとメモリが足りなくてすぐ死ぬ、Rust製のLighthouseに変更
+それでもメモリ足りない問題
+Lighthouseはある程度動かしたけど、数時間立つとvalidator client側が落ちる。 3GBのswapfile作成してswapスペースを確保する
+普段クラウド（aws, gcp）で動かすとなかなか出会えない問題で辛かった。面白かったところもあるけど</description>
+    </item>
+    
     <item>
       <title>国内外NFTマーケットのトランザクション雰囲気を調べてみた</title>
       <link>https://dongri.github.io/2022/03/%E5%9B%BD%E5%86%85%E5%A4%96nft%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88%E3%81%AE%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B6%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E9%9B%B0%E5%9B%B2%E6%B0%97%E3%82%92%E8%AA%BF%E3%81%B9%E3%81%A6%E3%81%BF%E3%81%9F/</link>
