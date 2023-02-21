@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on D</title>
+    <title>Posts on dongri</title>
     <link>https://dongri.github.io/post/</link>
-    <description>Recent content in Posts on D</description>
+    <description>Recent content in Posts on dongri</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 10 Jan 2023 18:15:43 +0900</lastBuildDate><atom:link href="https://dongri.github.io/post/index.xml" rel="self" type="application/rss+xml" />
@@ -374,7 +374,7 @@ Mac $ cd /Applications/Google\ Chrome.app/Contents/MacOS $ sudo ./Google\ Chrome
       <guid>https://dongri.github.io/2018/06/%E4%BA%8C%E9%80%B1%E9%96%93%E3%81%A72%E3%81%A4%E3%81%AE%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
       <description>仕事のコードは飽きだし、やる気出して新しいことやろうとすると政治かなにかでうまく行かないし、まあこの辺の話は別の機会でゆっくり話すことにして、今日は2週間プライベートサイドプロジェクトでやったことを書こうと思います。
 今月1日仙台言ってRubyKaigi参加して来ました。印象に残ってるのは牡蠣でしたね。本当にうまかったんです。普段勉強会、カンファレンスまったく行かない自分にはRubyKaigiが結構新鮮な感じでした。世界中からRubyを愛してる人達が集まって三日間Rubyについて語るのがすごいと思いました。三日間もあるし、Rubyも結構久しぶりだし、これを機会にRubyでなんか作ってみようと思いました。いろいろ悩んだ結果投げ銭サービスを作ることにしました。
-https://merci.hackerth.com
+https://merci.nilth.com
 Ruby, Sinatra, Postgres, Bulma, Stripe, Docker を使って構築されてます。Twitterログインでアカウント作って、Twitter Usernameでユーザー検索して少額のお金を投げる非常にシンプルなサービスです。
 バックグラウンドイメージをアクセス毎に変わるようにしたのですが、使ってるpcisum.photosが若干遅くて、Tokyo Regionで少しでも早く表示できるようにして作ったのがvia photosでした。
 https://via.photos (shutdown)
@@ -418,7 +418,7 @@ https://www.facebook.com/dgtgrade/posts/1776370592421799
       <guid>https://dongri.github.io/2018/04/%E7%9F%AD%E7%B8%AEurl%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
       <description>goo.glサービス終了のニュースで「短縮URLサービス作ってみた」の記事見かけで、ちょうど自分も一ヶ月ほど前に作ったものがあってその解説をしようと思います。 作ってみたきっかけはサイドプロジェクトでSMS送信する必要があったのですが、140文字の制限で長いURLは送れませんでした。それでGo言語用の go-shortener というライブラリ？まで作りました。
 その後５日間の休みを取って海外旅行したので、飛行機の中と旅行先で自前の短縮URLサービスを作ってみたくなって作りました。
-https://shortener.hackerth.com
+https://shortener.nilth.com
 clacky.org ドメインは旅行先のシンガポールClarke Quayから来てます。（ドメインは短くないですが）
 一定長さの文字列にする ハッシュ関数を使ってすべての文字列を一定長さにする方法もありますが、
 MD5 - 32文字 sha1 - 40文字 sha256 - 64文字 sha512 - 128文字 どれも短くありません。
@@ -455,7 +455,7 @@ https://play.google.com/store/apps/details?id=org.dongri.androidid
       <guid>https://dongri.github.io/2018/03/lets-encrypt%E3%81%A7%E3%83%AF%E3%82%A4%E3%83%AB%E3%83%89%E3%82%AB%E3%83%BC%E3%83%89%E8%A8%BC%E6%98%8E%E6%9B%B8%E7%99%BA%E8%A1%8C%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
       <description>Let&amp;rsquo;s Encryptがワイルドカード証明書サポートしたので設定してみた。
 certbot certbotの最新版をgithubから持ってくる
-$ git clone https://github.com/certbot/certbot.git ワイルドカード証明書の取得 $ ./certbot-auto certonly --manual \ -d *.hackerth.com -d hackerth.com \ -m dongrify@gmail.com \ --agree-tos \ --manual-public-ip-logging-ok \ --preferred-challenges dns-01 \ --server https://acme-v02.api.letsencrypt.org/directory -d *.hackerth.com -d hackerth.com: ワイルドカード証明書とサブドメイン無しの証明書も含めて取得
+$ git clone https://github.com/certbot/certbot.git ワイルドカード証明書の取得 $ ./certbot-auto certonly --manual \ -d *.nilth.com -d nilth.com \ -m dongrify@gmail.com \ --agree-tos \ --manual-public-ip-logging-ok \ --preferred-challenges dns-01 \ --server https://acme-v02.api.letsencrypt.org/directory -d *.nilth.com -d nilth.com: ワイルドカード証明書とサブドメイン無しの証明書も含めて取得
 -m sample@example.com: 指定したメールアドレスとに証明書更新の通知を受け取る
 &amp;ndash;agree-tos: 利用規約に同意
 &amp;ndash;manual-public-ip-logging-ok: サーバーの IPアドレスがログに記録され公開されることを許可します。
@@ -795,7 +795,7 @@ TODO
       
       <guid>https://dongri.github.io/2016/12/line-translate-bot/</guid>
       <description>LINE BOTがMessaging apiを正式にリリースしたので翻訳BOTを作りました。
-https://wise.hackerth.com (shutdown)
+https://wise.nilth.com (shutdown)
 公式の通訳BOTも何個かあるのに何で今更翻訳BOT? と思う人もいるかも知らないですが、理由は2つあります。
 1. 汎用性の問題 LINE公式通訳BOTをディスってるわけではないが、正直言って不便でした。日英、日中、日韓と一つ一つが単体のBOTになっていて、一つのグループに複数BOTを招待できないのと、あくまで日本語をベースにしてるので、例えば韓国語を英語に翻訳することはできません。
 2. 進化した翻訳技術 ちょっと前に話題になっていた翻訳技術の進化です。ニューラルネットワーク機械学習の応用により翻訳の精度が今までと比較できないレベルまで進化してきました。

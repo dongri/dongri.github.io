@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>BOT on D</title>
+    <title>BOT on dongri</title>
     <link>https://dongri.github.io/tags/bot/</link>
-    <description>Recent content in BOT on D</description>
+    <description>Recent content in BOT on dongri</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 03 Dec 2016 16:42:42 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/bot/index.xml" rel="self" type="application/rss+xml" />
@@ -14,7 +14,7 @@
       
       <guid>https://dongri.github.io/2016/12/line-translate-bot/</guid>
       <description>LINE BOTがMessaging apiを正式にリリースしたので翻訳BOTを作りました。
-https://wise.hackerth.com (shutdown)
+https://wise.nilth.com (shutdown)
 公式の通訳BOTも何個かあるのに何で今更翻訳BOT? と思う人もいるかも知らないですが、理由は2つあります。
 1. 汎用性の問題 LINE公式通訳BOTをディスってるわけではないが、正直言って不便でした。日英、日中、日韓と一つ一つが単体のBOTになっていて、一つのグループに複数BOTを招待できないのと、あくまで日本語をベースにしてるので、例えば韓国語を英語に翻訳することはできません。
 2. 進化した翻訳技術 ちょっと前に話題になっていた翻訳技術の進化です。ニューラルネットワーク機械学習の応用により翻訳の精度が今までと比較できないレベルまで進化してきました。

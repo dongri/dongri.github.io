@@ -18,8 +18,8 @@
 
         <link rel="icon" type="image/png" href="/images/avatar.png">
 
-        <meta property="og:title" content=" Let&#39;s Encryptでワイルドカード証明書発行してみた &middot;  D" />
-        <meta property="og:site_name" content="D" />
+        <meta property="og:title" content=" Let&#39;s Encryptでワイルドカード証明書発行してみた &middot;  dongri" />
+        <meta property="og:site_name" content="dongri" />
         <meta property="og:url" content="https://dongri.github.io/2018/03/lets-encrypt%E3%81%A7%E3%83%AF%E3%82%A4%E3%83%AB%E3%83%89%E3%82%AB%E3%83%BC%E3%83%89%E8%A8%BC%E6%98%8E%E6%9B%B8%E7%99%BA%E8%A1%8C%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/" />
 
     
@@ -37,7 +37,7 @@
         <meta name="twitter:url" content="https://dongri.github.io/2018/03/lets-encrypt%E3%81%A7%E3%83%AF%E3%82%A4%E3%83%AB%E3%83%89%E3%82%AB%E3%83%BC%E3%83%89%E8%A8%BC%E6%98%8E%E6%9B%B8%E7%99%BA%E8%A1%8C%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/" />
     
 
-        <title> Let&#39;s Encryptでワイルドカード証明書発行してみた &middot;  D</title>
+        <title> Let&#39;s Encryptでワイルドカード証明書発行してみた &middot;  dongri</title>
 
     
         <meta name="description" content="" />
@@ -52,7 +52,7 @@
         
 
     
-        <link href="https://dongri.github.io/index.xml" rel="alternate" type="application/rss+xml" title="D" />
+        <link href="https://dongri.github.io/index.xml" rel="alternate" type="application/rss+xml" title="dongri" />
     
 
     
@@ -80,7 +80,7 @@
     </head>
     <body>
         <header id="header">
-            <a id="logo" href="https://dongri.github.io/"><img src="/images/avatar.png" alt="D" /></a>
+            <a id="logo" href="https://dongri.github.io/"><img src="/images/avatar.png" alt="dongri" /></a>
             
             <p>Hello World</p>
 
@@ -122,7 +122,7 @@
 <pre tabindex="0"><code>$ git clone https://github.com/certbot/certbot.git
 </code></pre><h2 id="ワイルドカード証明書の取得">ワイルドカード証明書の取得</h2>
 <pre tabindex="0"><code>$ ./certbot-auto certonly --manual \
--d *.hackerth.com -d hackerth.com \
+-d *.nilth.com -d nilth.com \
 -m dongrify@gmail.com \
 --agree-tos \
 --manual-public-ip-logging-ok \
@@ -130,7 +130,7 @@
 --server https://acme-v02.api.letsencrypt.org/directory
 </code></pre><ul>
 <li>
-<p>-d *.hackerth.com -d hackerth.com: ワイルドカード証明書とサブドメイン無しの証明書も含めて取得</p>
+<p>-d *.nilth.com -d nilth.com: ワイルドカード証明書とサブドメイン無しの証明書も含めて取得</p>
 </li>
 <li>
 <p>-m <a href="mailto:sample@example.com">sample@example.com</a>: 指定したメールアドレスとに証明書更新の通知を受け取る</p>
@@ -165,11 +165,11 @@ our work to encrypt the web, protect its users and defend digital rights.
 (Y)es/(N)o: Y ← 入力
 Obtaining a new certificate
 Performing the following challenges:
-dns-01 challenge for hackerth.com
+dns-01 challenge for nilth.com
 
 -------------------------------------------------------------------------------
 Please deploy a DNS TXT record under the name
-_acme-challenge.hackerth.com with the following value:
+_acme-challenge.nilth.com with the following value:
 
 T32vZj4xmZ12QR_kMblVS31p2Czjb7HT-UQyelDPcYE
 
@@ -182,15 +182,15 @@ Value-Domainの例をあげると以下のように設定</p>
 </code></pre><p>二回出るので、二回設定する。</p>
 <p>すぐ反映されてないので反映されるまで待つ。
 反映されるかどうかは以下のコマンドで確認。</p>
-<pre tabindex="0"><code>$ dig -t txt hackerth.com
-$ host -t txt hackerth.com
-$ dig _acme-challenge.hackerth.com any @8.8.8.8
+<pre tabindex="0"><code>$ dig -t txt nilth.com
+$ host -t txt nilth.com
+$ dig _acme-challenge.nilth.com any @8.8.8.8
 </code></pre><p>反映されたらEnterを押して完了させる。</p>
 <pre tabindex="0"><code>IMPORTANT NOTES:
  - Congratulations! Your certificate and chain have been saved at:
-   /etc/letsencrypt/live/hackerth.com/fullchain.pem
+   /etc/letsencrypt/live/nilth.com/fullchain.pem
    Your key file has been saved at:
-   /etc/letsencrypt/live/hackerth.com/privkey.pem
+   /etc/letsencrypt/live/nilth.com/privkey.pem
    Your cert will expire on 2018-06-21. To obtain a new or tweaked
    version of this certificate in the future, simply run certbot-auto
    again. To non-interactively renew *all* of your certificates, run
@@ -200,11 +200,11 @@ $ dig _acme-challenge.hackerth.com any @8.8.8.8
    Donating to ISRG / Let&#39;s Encrypt:   https://letsencrypt.org/donate
    Donating to EFF:                    https://eff.org/donate-le
 </code></pre><h2 id="nginx設定">Nginx設定</h2>
-<p><a href="https://hackerth.com">https://hackerth.com</a></p>
+<p><a href="https://nilth.com">https://nilth.com</a></p>
 <pre tabindex="0"><code>server {
     listen 80;
-    server_name hackerth.com;
-    root /usr/share/nginx/html/hackerth.com;
+    server_name nilth.com;
+    root /usr/share/nginx/html/nilth.com;
     location / {
         return 301 https://$server_name$request_uri;
     }
@@ -212,20 +212,20 @@ $ dig _acme-challenge.hackerth.com any @8.8.8.8
 
 server {
     listen 443 ssl;
-    server_name hackerth.com;
-    ssl_certificate /etc/letsencrypt/live/hackerth.com/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/hackerth.com/privkey.pem;
+    server_name nilth.com;
+    ssl_certificate /etc/letsencrypt/live/nilth.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/nilth.com/privkey.pem;
     ssl_session_tickets on;
     ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
     ssl_ciphers AESGCM:HIGH:!aNULL:!MD5;
     ssl_prefer_server_ciphers on;
-    root /usr/share/nginx/html/hackerth.com;
+    root /usr/share/nginx/html/nilth.com;
 }
-</code></pre><p><a href="https://girl.hackerth.com">https://girl.hackerth.com</a></p>
+</code></pre><p><a href="https://girl.nilth.com">https://girl.nilth.com</a></p>
 <pre tabindex="0"><code>server {
     listen 80;
-    server_name girl.hackerth.com;
-    root /usr/share/nginx/html/hackerth.com/girl;
+    server_name girl.nilth.com;
+    root /usr/share/nginx/html/nilth.com/girl;
     location / {
         return 301 https://$server_name$request_uri;
     }
@@ -233,14 +233,14 @@ server {
 
 server {
     listen 443 ssl;
-    server_name girl.hackerth.com;
-    ssl_certificate /etc/letsencrypt/live/hackerth.com/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/hackerth.com/privkey.pem;
+    server_name girl.nilth.com;
+    ssl_certificate /etc/letsencrypt/live/nilth.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/nilth.com/privkey.pem;
     ssl_session_tickets on;
     ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
     ssl_ciphers AESGCM:HIGH:!aNULL:!MD5;
     ssl_prefer_server_ciphers on;
-    root /usr/share/nginx/html/hackerth.com/girl;
+    root /usr/share/nginx/html/nilth.com/girl;
 }
 </code></pre><p>これで、ドメインとサブドメインが同じ証明書でアクセスできるようになった。
 更新時は以下のコマンドでいけるらしい</p>
@@ -251,7 +251,7 @@ server {
 <pre tabindex="0"><code>The error was: PluginError(&#39;An authentication script must be provided with --manual-auth-hook when using the manual plugin non-interactively.&#39;,) 
 </code></pre><p>こんなエラーで更新出来なかった。</p>
 <pre tabindex="0"><code>$ ./certbot-auto certonly --manual \
--d *.hackerth.com -d hackerth.com \
+-d *.nilth.com -d nilth.com \
 -m dongrify@gmail.com \
 --agree-tos \
 --manual-public-ip-logging-ok \
@@ -268,7 +268,7 @@ server {
 
 </main>
 		<footer id="footer">
-			<section id="footer-message">Powered by Hugo.  &copy; 2014 D</section>
+			<section id="footer-message">Powered by Hugo.  &copy; 2014 dongri</section>
 		</footer>
 
     <script>
@@ -294,7 +294,7 @@ server {
       });
     </script>
 	
-  <script src="//insight.hackerth.com/js/in.js" type="text/javascript"></script>
+  <script src="//insight.nilth.com/js/in.js" type="text/javascript"></script>
 	</body>
 </html>
 

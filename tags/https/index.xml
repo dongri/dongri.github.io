@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>https on D</title>
+    <title>https on dongri</title>
     <link>https://dongri.github.io/tags/https/</link>
-    <description>Recent content in https on D</description>
+    <description>Recent content in https on dongri</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 23 Mar 2018 23:37:02 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/https/index.xml" rel="self" type="application/rss+xml" />
@@ -15,7 +15,7 @@
       <guid>https://dongri.github.io/2018/03/lets-encrypt%E3%81%A7%E3%83%AF%E3%82%A4%E3%83%AB%E3%83%89%E3%82%AB%E3%83%BC%E3%83%89%E8%A8%BC%E6%98%8E%E6%9B%B8%E7%99%BA%E8%A1%8C%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
       <description>Let&amp;rsquo;s Encryptがワイルドカード証明書サポートしたので設定してみた。
 certbot certbotの最新版をgithubから持ってくる
-$ git clone https://github.com/certbot/certbot.git ワイルドカード証明書の取得 $ ./certbot-auto certonly --manual \ -d *.hackerth.com -d hackerth.com \ -m dongrify@gmail.com \ --agree-tos \ --manual-public-ip-logging-ok \ --preferred-challenges dns-01 \ --server https://acme-v02.api.letsencrypt.org/directory -d *.hackerth.com -d hackerth.com: ワイルドカード証明書とサブドメイン無しの証明書も含めて取得
+$ git clone https://github.com/certbot/certbot.git ワイルドカード証明書の取得 $ ./certbot-auto certonly --manual \ -d *.nilth.com -d nilth.com \ -m dongrify@gmail.com \ --agree-tos \ --manual-public-ip-logging-ok \ --preferred-challenges dns-01 \ --server https://acme-v02.api.letsencrypt.org/directory -d *.nilth.com -d nilth.com: ワイルドカード証明書とサブドメイン無しの証明書も含めて取得
 -m sample@example.com: 指定したメールアドレスとに証明書更新の通知を受け取る
 &amp;ndash;agree-tos: 利用規約に同意
 &amp;ndash;manual-public-ip-logging-ok: サーバーの IPアドレスがログに記録され公開されることを許可します。

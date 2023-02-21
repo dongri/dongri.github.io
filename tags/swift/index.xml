@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>swift on D</title>
+    <title>swift on dongri</title>
     <link>https://dongri.github.io/tags/swift/</link>
-    <description>Recent content in swift on D</description>
+    <description>Recent content in swift on dongri</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 14 Dec 2017 23:36:27 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/swift/index.xml" rel="self" type="application/rss+xml" />
