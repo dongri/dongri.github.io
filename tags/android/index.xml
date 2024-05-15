@@ -1,190 +1,89 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>android on dongri</title>
+    <title>Android on dongri</title>
     <link>https://dongri.github.io/tags/android/</link>
-    <description>Recent content in android on dongri</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Android on dongri</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Apr 2018 03:13:44 +0800</lastBuildDate><atom:link href="https://dongri.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Apr 2018 03:13:44 +0800</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>非認証Android端末をGoogle認証通す方法</title>
       <link>https://dongri.github.io/2018/04/%E9%9D%9E%E8%AA%8D%E8%A8%BCandroid%E7%AB%AF%E6%9C%AB%E3%82%92google%E8%AA%8D%E8%A8%BC%E9%80%9A%E3%81%99%E6%96%B9%E6%B3%95/</link>
       <pubDate>Fri, 13 Apr 2018 03:13:44 +0800</pubDate>
-      
       <guid>https://dongri.github.io/2018/04/%E9%9D%9E%E8%AA%8D%E8%A8%BCandroid%E7%AB%AF%E6%9C%AB%E3%82%92google%E8%AA%8D%E8%A8%BC%E9%80%9A%E3%81%99%E6%96%B9%E6%B3%95/</guid>
-      <description>突然Kyashが使えなくなった。
-この端末はRoot取ってないのでおそらくGoogleの認定を受けてない端末だからでしょう。Play Storeアプリ開いて設定見ると端末の認証のところが認証されてませんと出る。
-https://www.android.com/certified/partners/
-自分の端末はsmartisanという中国の端末で上のパートナー一覧には載ってなかった。
-確かにこの前この辺のニュースも出て、将来はGoogleのアプリ（Gmail, Chromeなど）も認証されてない端末では動かないようにする予定。
-https://www.google.com/android/uncertified/
-上のリンク先にカスタムROMをインストールした端末はAndroid IDを入れるといいらしいが、自分の端末はちょっと違う。試しにAndroid IDを入れてみたら通った。Kyashも正しく起動してくれた。
-Android IDはどう取得するのか？上のページでは adb コマンドで取得すると書いてあるが、そもそもRoot取ってないのでこの方法だとだめで、違う方法でAndroid IDを取得しないといけない。
-String androidId = Settings.Secure.getString(getContext().getContentResolver(), Settings.Secure.ANDROID_ID); System.out.println(androidId); Android開発環境でこのようなコードで取得できるが、エンジニアじゃないと無理だろう。せっかくなのでAndroid IDだけを表示するアプリを作ってPlay Storeに公開した。
-https://play.google.com/store/apps/details?id=org.dongri.androidid
-追記 あとでPlay StoreでAndroid IDで検索してみたらアプリが大量に出てきたｗ</description>
+      <description>突然Kyashが使えなくなった。&#xA;この端末はRoot取ってないのでおそらくGoogleの認定を受けてない端末だからでしょう。Play Storeアプリ開いて設定見ると端末の認証のところが認証されてませんと出る。&#xA;https://www.android.com/certified/partners/&#xA;自分の端末はsmartisanという中国の端末で上のパートナー一覧には載ってなかった。&#xA;確かにこの前この辺のニュースも出て、将来はGoogleのアプリ（Gmail, Chromeなど）も認証されてない端末では動かないようにする予定。&#xA;https://www.google.com/android/uncertified/&#xA;上のリンク先にカスタムROMをインストールした端末はAndroid IDを入れるといいらしいが、自分の端末はちょっと違う。試しにAndroid IDを入れてみたら通った。Kyashも正しく起動してくれた。&#xA;Android IDはどう取得するのか？上のページでは adb コマンドで取得すると書いてあるが、そもそもRoot取ってないのでこの方法だとだめで、違う方法でAndroid IDを取得しないといけない。&#xA;String androidId = Settings.Secure.getString(getContext().getContentResolver(), Settings.Secure.ANDROID_ID); System.out.println(androidId); Android開発環境でこのようなコードで取得できるが、エンジニアじゃないと無理だろう。せっかくなのでAndroid IDだけを表示するアプリを作ってPlay Storeに公開した。&#xA;https://play.google.com/store/apps/details?id=org.dongri.androidid&#xA;追記 あとでPlay StoreでAndroid IDで検索してみたらアプリが大量に出てきたｗ</description>
     </item>
-    
     <item>
       <title>Progressive Web Apps</title>
       <link>https://dongri.github.io/2018/01/progressive-web-apps/</link>
       <pubDate>Wed, 10 Jan 2018 12:12:06 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2018/01/progressive-web-apps/</guid>
-      <description>PWA(Progressive Web Apps)とは、WebページをネイティブアプリのようなUXを提供するためのものです。
-なんでこれを思い出したかと言うと https://doper.io というWebサイトを開発していて、iOSクライアントは去年なんとか作りましたが、Androidはなかなか手が出せなくて、今年に入ってなんとかしようと思いPWAがいいんじゃないかと思いました。
-条件 Webサイトがhttps対応してること Android Chromeが必要 対応 manifest.json manifest.jsonファイル作成します。
-{ lang: &amp;#34;ja&amp;#34;, name: &amp;#34;Doper Lite&amp;#34;, short_name: &amp;#34;Doper Lite&amp;#34;, start_url: &amp;#34;/&amp;#34;, display: &amp;#34;standalone&amp;#34;, theme_color: &amp;#34;#24292e&amp;#34;, icons: [ { src: &amp;#34;/img/launcher-icon48.png&amp;#34;, sizes: &amp;#34;48x48&amp;#34;, type: &amp;#34;image/png&amp;#34; }, { src: &amp;#34;/img/launcher-icon-72.png&amp;#34;, sizes: &amp;#34;72x72&amp;#34;, type: &amp;#34;image/png&amp;#34; }, { src: &amp;#34;/img/launcher-icon-96.png&amp;#34;, sizes: &amp;#34;96x96&amp;#34;, type: &amp;#34;image/png&amp;#34; }, { src: &amp;#34;/img/launcher-icon-144.png&amp;#34;, sizes: &amp;#34;144x144&amp;#34;, type: &amp;#34;image/png&amp;#34; }, { src: &amp;#34;/img/launcher-icon-192.png&amp;#34;, sizes: &amp;#34;192x192&amp;#34;, type: &amp;#34;image/png&amp;#34; } ] } https://www.</description>
+      <description>PWA(Progressive Web Apps)とは、WebページをネイティブアプリのようなUXを提供するためのものです。&#xA;なんでこれを思い出したかと言うと https://doper.io というWebサイトを開発していて、iOSクライアントは去年なんとか作りましたが、Androidはなかなか手が出せなくて、今年に入ってなんとかしようと思いPWAがいいんじゃないかと思いました。&#xA;条件 Webサイトがhttps対応してること Android Chromeが必要 対応 manifest.json manifest.jsonファイル作成します。&#xA;{ lang: &amp;#34;ja&amp;#34;, name: &amp;#34;Doper Lite&amp;#34;, short_name: &amp;#34;Doper Lite&amp;#34;, start_url: &amp;#34;/&amp;#34;, display: &amp;#34;standalone&amp;#34;, theme_color: &amp;#34;#24292e&amp;#34;, icons: [ { src: &amp;#34;/img/launcher-icon48.png&amp;#34;, sizes: &amp;#34;48x48&amp;#34;, type: &amp;#34;image/png&amp;#34; }, { src: &amp;#34;/img/launcher-icon-72.png&amp;#34;, sizes: &amp;#34;72x72&amp;#34;, type: &amp;#34;image/png&amp;#34; }, { src: &amp;#34;/img/launcher-icon-96.png&amp;#34;, sizes: &amp;#34;96x96&amp;#34;, type: &amp;#34;image/png&amp;#34; }, { src: &amp;#34;/img/launcher-icon-144.png&amp;#34;, sizes: &amp;#34;144x144&amp;#34;, type: &amp;#34;image/png&amp;#34; }, { src: &amp;#34;/img/launcher-icon-192.png&amp;#34;, sizes: &amp;#34;192x192&amp;#34;, type: &amp;#34;image/png&amp;#34; } ] } https://www.</description>
     </item>
-    
     <item>
       <title>iOS, Android アプリダウンロード数を取得</title>
       <link>https://dongri.github.io/2017/12/ios-android-%E3%82%A2%E3%83%97%E3%83%AA%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E6%95%B0%E3%82%92%E5%8F%96%E5%BE%97/</link>
       <pubDate>Tue, 19 Dec 2017 15:38:35 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2017/12/ios-android-%E3%82%A2%E3%83%97%E3%83%AA%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E6%95%B0%E3%82%92%E5%8F%96%E5%BE%97/</guid>
-      <description>App Annie、Search Manなどサービスを使えばAPI経由でアプリのダウンロード数を取得する方法いろいろあるようだが、iTunesconnectとPlay Storeから直接取得してみた。
-iOS Reporter https://help.apple.com/itc/appsreporterguide/#/itc0f2481229 ここからReporter.zipをダウンロード。
-1. access tokenをitunesconnectページで発行する。 https://reportingitc2.apple.com/reports.html ページの左にに「レポートについて？」があるので？マークをクリックして「アクセストークン生成」リンクがクリックして生成する。
-2. Reporter.propertiesを編集 AccessToken=********-****-****-****-************ Mode=Normal SalesUrl=https://reportingitc-reporter.apple.com/reportservice/sales/v1 FinanceUrl=https://reportingitc-reporter.apple.com/reportservice/finance/v1 3. javaでレポート取得 $ java -jar Reporter.jar p=Reporter.properties Sales.getVendors ******** 上で取得したVendor Numberを設定
-DATE=&amp;#34;20171216&amp;#34; VENDOR_NUMBER=&amp;#34;********&amp;#34; $ java -jar Reporter.jar p=Reporter.properties Sales.getReport ${VENDOR_NUMBER}, Sales, Summary, Daily, ${DATE} 4. レポート形式 ドキュメントのリンク切れたりして正確なドキュメント見つかってないが、tvsファイルの Product Type Identifierが1のものが新規ダウンロードらしい。 あとはファイルをshellか、何かで読んでunitsを出せば日付別に新規ダウンロード数取得できる。
-Android 1. Google Cloud SDKダウンロード、初期化 https://cloud.google.com/sdk/docs/ からgoogle cloud sdkをダウンロード。
-$ cd google-cloud-sdk $ ./bin/gcloud init 途中でブラウザが起動されて認証を終わらせる
-2. バケットID取得 https://play.google.com/apps/publish/ Play Store Consoleの統計情報ページでアプリを選択して、ページの下に表示されてる「レポートの直接 URI:」の pubsite_prod_rev_*** をメモする。これがdeveloper_bucket_id になる</description>
+      <description>App Annie、Search Manなどサービスを使えばAPI経由でアプリのダウンロード数を取得する方法いろいろあるようだが、iTunesconnectとPlay Storeから直接取得してみた。&#xA;iOS Reporter https://help.apple.com/itc/appsreporterguide/#/itc0f2481229 ここからReporter.zipをダウンロード。&#xA;1. access tokenをitunesconnectページで発行する。 https://reportingitc2.apple.com/reports.html ページの左にに「レポートについて？」があるので？マークをクリックして「アクセストークン生成」リンクがクリックして生成する。&#xA;2. Reporter.propertiesを編集 AccessToken=********-****-****-****-************ Mode=Normal SalesUrl=https://reportingitc-reporter.apple.com/reportservice/sales/v1 FinanceUrl=https://reportingitc-reporter.apple.com/reportservice/finance/v1 3. javaでレポート取得 $ java -jar Reporter.jar p=Reporter.properties Sales.getVendors ******** 上で取得したVendor Numberを設定&#xA;DATE=&amp;#34;20171216&amp;#34; VENDOR_NUMBER=&amp;#34;********&amp;#34; $ java -jar Reporter.jar p=Reporter.properties Sales.getReport ${VENDOR_NUMBER}, Sales, Summary, Daily, ${DATE} 4. レポート形式 ドキュメントのリンク切れたりして正確なドキュメント見つかってないが、tvsファイルの Product Type Identifierが1のものが新規ダウンロードらしい。 あとはファイルをshellか、何かで読んでunitsを出せば日付別に新規ダウンロード数取得できる。&#xA;Android 1. Google Cloud SDKダウンロード、初期化 https://cloud.google.com/sdk/docs/ からgoogle cloud sdkをダウンロード。&#xA;$ cd google-cloud-sdk $ ./bin/gcloud init 途中でブラウザが起動されて認証を終わらせる&#xA;2. バケットID取得 https://play.google.com/apps/publish/ Play Store Consoleの統計情報ページでアプリを選択して、ページの下に表示されてる「レポートの直接 URI:」の pubsite_prod_rev_*** をメモする。これがdeveloper_bucket_id になる</description>
     </item>
-    
     <item>
       <title>Smartisan M1</title>
       <link>https://dongri.github.io/2017/04/smartisan-m1/</link>
       <pubDate>Wed, 05 Apr 2017 23:45:40 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2017/04/smartisan-m1/</guid>
-      <description>二ヶ月待ってたSmartisan M1が今日やっと届いた。触ってみた感じめっちゃよかった。 一時期使ってたOnePlus Oneに比べると天と地の差？
-Google Play Services デフォルトではGoogle Play Servicesが入ってないので、Googleアカウントと連携できない。 「谷歌安装器」というアプリをインストールしてGoogle Play Servicesをインストール。 インストールするとGoogle Play Storeもインストールボタンがあるが、押して見るとroot権限がないよ言われる。 Google Play Storeは別途検索してインストールすればOK.インストール環境して、Googleアカウント連携すると 連絡先、写真、カレンダーなどが同期できる。
-追記 SmartisanのStoreでGoogle Play StoreインストールするとGoogle Play Servicesが先にインストール されて再起動される、その後Play Storeがインストールさるので、その後Googleアカウント連携できる。
-iijモバイルネットワーク設定 APN: iijmio.jp ユーザー名: 必要なし パスワード: 必要なし 認証タイプ: PAPまたはCHAP これで楽しいSmartisan生活が始まる。</description>
+      <description>二ヶ月待ってたSmartisan M1が今日やっと届いた。触ってみた感じめっちゃよかった。 一時期使ってたOnePlus Oneに比べると天と地の差？&#xA;Google Play Services デフォルトではGoogle Play Servicesが入ってないので、Googleアカウントと連携できない。 「谷歌安装器」というアプリをインストールしてGoogle Play Servicesをインストール。 インストールするとGoogle Play Storeもインストールボタンがあるが、押して見るとroot権限がないよ言われる。 Google Play Storeは別途検索してインストールすればOK.インストール環境して、Googleアカウント連携すると 連絡先、写真、カレンダーなどが同期できる。&#xA;追記 SmartisanのStoreでGoogle Play StoreインストールするとGoogle Play Servicesが先にインストール されて再起動される、その後Play Storeがインストールさるので、その後Googleアカウント連携できる。&#xA;iijモバイルネットワーク設定 APN: iijmio.jp ユーザー名: 必要なし パスワード: 必要なし 認証タイプ: PAPまたはCHAP これで楽しいSmartisan生活が始まる。</description>
     </item>
-    
     <item>
       <title>Suica PASMO リーダー</title>
       <link>https://dongri.github.io/2016/12/suica-pasmo-%E3%83%AA%E3%83%BC%E3%83%80%E3%83%BC/</link>
       <pubDate>Sun, 18 Dec 2016 15:58:44 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2016/12/suica-pasmo-%E3%83%AA%E3%83%BC%E3%83%80%E3%83%BC/</guid>
-      <description>最近良く自分のPASMO残高を把握できず、改札口で引っかかって「ファック」と小さい声出した時がよくあって、 AndroidでPASMOの残高を確認できるアプリを探してみたが、どれも必要ない機能ががたくさんあるのとデザインがイマイチ、 且つうざい広告が出るので逆にイラッとしたり、自分のAndroidのせいか分からないが、クラッシュしまくったり、、、
-今週Android Payも出たし、FeliCaとかNFCの勉強も含めてアプリを開発してみようと思ってSuica, PASMOリーダーを作ってみることにした。
-一日でやっつけたもので処理は単純。かざすとアプリが起動して読み取ったデータを表示するだけ。
-Play Store - Suica PASMO リーダー
-参考になったページ
-FeliCa Library
-路線、駅コード
-AndroidでFelica(NFC)のブロックデータの取得
-ダウンロード数がどれぐらいになるかわからないが、広告入れる予定もないし、機能追加しても課金する予定もないので、 オープンソースにしてメンテナンスして行こうと思います。
-Github - CardReader
-TODO
-読み取れる件数は決まってるので、過去のデータを保存する機能 CSVフォーマットでUSBストレージに保存する機能 バグ修正 </description>
+      <description>最近良く自分のPASMO残高を把握できず、改札口で引っかかって「ファック」と小さい声出した時がよくあって、 AndroidでPASMOの残高を確認できるアプリを探してみたが、どれも必要ない機能ががたくさんあるのとデザインがイマイチ、 且つうざい広告が出るので逆にイラッとしたり、自分のAndroidのせいか分からないが、クラッシュしまくったり、、、&#xA;今週Android Payも出たし、FeliCaとかNFCの勉強も含めてアプリを開発してみようと思ってSuica, PASMOリーダーを作ってみることにした。&#xA;一日でやっつけたもので処理は単純。かざすとアプリが起動して読み取ったデータを表示するだけ。&#xA;Play Store - Suica PASMO リーダー&#xA;参考になったページ&#xA;FeliCa Library&#xA;路線、駅コード&#xA;AndroidでFelica(NFC)のブロックデータの取得&#xA;ダウンロード数がどれぐらいになるかわからないが、広告入れる予定もないし、機能追加しても課金する予定もないので、 オープンソースにしてメンテナンスして行こうと思います。&#xA;Github - CardReader&#xA;TODO&#xA;読み取れる件数は決まってるので、過去のデータを保存する機能 CSVフォーマットでUSBストレージに保存する機能 バグ修正 </description>
     </item>
-    
     <item>
       <title>Nexus 5X クリーンインストール &amp; Root化</title>
       <link>https://dongri.github.io/2016/05/nexus-5x-%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB-root%E5%8C%96/</link>
       <pubDate>Tue, 03 May 2016 01:36:00 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2016/05/nexus-5x-%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB-root%E5%8C%96/</guid>
-      <description>Factory Image Googleが公開しているNexus端末向けの初期ROMデータのことを言います。 Factory Imageには、「system・boot（Kernel）・recovery・bootloader・radio・userdata・cache」などの各領域のイメージが含まれており、 それらを端末に書き込むことで領域を完全に初期化することが出来ます。
-https://developers.google.com/android/nexus/images
-nexus5xのところの最新のものをダウンロードして解凍する
-OEMロック解除 開発者向けオプションで「OEMロック解除を有効にする」にチェックを入れる
-ブートローダーをアンロック $ adb reboot bootloader // もしくは、電源ボタンとボリュームダウンボタンを同時に長押し $ fastboot oem unlock ... OKAY [ 20.966s] finished. total time: 20.966s これでbootloaderがunlockの状態になる
-DEVICE STATE - locked
-↓
-DEVICE STATE - unlocked
-flash-all $ cd bullhead-mhc19q $ ./flash-all.sh ... OKAY [ 0.214s] writing &amp;#39;cache&amp;#39;... OKAY [ 0.061s] rebooting... finished. total time: 86.174s カスタムリカバリの導入 https://twrp.me/devices/lgnexus5x.html
-Download Links で 最新のimgファイルダウンロードする。
-$ fastboot flash recovery twrp-3.0.2-0-bullhead.img ブートローダー画面から「Recovery mode」を選択すると導入したTWRPを起動できるようなりました。</description>
+      <description>Factory Image Googleが公開しているNexus端末向けの初期ROMデータのことを言います。 Factory Imageには、「system・boot（Kernel）・recovery・bootloader・radio・userdata・cache」などの各領域のイメージが含まれており、 それらを端末に書き込むことで領域を完全に初期化することが出来ます。&#xA;https://developers.google.com/android/nexus/images&#xA;nexus5xのところの最新のものをダウンロードして解凍する&#xA;OEMロック解除 開発者向けオプションで「OEMロック解除を有効にする」にチェックを入れる&#xA;ブートローダーをアンロック $ adb reboot bootloader // もしくは、電源ボタンとボリュームダウンボタンを同時に長押し $ fastboot oem unlock ... OKAY [ 20.966s] finished. total time: 20.966s これでbootloaderがunlockの状態になる&#xA;DEVICE STATE - locked&#xA;↓&#xA;DEVICE STATE - unlocked&#xA;flash-all $ cd bullhead-mhc19q $ ./flash-all.sh ... OKAY [ 0.214s] writing &amp;#39;cache&amp;#39;... OKAY [ 0.061s] rebooting... finished. total time: 86.174s カスタムリカバリの導入 https://twrp.me/devices/lgnexus5x.html&#xA;Download Links で 最新のimgファイルダウンロードする。&#xA;$ fastboot flash recovery twrp-3.0.2-0-bullhead.img ブートローダー画面から「Recovery mode」を選択すると導入したTWRPを起動できるようなりました。</description>
     </item>
-    
     <item>
       <title>Android Stagefright</title>
       <link>https://dongri.github.io/2015/07/android-stagefright/</link>
       <pubDate>Tue, 28 Jul 2015 11:28:57 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2015/07/android-stagefright/</guid>
-      <description>詳しいことはこちら。
-Androidに最悪の脆弱性発見―ビデオメッセージを受信するだけでデバイスが乗っ取られる
-ということで、まずSIMを抜いてOSのバージョンアップするようにした。
-CyanogenMod: Recent Stagefright issues
-Zip Fileダウンロードしてインストール こちらから最新版cm-12.1をダウンロード。
-https://download.cyanogenmod.org/?device=bacon
-$ adb push cm-12.1-20150728-NIGHTLY-bacon.zip /sdcard/ TWRPでinstallを選択して、cm-12.1-20150728-NIGHTLY-bacon.zipを選択してインストール
-Google Appsインストール CMではデフォルトでGoogle Apps入ってないので、追加でインストールする。 こちらからarmバージョンをダウンロードする。
-https://github.com/cgapps/vendor_google
-$ adb push gapps-5.1-arm-2015-07-17-13-29.zip /sdcard/ TWRPでinstallを選択して、gapps-5.1-arm-2015-07-17-13-29.zipを選択してインストール</description>
+      <description>詳しいことはこちら。&#xA;Androidに最悪の脆弱性発見―ビデオメッセージを受信するだけでデバイスが乗っ取られる&#xA;ということで、まずSIMを抜いてOSのバージョンアップするようにした。&#xA;CyanogenMod: Recent Stagefright issues&#xA;Zip Fileダウンロードしてインストール こちらから最新版cm-12.1をダウンロード。&#xA;https://download.cyanogenmod.org/?device=bacon&#xA;$ adb push cm-12.1-20150728-NIGHTLY-bacon.zip /sdcard/ TWRPでinstallを選択して、cm-12.1-20150728-NIGHTLY-bacon.zipを選択してインストール&#xA;Google Appsインストール CMではデフォルトでGoogle Apps入ってないので、追加でインストールする。 こちらからarmバージョンをダウンロードする。&#xA;https://github.com/cgapps/vendor_google&#xA;$ adb push gapps-5.1-arm-2015-07-17-13-29.zip /sdcard/ TWRPでinstallを選択して、gapps-5.1-arm-2015-07-17-13-29.zipを選択してインストール</description>
     </item>
-    
     <item>
       <title>OnePlus One</title>
       <link>https://dongri.github.io/2015/04/oneplus-one/</link>
       <pubDate>Tue, 14 Apr 2015 11:28:57 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2015/04/oneplus-one/</guid>
-      <description>1. Bootloader Unlock $ adb reboot bootloader CyanogenMod Logoが出る
-$ fastboot oem unlock ... OKAY [ 0.005s] finished. total time: 0.005s $ 2. Install TWRP http://dl.twrp.me/bacon/
-twrp-2.8.6.0-bacon.img ダウンロード
-$ adb reboot bootloader $ fastboot flash recovery twrp-2.8.6.0-bacon.img target reported max download size of 536870912 bytes sending &amp;#39;recovery&amp;#39; (10180 KB)... OKAY [ 0.323s] writing &amp;#39;recovery&amp;#39;... OKAY [ 0.132s] finished. total time: 0.455s $ fastboot reboot rebooting... finished. total time: 0.005s $ 強制的にtwrp起動する</description>
+      <description>1. Bootloader Unlock $ adb reboot bootloader CyanogenMod Logoが出る&#xA;$ fastboot oem unlock ... OKAY [ 0.005s] finished. total time: 0.005s $ 2. Install TWRP http://dl.twrp.me/bacon/&#xA;twrp-2.8.6.0-bacon.img ダウンロード&#xA;$ adb reboot bootloader $ fastboot flash recovery twrp-2.8.6.0-bacon.img target reported max download size of 536870912 bytes sending &amp;#39;recovery&amp;#39; (10180 KB)... OKAY [ 0.323s] writing &amp;#39;recovery&amp;#39;... OKAY [ 0.132s] finished. total time: 0.455s $ fastboot reboot rebooting... finished. total time: 0.005s $ 強制的にtwrp起動する</description>
     </item>
-    
     <item>
       <title>OxygenOS</title>
       <link>https://dongri.github.io/2015/04/oxygenos/</link>
       <pubDate>Sun, 05 Apr 2015 11:28:57 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2015/04/oxygenos/</guid>
-      <description>(下に追記あり)
-昨日出たOxygenOS 1.0.0について簡単にメモでも残そうかと思って書いた。
-結論から言うと、OxygenOSはやめてCyanogenmod 12Sにした。
-April 3 2015
-OxygenOS is Here
-https://oneplus.net/oxygenos
-Installation Guide
-インストールの流れは
-Bootloader Unlock TWRPをインストール oxygenos_1.0.0.flashable.zipを実機に転送 TWRPでzip指定してインストール コマンドは以下のようになる
-$ adb reboot bootloader $ fastboot oem unlock $ fastboot flash recovery ***.img $ fastboot reboot or $ fastboot boot ***.img $ adb push oxygenos_1.0.0.flashable.zip /sdcard/ 上の手順で既存OnePlus OneのCyanogenmod 11SからOxygenOSにはアップグレードしたことは成功したが、 人によって、まっさらな状態で綺麗にインストールしたいですよね（私だけ？）
-で、TWRPで全てのデータ削除して、0からOxygenOSをインストールしてみた。結果やばいことになった。
-そもそもステータスバー出て来ない。 画面が真っ黒で壁紙設定できない。 戻るボタン以外他のボタン効かない。 ソフトボタンの表示設定しても出て来ない。 ２，３回インストールし直しても結果は同じだった。推測だが、既存OSからOxygenOSにアップグレードはサポートするけど、 クリーンインストールはサポートしてないかという疑惑。
-上で使い物にならなかったので、Cyanogenmodに頼るしかない。
-http://download.cyanogenmod.org/?device=bacon&amp;amp;type=nightly
-2015-04-04 04:19:52の最新版があったので、ダウンロードしてインストール。
-これで、綺麗な状態で綺麗にインストール出来たわけだが、CyanogenMod IncとGoogleの関係上CyanogenModにGoogle系appsを入れちゃだめなので、別途インストールするしかない。
-Google Apps
-ここでもよいだが、若干古い感じがする。ググって最新版をダウンロードしてインストール。
-その後Cyanogenmod 12Sの上にOxygenOSをインストールしてみてもダメだった。
-ということで、しばらくはOxygenOSは使わないことにした。</description>
+      <description>(下に追記あり)&#xA;昨日出たOxygenOS 1.0.0について簡単にメモでも残そうかと思って書いた。&#xA;結論から言うと、OxygenOSはやめてCyanogenmod 12Sにした。&#xA;April 3 2015&#xA;OxygenOS is Here&#xA;https://oneplus.net/oxygenos&#xA;Installation Guide&#xA;インストールの流れは&#xA;Bootloader Unlock TWRPをインストール oxygenos_1.0.0.flashable.zipを実機に転送 TWRPでzip指定してインストール コマンドは以下のようになる&#xA;$ adb reboot bootloader $ fastboot oem unlock $ fastboot flash recovery ***.img $ fastboot reboot or $ fastboot boot ***.img $ adb push oxygenos_1.0.0.flashable.zip /sdcard/ 上の手順で既存OnePlus OneのCyanogenmod 11SからOxygenOSにはアップグレードしたことは成功したが、 人によって、まっさらな状態で綺麗にインストールしたいですよね（私だけ？）&#xA;で、TWRPで全てのデータ削除して、0からOxygenOSをインストールしてみた。結果やばいことになった。&#xA;そもそもステータスバー出て来ない。 画面が真っ黒で壁紙設定できない。 戻るボタン以外他のボタン効かない。 ソフトボタンの表示設定しても出て来ない。 ２，３回インストールし直しても結果は同じだった。推測だが、既存OSからOxygenOSにアップグレードはサポートするけど、 クリーンインストールはサポートしてないかという疑惑。&#xA;上で使い物にならなかったので、Cyanogenmodに頼るしかない。&#xA;http://download.cyanogenmod.org/?device=bacon&amp;amp;type=nightly&#xA;2015-04-04 04:19:52の最新版があったので、ダウンロードしてインストール。&#xA;これで、綺麗な状態で綺麗にインストール出来たわけだが、CyanogenMod IncとGoogleの関係上CyanogenModにGoogle系appsを入れちゃだめなので、別途インストールするしかない。&#xA;Google Apps&#xA;ここでもよいだが、若干古い感じがする。ググって最新版をダウンロードしてインストール。&#xA;その後Cyanogenmod 12Sの上にOxygenOSをインストールしてみてもダメだった。&#xA;ということで、しばらくはOxygenOSは使わないことにした。</description>
     </item>
-    
     <item>
       <title>Nexus5 Lollipop</title>
       <link>https://dongri.github.io/2014/11/nexus5-lollipop/</link>
       <pubDate>Thu, 13 Nov 2014 11:28:57 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2014/11/nexus5-lollipop/</guid>
-      <description>数ヶ月間ずっとAndroid L Preview版入れて使ってたけど、今日やっとGoogleのデベロッパーサイトにNexus5のLollipop Factory Imageが現れたので、手動で入れてみた。
-Factory Images for Nexus Devices アクセスして、Nexus5用のimageファイルダウンロード。5.0 (LRX21O)
-$ tar -zxvf hammerhead-lrx21o-factory-01315e08.tgz $ cd hammerhead-lrx21o $ adb reboot bootloader $ fastboot oem unlock $ ./flash-all.sh 以上！</description>
+      <description>数ヶ月間ずっとAndroid L Preview版入れて使ってたけど、今日やっとGoogleのデベロッパーサイトにNexus5のLollipop Factory Imageが現れたので、手動で入れてみた。&#xA;Factory Images for Nexus Devices アクセスして、Nexus5用のimageファイルダウンロード。5.0 (LRX21O)&#xA;$ tar -zxvf hammerhead-lrx21o-factory-01315e08.tgz $ cd hammerhead-lrx21o $ adb reboot bootloader $ fastboot oem unlock $ ./flash-all.sh 以上！</description>
     </item>
-    
     <item>
       <title>Pull APK</title>
       <link>https://dongri.github.io/2014/11/pull-apk/</link>
       <pubDate>Thu, 13 Nov 2014 11:28:57 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2014/11/pull-apk/</guid>
-      <description>Androidにあるapkファイルを取り出す方法紹介。
-PlayStoreに「apk 抽出」アプリたくさんあるけど、あえてadb shellで取り出す。
-$ adb shell pm list packages -f | grep package:/data/app/jp.naver.line.android-1/base.apk=jp.naver.line.android package:/data/app/jp.linecorp.LINEMAPS-1/base.apk=jp.linecorp.LINEMAPS $ adb pull /data/app/jp.naver.line.android-1/base.apk ~/Desktop 取り出したapkファイルをインストールしてみる。
-$ adb install base.apk 7522 KB/s (22969465 bytes in 2.981s) pkg: /data/local/tmp/base.apk Success $ adb shell pm list packages -f | grep line package:/data/app/jp.naver.line.android-1/base.apk=jp.naver.line.android package:/data/app/jp.linecorp.LINEMAPS-1/base.apk=jp.linecorp.LINEMAPS ※ Lollipopからはroot化が困難になった模様</description>
+      <description>Androidにあるapkファイルを取り出す方法紹介。&#xA;PlayStoreに「apk 抽出」アプリたくさんあるけど、あえてadb shellで取り出す。&#xA;$ adb shell pm list packages -f | grep package:/data/app/jp.naver.line.android-1/base.apk=jp.naver.line.android package:/data/app/jp.linecorp.LINEMAPS-1/base.apk=jp.linecorp.LINEMAPS $ adb pull /data/app/jp.naver.line.android-1/base.apk ~/Desktop 取り出したapkファイルをインストールしてみる。&#xA;$ adb install base.apk 7522 KB/s (22969465 bytes in 2.981s) pkg: /data/local/tmp/base.apk Success $ adb shell pm list packages -f | grep line package:/data/app/jp.naver.line.android-1/base.apk=jp.naver.line.android package:/data/app/jp.linecorp.LINEMAPS-1/base.apk=jp.linecorp.LINEMAPS ※ Lollipopからはroot化が困難になった模様</description>
     </item>
-    
   </channel>
 </rss>

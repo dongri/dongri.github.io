@@ -1,47 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>github on dongri</title>
+    <title>GitHub on dongri</title>
     <link>https://dongri.github.io/tags/github/</link>
-    <description>Recent content in github on dongri</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in GitHub on dongri</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Jan 2015 11:28:57 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 May 2024 20:53:16 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitHubがお金になった話</title>
+      <link>https://dongri.github.io/2024/05/github%E3%81%8C%E3%81%8A%E9%87%91%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F%E8%A9%B1/</link>
+      <pubDate>Wed, 15 May 2024 20:53:16 +0900</pubDate>
+      <guid>https://dongri.github.io/2024/05/github%E3%81%8C%E3%81%8A%E9%87%91%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F%E8%A9%B1/</guid>
+      <description>2017年にこんな記事を書いてました。 OSSがお金になった話&#xA;7年過ぎた今はこんな話をしてみようと思います。 「GitHubがお金になった話」&#xA;この数年GitHubでブロックチェーン関連のプロジェクトにコミットしたり、issue立てたり、自分が書いたコードを公開したりと活動してました。 正直どんなプロジェクトで具体的にどんなことやったかははっきり思い出せない状態です。&#xA;Celestiaの例 2023年9月のある日あるDiscordのチャンネルでCelestiaのエアドロップにGitHubアカウントが対象になってるからどんぐりさんのアカウントでチェックしてみてと言われてチェックしてみたら対象でした。&#xA;https://twitter.com/CelestiaOrg/status/1706671258757468414 https://blog.celestia.org/genesis-drop/&#xA;当初のCelestiaはそんなに注目されてなくて実際対象になってるGitHubアカウントもClaimせずにいたらしく、残りの枠をClaim申請したアカウントに分配されたようです。もらった $TIA をピーク時に売ったら800万円はあるかと思いますが、トレーダーではない自分には当然そんなことができませんでしたｗ&#xA;Fluenceの例 2024年3月のある日一通のメールが届きました、お前のGitHubアカウントが https://fluence.network の Developer Rewards 対象になってる、お金払うからそのアカウントに俺のウォレットアドレスを紐付けてほしいと。最初はGmailのスパム機能を疑ってましたが、メールちゃんと見て、fluenceのサイトでチェックしてみたら本当でした。&#xA;The Future is Cloudless: Fluence’s DePIN computing platform DAO and FLT token are now live ロックアップ期間があってすぐ取引できなかったんですが、今日二ヶ月のロックアップが解除で今の値段だと70万円ぐらいありました。&#xA;感謝 このように開発者の貢献を評価してエアドロップしてくれるプロジェクトに感謝します。 引き続きGitHubでいろんなプロジェクトに貢献して大事に使おうと思います。</description>
+    </item>
     <item>
       <title>Carthage</title>
       <link>https://dongri.github.io/2015/01/carthage/</link>
       <pubDate>Thu, 15 Jan 2015 11:28:57 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2015/01/carthage/</guid>
-      <description>OAuthSwiftをCarthageに対応したので、メモとして残します。
-Carthageってなんなの？ https://github.com/Carthage/Carthage
-「カルタゴ」と読んで、Swift対応したライブラリ管理ツールです。
-インストール、使い方はgithubページ見ればわかると思います。
-基本的な使い方は Cartfile 作成して使いたいgithubのライブラリをリストで書いてから 「carthage update」するとCarthage/Buildの下に ******.framework ファイルが出来上がるので それをプロジェクトにドラッグアンドドロップして入れる。
-$ vim Cartfile github &amp;#34;dongri/OAuthSwift&amp;#34; ~&amp;gt; 0.1.7 $ carthage update 既存のライブラリCarthage対応 Targets に 新しい Cocoa Touch Framework Schemeを作る。Shared になってること確認。
-既存ライブラリを新しいTargetに移す
-Swift Compiler設定
-Compile Sourcesに必要なSwiftファイル追加
-Schemeを新しいtargetにしてビルドする。（iOS Deviceにして） エラーになったら自己解決
-carthage buildしてみる。githubに上げる前に、ローカルでビルとして、正常に ******.framework が出来上がるのを確認。
-$ carthage build --no-skip-current githubに上げる。 $ git tag v0.1.0 $ git push origin v0.1.0 以上でcarthage対応完了。
-対応したプロジェクトがこれ。
-https://github.com/dongri/OAuthSwift</description>
+      <description>OAuthSwiftをCarthageに対応したので、メモとして残します。&#xA;Carthageってなんなの？ https://github.com/Carthage/Carthage&#xA;「カルタゴ」と読んで、Swift対応したライブラリ管理ツールです。&#xA;インストール、使い方はgithubページ見ればわかると思います。&#xA;基本的な使い方は Cartfile 作成して使いたいgithubのライブラリをリストで書いてから 「carthage update」するとCarthage/Buildの下に ******.framework ファイルが出来上がるので それをプロジェクトにドラッグアンドドロップして入れる。&#xA;$ vim Cartfile github &amp;#34;dongri/OAuthSwift&amp;#34; ~&amp;gt; 0.1.7 $ carthage update 既存のライブラリCarthage対応 Targets に 新しい Cocoa Touch Framework Schemeを作る。Shared になってること確認。&#xA;既存ライブラリを新しいTargetに移す&#xA;Swift Compiler設定&#xA;Compile Sourcesに必要なSwiftファイル追加&#xA;Schemeを新しいtargetにしてビルドする。（iOS Deviceにして） エラーになったら自己解決&#xA;carthage buildしてみる。githubに上げる前に、ローカルでビルとして、正常に ******.framework が出来上がるのを確認。&#xA;$ carthage build --no-skip-current githubに上げる。 $ git tag v0.1.0 $ git push origin v0.1.0 以上でcarthage対応完了。&#xA;対応したプロジェクトがこれ。&#xA;https://github.com/dongri/OAuthSwift</description>
     </item>
-    
     <item>
       <title>github multiple accounts</title>
       <link>https://dongri.github.io/2014/11/github-multiple-accounts/</link>
       <pubDate>Tue, 18 Nov 2014 11:28:57 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2014/11/github-multiple-accounts/</guid>
-      <description>ある事情により、githubに公開アカウントと秘密アカウントが必要になって、複数のアカウントを扱うようになりました。
-まず、新しいSSHキーの生成 $ ssh-keygen -t rsa -C &amp;#34;yoda@gmail.com&amp;#34; -f id_rsa_secret ~/.ssh/config 設定 $ vim ~/.ssh/config ############ Github ############### Host github-secret User git Port 22 HostName github.com IdentityFile ~/.ssh/id_rsa_secret TCPKeepAlive yes IdentitiesOnly yes git clone SSH clone URL: git@github.com:user/project.git の場合
-$ git clone git@github-secret:user/project.git git config 確認してみる。
-$ git config --global user.name $ git config --global user.email SSHキー違ってもこのままだと複数プロジェクトのauthor, committerがglobal設定になるので、変更する。
-git clone したあとのプロジェクトに入って
-$ git config --local user.name &amp;#34;Yoda&amp;#34; $ git config --local user.</description>
+      <description>ある事情により、githubに公開アカウントと秘密アカウントが必要になって、複数のアカウントを扱うようになりました。&#xA;まず、新しいSSHキーの生成 $ ssh-keygen -t rsa -C &amp;#34;yoda@gmail.com&amp;#34; -f id_rsa_secret ~/.ssh/config 設定 $ vim ~/.ssh/config ############ Github ############### Host github-secret User git Port 22 HostName github.com IdentityFile ~/.ssh/id_rsa_secret TCPKeepAlive yes IdentitiesOnly yes git clone SSH clone URL: git@github.com:user/project.git の場合&#xA;$ git clone git@github-secret:user/project.git git config 確認してみる。&#xA;$ git config --global user.name $ git config --global user.email SSHキー違ってもこのままだと複数プロジェクトのauthor, committerがglobal設定になるので、変更する。&#xA;git clone したあとのプロジェクトに入って&#xA;$ git config --local user.name &amp;#34;Yoda&amp;#34; $ git config --local user.</description>
     </item>
-    
   </channel>
 </rss>

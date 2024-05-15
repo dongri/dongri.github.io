@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>documentdb on dongri</title>
+    <title>Documentdb on dongri</title>
     <link>https://dongri.github.io/tags/documentdb/</link>
-    <description>Recent content in documentdb on dongri</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Documentdb on dongri</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Jan 2019 21:42:00 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/documentdb/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Jan 2019 21:42:00 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/documentdb/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Amazon DocumentDBを試してみた</title>
       <link>https://dongri.github.io/2019/01/amazon-documentdb%E3%82%92%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/</link>
       <pubDate>Mon, 14 Jan 2019 21:42:00 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2019/01/amazon-documentdb%E3%82%92%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
-      <description>AmazonからMongoDBと互換性を持つDocumentDBをリリースしたと言ってるので試してみた。 クラスタを作成するためにVPCが必要だったのでVPCを一つ作成。VPCの他にアベイラビリティゾーン２つ必要なので、違うアベイラビリティゾーンを持つサブネット２つ作成。これでクラスタ作成できる。
-インスタンスタイプは最低でもdb.r4.largeで15.25GBのメモリ。値段は$0.277
-エンドポイントはPublicにできないので、sshトンネル作って接続するようにする。
-SSHトンネル $ ssh -L 27017:docdb-2019-01-14-13-34-21.cluster-crgjmmxnvvix.us-east-1.docdb.amazonaws.com:27017 -i ~/.ssh/{pem file} -p 22 ec2-user@{bastion ip} bastionをssh configに設定済みであれば以下のようにしてもOK
-$ ssh -L 27017:docdb-2019-01-14-13-34-21.cluster-crgjmmxnvvix.us-east-1.docdb.amazonaws.com:27017 {bastion} mongo cliで接続してみる $ wget https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem $ mongo --ssl --host localhost:27017 --sslCAFile ./rds-combined-ca-bundle.pem --username {user} --password {password} --sslAllowInvalidHostnames MongoDB shell version v4.0.1 connecting to: mongodb://localhost:12345/ MongoDB server version: 3.6.0 rs0:PRIMARY&amp;gt; show dbs docdb-2019-01-14-13-34-21 0.000GB rs0:PRIMARY&amp;gt; use docdb-2019-01-14-13-34-21 switched to db docdb-2019-01-14-13-34-21 rs0:PRIMARY&amp;gt; show collections users mongriで接続してみる https://github.com/dongri/mongri
-$ vim config/mongo.</description>
+      <description>AmazonからMongoDBと互換性を持つDocumentDBをリリースしたと言ってるので試してみた。 クラスタを作成するためにVPCが必要だったのでVPCを一つ作成。VPCの他にアベイラビリティゾーン２つ必要なので、違うアベイラビリティゾーンを持つサブネット２つ作成。これでクラスタ作成できる。&#xA;インスタンスタイプは最低でもdb.r4.largeで15.25GBのメモリ。値段は$0.277&#xA;エンドポイントはPublicにできないので、sshトンネル作って接続するようにする。&#xA;SSHトンネル $ ssh -L 27017:docdb-2019-01-14-13-34-21.cluster-crgjmmxnvvix.us-east-1.docdb.amazonaws.com:27017 -i ~/.ssh/{pem file} -p 22 ec2-user@{bastion ip} bastionをssh configに設定済みであれば以下のようにしてもOK&#xA;$ ssh -L 27017:docdb-2019-01-14-13-34-21.cluster-crgjmmxnvvix.us-east-1.docdb.amazonaws.com:27017 {bastion} mongo cliで接続してみる $ wget https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem $ mongo --ssl --host localhost:27017 --sslCAFile ./rds-combined-ca-bundle.pem --username {user} --password {password} --sslAllowInvalidHostnames MongoDB shell version v4.0.1 connecting to: mongodb://localhost:12345/ MongoDB server version: 3.6.0 rs0:PRIMARY&amp;gt; show dbs docdb-2019-01-14-13-34-21 0.000GB rs0:PRIMARY&amp;gt; use docdb-2019-01-14-13-34-21 switched to db docdb-2019-01-14-13-34-21 rs0:PRIMARY&amp;gt; show collections users mongriで接続してみる https://github.com/dongri/mongri&#xA;$ vim config/mongo.</description>
     </item>
-    
   </channel>
 </rss>

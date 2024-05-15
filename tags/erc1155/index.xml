@@ -4,49 +4,16 @@
     <title>ERC1155 on dongri</title>
     <link>https://dongri.github.io/tags/erc1155/</link>
     <description>Recent content in ERC1155 on dongri</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 May 2021 11:12:03 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/erc1155/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 May 2021 11:12:03 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/erc1155/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>NFTの話</title>
       <link>https://dongri.github.io/2021/05/nft%E3%81%AE%E8%A9%B1/</link>
       <pubDate>Sun, 02 May 2021 11:12:03 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2021/05/nft%E3%81%AE%E8%A9%B1/</guid>
-      <description>なんであの絵が75億円もするの？なんで初ツイートが3億円もするの？
-ちょうど一年ぐらい前からNFT関連の仕事して、NFT発行したり、NFTマーケット作ったりして、NFTそのものはわかってるつもりだけど、NFTアートについては何もわからない状態です。
-NFTとは？ NFT（Non-fungible token）は非代替性トークンと言って、ファンジブルトークン（FT）と比較してみます。
-あなたの1BTCとわたしの1BTCは同じ、これがFT。
-あなたのレベル1の剣とわたしのレベル5の剣は違う。これがNFT。
-ERC721, ERC1155 http://erc721.org/
-https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md
-https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1155.md
-この辺にNFTの仕様が書いてあります。
-FTはトークンアドレスと発行枚数で誰が何枚持ってるか？みんな持ってるものは同じで、枚数が違うだけです。
-NFT（ERC721）はトークンアドレスとインデックスがあって、各インデックスの発行枚数は1つだけ、人それぞれ持ってるインデックスが違うので、アドレスとインデックスを組み合わせばユニークになるわけです。
-NFT（ERC1155）はトークンアドレスとインデックスで構成されてるところはERC721と同じだが、あるインデックスに対して発行枚数を指定できます。なので、わたしが持ってる剣とあなたが持ってる剣は同じインデックスかもしらないです。（これってノンファンジブルと言えるのか？）
-NFTの中身 75億円の絵を見てみましょう。
-https://osake.io/assets/0x2a46f2ffd99e19a89476e2f62270e0a35bbf0756/40913
-TokenURIの ipfs://ipfs/QmPAg1mjxcEQPPtqsLoEcauVedaeMH81WXDPvPx3VC5zUz がNFTのメタデータの場所です。実際オンチェーン（ブロックチェーン）に書き込まれるのはここまでです。 https://ipfs.io/ipfs/QmPAg1mjxcEQPPtqsLoEcauVedaeMH81WXDPvPx3VC5zUz 開いて見るとJSONファイルで、実際のイメージURLとその他プロパティが入ってます。
-imageUrlを見ると、 https://ipfsgateway.makersplace.com/ipfs/QmZ15eQX8FPjfrtdX3QYbrhZxJpbLpvDpsgb2p3VEH8Bqq これが画像のサムネイルみたいなものですね。
-実データは raw_media_file のところにあります。このサイズが320MBぐらいのjpgが75億円ですね。 https://ipfsgateway.makersplace.com/ipfs/QmXkxpwAHCtDXbbZHUwqtFucG1RMS6T87vi1CdvadfL7qA
-データの保管場所 NFTのメタデータの保管場所は上で見たように、 ipfsgateway.makersplace.com というところのドメイン配下ですね。
-NFTの所有者データは以下のようにブロックチェーンで管理されてます。
-https://etherscan.io/address/0x2a46f2ffd99e19a89476e2f62270e0a35bbf0756#readContract
-ownerOfのところで、_tokenId: 40913 してQueryすると所有者のアドレスが見れます。
-しかし、データそのものは今までのWebと変わらず、ブロックチェーンの外で保管されます。この絵はIPFSというファイルシステムを使って少し（少し）いい方だと思います。 NFT発行業者によってS3に保管するところもあれば、普通のサーバーに置く業者もあります。
-つまり、S3からデータ消されたり、サーバーが停止されてデータにアクセスできなくなった場合、所有者すらアクセスできなくなります。さらにデータが改ざんされる可能性もあります。 https://osake.io/assets/0x273f7f8e6489682df756151f5525576e322d51a3/40430081
-例えばこういうゲームアイテムのNFT買ったとして運営元の mycryptoheroes.net が潰れたらデータも消えて何も残らないですね。昔のゲーム内マネーとかと一緒かと思います。
-IPFS https://ipfs.io/
-IPFSは分散化されて、一度生成したhash値は改ざんできないところはS3などに比べると安全だが、IPFSもnodeが消えたりすると本データは消えます。誤解しがちなのはIPFSにadd, pinしてhash値取れて、gateway提供してるところでアクセスできたと安心してる人もいますが、実際それはgateway, node間のキャッシュであって、本データは別のnodeに存在します。自分でnodeメンテナンスし続けない限りキャッシュがいつ消えてアクセスできなくなるのもおかしくないと思います。お金払ってpinしてくれるところもあるけど、結局は中央集権的やつですよね。
-Osake飲みながら書いたコードから 半年ぐらい前に🍺 飲みながらNFT発行、NFTマーケットのコード書いてみました。
-https://osake.io
-NFT発行で使う保管場所は http://pinata.cloud というIPFS pinning serviceを使ってます。自前でIPFSのnodeをメンテナンスするよりかはこのような業者に任せて方がいいだろうと思いました。無料で似たようなサービスもありますが、いつサービス停止されてもおかしくないので、ここは課金しても比較的に安全な場所を選んだつもりです。
-サポートしてるチェーンもEthereum以外Polygon, Binance Smart Chainなどあります。
-お金がなくて（GasPriceが高くて）メインネットにはコントラクトデプロイしてない状態だが、Rinkebyなどのテストネットではいくらでも遊べます。
-NFTアートは何もわからない NFTそのものはなんとなくわかってるつもりだけど、NFTアートに付く価値は何もわからない。
-NFTのオンチェーン上の所有者情報をチェットの代わりになるとかの使い方はありだけど、なんの保証もないオフチェーンデータを信じて高い価値が付くNFTアートに関しては何もわからないです。（今は）</description>
+      <description>なんであの絵が75億円もするの？なんで初ツイートが3億円もするの？&#xA;ちょうど一年ぐらい前からNFT関連の仕事して、NFT発行したり、NFTマーケット作ったりして、NFTそのものはわかってるつもりだけど、NFTアートについては何もわからない状態です。&#xA;NFTとは？ NFT（Non-fungible token）は非代替性トークンと言って、ファンジブルトークン（FT）と比較してみます。&#xA;あなたの1BTCとわたしの1BTCは同じ、これがFT。&#xA;あなたのレベル1の剣とわたしのレベル5の剣は違う。これがNFT。&#xA;ERC721, ERC1155 http://erc721.org/&#xA;https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md&#xA;https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1155.md&#xA;この辺にNFTの仕様が書いてあります。&#xA;FTはトークンアドレスと発行枚数で誰が何枚持ってるか？みんな持ってるものは同じで、枚数が違うだけです。&#xA;NFT（ERC721）はトークンアドレスとインデックスがあって、各インデックスの発行枚数は1つだけ、人それぞれ持ってるインデックスが違うので、アドレスとインデックスを組み合わせばユニークになるわけです。&#xA;NFT（ERC1155）はトークンアドレスとインデックスで構成されてるところはERC721と同じだが、あるインデックスに対して発行枚数を指定できます。なので、わたしが持ってる剣とあなたが持ってる剣は同じインデックスかもしらないです。（これってノンファンジブルと言えるのか？）&#xA;NFTの中身 75億円の絵を見てみましょう。&#xA;https://osake.io/assets/0x2a46f2ffd99e19a89476e2f62270e0a35bbf0756/40913&#xA;TokenURIの ipfs://ipfs/QmPAg1mjxcEQPPtqsLoEcauVedaeMH81WXDPvPx3VC5zUz がNFTのメタデータの場所です。実際オンチェーン（ブロックチェーン）に書き込まれるのはここまでです。 https://ipfs.io/ipfs/QmPAg1mjxcEQPPtqsLoEcauVedaeMH81WXDPvPx3VC5zUz 開いて見るとJSONファイルで、実際のイメージURLとその他プロパティが入ってます。&#xA;imageUrlを見ると、 https://ipfsgateway.makersplace.com/ipfs/QmZ15eQX8FPjfrtdX3QYbrhZxJpbLpvDpsgb2p3VEH8Bqq これが画像のサムネイルみたいなものですね。&#xA;実データは raw_media_file のところにあります。このサイズが320MBぐらいのjpgが75億円ですね。 https://ipfsgateway.makersplace.com/ipfs/QmXkxpwAHCtDXbbZHUwqtFucG1RMS6T87vi1CdvadfL7qA&#xA;データの保管場所 NFTのメタデータの保管場所は上で見たように、 ipfsgateway.makersplace.com というところのドメイン配下ですね。&#xA;NFTの所有者データは以下のようにブロックチェーンで管理されてます。&#xA;https://etherscan.io/address/0x2a46f2ffd99e19a89476e2f62270e0a35bbf0756#readContract&#xA;ownerOfのところで、_tokenId: 40913 してQueryすると所有者のアドレスが見れます。&#xA;しかし、データそのものは今までのWebと変わらず、ブロックチェーンの外で保管されます。この絵はIPFSというファイルシステムを使って少し（少し）いい方だと思います。 NFT発行業者によってS3に保管するところもあれば、普通のサーバーに置く業者もあります。&#xA;つまり、S3からデータ消されたり、サーバーが停止されてデータにアクセスできなくなった場合、所有者すらアクセスできなくなります。さらにデータが改ざんされる可能性もあります。 https://osake.io/assets/0x273f7f8e6489682df756151f5525576e322d51a3/40430081&#xA;例えばこういうゲームアイテムのNFT買ったとして運営元の mycryptoheroes.net が潰れたらデータも消えて何も残らないですね。昔のゲーム内マネーとかと一緒かと思います。&#xA;IPFS https://ipfs.io/&#xA;IPFSは分散化されて、一度生成したhash値は改ざんできないところはS3などに比べると安全だが、IPFSもnodeが消えたりすると本データは消えます。誤解しがちなのはIPFSにadd, pinしてhash値取れて、gateway提供してるところでアクセスできたと安心してる人もいますが、実際それはgateway, node間のキャッシュであって、本データは別のnodeに存在します。自分でnodeメンテナンスし続けない限りキャッシュがいつ消えてアクセスできなくなるのもおかしくないと思います。お金払ってpinしてくれるところもあるけど、結局は中央集権的やつですよね。&#xA;Osake飲みながら書いたコードから 半年ぐらい前に🍺 飲みながらNFT発行、NFTマーケットのコード書いてみました。&#xA;https://osake.io&#xA;NFT発行で使う保管場所は http://pinata.cloud というIPFS pinning serviceを使ってます。自前でIPFSのnodeをメンテナンスするよりかはこのような業者に任せて方がいいだろうと思いました。無料で似たようなサービスもありますが、いつサービス停止されてもおかしくないので、ここは課金しても比較的に安全な場所を選んだつもりです。&#xA;サポートしてるチェーンもEthereum以外Polygon, Binance Smart Chainなどあります。&#xA;お金がなくて（GasPriceが高くて）メインネットにはコントラクトデプロイしてない状態だが、Rinkebyなどのテストネットではいくらでも遊べます。&#xA;NFTアートは何もわからない NFTそのものはなんとなくわかってるつもりだけど、NFTアートに付く価値は何もわからない。&#xA;NFTのオンチェーン上の所有者情報をチェットの代わりになるとかの使い方はありだけど、なんの保証もないオフチェーンデータを信じて高い価値が付くNFTアートに関しては何もわからないです。（今は）</description>
     </item>
-    
   </channel>
 </rss>

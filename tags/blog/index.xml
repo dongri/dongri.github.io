@@ -1,200 +1,103 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>blog on dongri</title>
+    <title>Blog on dongri</title>
     <link>https://dongri.github.io/tags/blog/</link>
-    <description>Recent content in blog on dongri</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Blog on dongri</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 05 Sep 2017 22:34:49 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Sep 2017 22:34:49 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>社内サイドプロジェクトについて考えてみた</title>
       <link>https://dongri.github.io/2017/09/%E7%A4%BE%E5%86%85%E3%82%B5%E3%82%A4%E3%83%89%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%80%83%E3%81%88%E3%81%A6%E3%81%BF%E3%81%9F/</link>
       <pubDate>Tue, 05 Sep 2017 22:34:49 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2017/09/%E7%A4%BE%E5%86%85%E3%82%B5%E3%82%A4%E3%83%89%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%80%83%E3%81%88%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
-      <description>そもそも社内サイドプロジェクトとは何なのか？ 自分の中ではGoogleの20%ルールの20%を業務時間外と考えた言葉。
-自分は決まったスケジュール、決まった仕様で開発するのがつまらないと思った。 そこで非エンジニアの方々からこんなのできるといいですねを拾ってプライベートの時間で社内サイドプロジェクトをするのが本業より面白かった。 そっちのほうがもっと達成感を感じるからだ。
-Apple WatchやTVなど今までいろいろやってきたサイドプロジェクトの感想を書いてみよう。
-流れは大体以下のようだ。
-作ると宣言せず家に帰って黙々とコードを書く みんなが集まる場を借りてみせる（デモ） おー！すごい！リアクションをもらう。質問に答える 解散 ここで抜けてるのは個別に上の人達と話をしなかったことだ。そこが問題？ デモもデモの後開発進めてリリースできるレベルまで持っていくところまでは問題ない。 それはお前のプライベートの時間で好きてやってるのでどうぞだね。 応援する人が多くなって本プロジェクト化もしくはリリース直前になると問題になる。 どんな問題になるかは各自想像してください。
-それで以下のようにまとめてみた。
-いろんな人と話して意見を交換して成功か失敗か早い段階ではっきりさせる 自分が好きてやってるので成功か失敗か気にしない デモまでやって自己満足で終わらせる この会社はサイドプロジェクト文化がないのでさようなら 1からやってみよう</description>
+      <description>そもそも社内サイドプロジェクトとは何なのか？ 自分の中ではGoogleの20%ルールの20%を業務時間外と考えた言葉。&#xA;自分は決まったスケジュール、決まった仕様で開発するのがつまらないと思った。 そこで非エンジニアの方々からこんなのできるといいですねを拾ってプライベートの時間で社内サイドプロジェクトをするのが本業より面白かった。 そっちのほうがもっと達成感を感じるからだ。&#xA;Apple WatchやTVなど今までいろいろやってきたサイドプロジェクトの感想を書いてみよう。&#xA;流れは大体以下のようだ。&#xA;作ると宣言せず家に帰って黙々とコードを書く みんなが集まる場を借りてみせる（デモ） おー！すごい！リアクションをもらう。質問に答える 解散 ここで抜けてるのは個別に上の人達と話をしなかったことだ。そこが問題？ デモもデモの後開発進めてリリースできるレベルまで持っていくところまでは問題ない。 それはお前のプライベートの時間で好きてやってるのでどうぞだね。 応援する人が多くなって本プロジェクト化もしくはリリース直前になると問題になる。 どんな問題になるかは各自想像してください。&#xA;それで以下のようにまとめてみた。&#xA;いろんな人と話して意見を交換して成功か失敗か早い段階ではっきりさせる 自分が好きてやってるので成功か失敗か気にしない デモまでやって自己満足で終わらせる この会社はサイドプロジェクト文化がないのでさようなら 1からやってみよう</description>
     </item>
-    
     <item>
       <title>Twitterを愛してた</title>
       <link>https://dongri.github.io/2017/05/twitter%E3%82%92%E6%84%9B%E3%81%97%E3%81%A6%E3%81%9F/</link>
       <pubDate>Fri, 05 May 2017 16:17:12 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2017/05/twitter%E3%82%92%E6%84%9B%E3%81%97%E3%81%A6%E3%81%9F/</guid>
-      <description>Twitterやらなくなって二ヶ月ほど経ちますが、支障なく生きています。今はたまに開いてニュース見たり、aws障害検索したりするぐらいです。
-かつてはTwitterを愛してました。9年ぐらい前はTwitterのお陰で会ったこともない人と一緒にiPhoneアプリ作って出したり、 7年前はTwitterのお陰で転職できたし、テック系イベント参加するとフォロワーが増えてコミュニケーションしたり、いいことばかりでした。
-#腹減ったー #ラーメンうまい #githubダウンした などなどどうでもいいツイートばかりで、 偶に毒吐いたりして周りに迷惑かけたりすることもしました。酒を飲むと特に
-徐々に人間関係にも影響が出始めました。Twitterを愛してる人から見るとフォローから外れるということはもう絶交と同じでしたね。 Twitterにキレイな自分しか出さない人達からは嫌われ始めたし、絡まなくなると嫌われ始めたし、 正直この数年はTwitterのお陰で何が良かったことはありませんでしたね。
-「腹減ったー」「酒飲みたい」は呟きたい、しかしTwitterは嫌だ。結果として自分でTwitterみたいなのを作って呟くことにしました。
-今のところ数人のフォロワーしかいないけど、楽しく呟いてます、なぜかReplyが多いですね。
-昔みたいに酒飲みながら話に集中するのではなくTwitter開いて見たり、呟いたりしなくなったのと、 仕事中のTwitter割り込みもなくなって、少しDeep Workできた気がします。
-去年はInstagramのアカウント削除して、AndroidからFacebookアプリ消して、最近はTwitterやらなくなって、これはもう「年だね」と思いますね。</description>
+      <description>Twitterやらなくなって二ヶ月ほど経ちますが、支障なく生きています。今はたまに開いてニュース見たり、aws障害検索したりするぐらいです。&#xA;かつてはTwitterを愛してました。9年ぐらい前はTwitterのお陰で会ったこともない人と一緒にiPhoneアプリ作って出したり、 7年前はTwitterのお陰で転職できたし、テック系イベント参加するとフォロワーが増えてコミュニケーションしたり、いいことばかりでした。&#xA;#腹減ったー #ラーメンうまい #githubダウンした などなどどうでもいいツイートばかりで、 偶に毒吐いたりして周りに迷惑かけたりすることもしました。酒を飲むと特に&#xA;徐々に人間関係にも影響が出始めました。Twitterを愛してる人から見るとフォローから外れるということはもう絶交と同じでしたね。 Twitterにキレイな自分しか出さない人達からは嫌われ始めたし、絡まなくなると嫌われ始めたし、 正直この数年はTwitterのお陰で何が良かったことはありませんでしたね。&#xA;「腹減ったー」「酒飲みたい」は呟きたい、しかしTwitterは嫌だ。結果として自分でTwitterみたいなのを作って呟くことにしました。&#xA;今のところ数人のフォロワーしかいないけど、楽しく呟いてます、なぜかReplyが多いですね。&#xA;昔みたいに酒飲みながら話に集中するのではなくTwitter開いて見たり、呟いたりしなくなったのと、 仕事中のTwitter割り込みもなくなって、少しDeep Workできた気がします。&#xA;去年はInstagramのアカウント削除して、AndroidからFacebookアプリ消して、最近はTwitterやらなくなって、これはもう「年だね」と思いますね。</description>
     </item>
-    
     <item>
       <title>エンジニアの10大ウソ</title>
       <link>https://dongri.github.io/2017/02/%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%81%AE10%E5%A4%A7%E3%82%A6%E3%82%BD/</link>
       <pubDate>Sat, 04 Feb 2017 01:01:48 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2017/02/%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%81%AE10%E5%A4%A7%E3%82%A6%E3%82%BD/</guid>
       <description> 後でコメント付けるから これは暫定的な方法、本番リリース時はこの方法で書かない 大体終わった。後小さい問題何個か残ってるだけ エンジニア：”十日は必要”。Boss：”五日でできる？”。エンジニア：”できる！” TODO 私の端末ではちゃんと動くのに これはテストする必要ない、絶対問題ないから そう、もうテストした 一行の修正だけ、他の処理に影響しない これは前からあった問題 追加10ウソ 次コード修正する時ユニットテスト書くよ ９０％は終わった これは二分で解決できる そう、これは既知のBugだ 昨日はちゃんと動いてたのに そんなのありえない これはハードウェア/ネットワークの問題、私のコードと関係ない これはBugではなく、特性だ 私は今ドキュメント読んでる 私はサボってない、今ビルド中 </description>
     </item>
-    
     <item>
       <title>LINE Translate BOT</title>
       <link>https://dongri.github.io/2016/12/line-translate-bot/</link>
       <pubDate>Sat, 03 Dec 2016 16:42:42 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2016/12/line-translate-bot/</guid>
-      <description>LINE BOTがMessaging apiを正式にリリースしたので翻訳BOTを作りました。
-https://wise.nilth.com (shutdown)
-公式の通訳BOTも何個かあるのに何で今更翻訳BOT? と思う人もいるかも知らないですが、理由は2つあります。
-1. 汎用性の問題 LINE公式通訳BOTをディスってるわけではないが、正直言って不便でした。日英、日中、日韓と一つ一つが単体のBOTになっていて、一つのグループに複数BOTを招待できないのと、あくまで日本語をベースにしてるので、例えば韓国語を英語に翻訳することはできません。
-2. 進化した翻訳技術 ちょっと前に話題になっていた翻訳技術の進化です。ニューラルネットワーク機械学習の応用により翻訳の精度が今までと比較できないレベルまで進化してきました。
-上の理由から今更なんですが翻訳BOTを作りました。英語がダメな私はまず普段辞書の代わりによく使うと思います。
-エンジニア的な話をちょっと 今はdocker container一つで動かしていて正直言ってどれくらいのリクエストで死ぬかわからないです。 このBOTの利用者が増えてリクエストをさばけない時にはサーバー増やしたりスペック上げたりなど考えることにしました。 エンジニア達はすぐ分かったと思いますが、この俺が翻訳エンジンなんか作れるわけではないので、Google Translate APIを使ってます。 こいつにも金取られるので、これ以上無理だと判断した時にはまた考えようかと思います。 BOTサーバーはGo言語で書いていて、LINE BOT API Trialの時から自前で作ったGo言語用SDKを使ってます。 line-bot-sdk-go 。 Landing PageはF7さんのLp使いました。 https://github.com/F7/Lp
-LINE BOT AWARDS https://botawards.line.me これなんですが、この翻訳BOTはある意味今のLINE公式通訳BOTと競合？してるので、どうかなと思いますｗ。 それと元中の人だったので応募するとなんか気まずいところもあって、悩んてるところですｗ。</description>
+      <description>LINE BOTがMessaging apiを正式にリリースしたので翻訳BOTを作りました。&#xA;https://wise.nilth.com (shutdown)&#xA;公式の通訳BOTも何個かあるのに何で今更翻訳BOT? と思う人もいるかも知らないですが、理由は2つあります。&#xA;1. 汎用性の問題 LINE公式通訳BOTをディスってるわけではないが、正直言って不便でした。日英、日中、日韓と一つ一つが単体のBOTになっていて、一つのグループに複数BOTを招待できないのと、あくまで日本語をベースにしてるので、例えば韓国語を英語に翻訳することはできません。&#xA;2. 進化した翻訳技術 ちょっと前に話題になっていた翻訳技術の進化です。ニューラルネットワーク機械学習の応用により翻訳の精度が今までと比較できないレベルまで進化してきました。&#xA;上の理由から今更なんですが翻訳BOTを作りました。英語がダメな私はまず普段辞書の代わりによく使うと思います。&#xA;エンジニア的な話をちょっと 今はdocker container一つで動かしていて正直言ってどれくらいのリクエストで死ぬかわからないです。 このBOTの利用者が増えてリクエストをさばけない時にはサーバー増やしたりスペック上げたりなど考えることにしました。 エンジニア達はすぐ分かったと思いますが、この俺が翻訳エンジンなんか作れるわけではないので、Google Translate APIを使ってます。 こいつにも金取られるので、これ以上無理だと判断した時にはまた考えようかと思います。 BOTサーバーはGo言語で書いていて、LINE BOT API Trialの時から自前で作ったGo言語用SDKを使ってます。 line-bot-sdk-go 。 Landing PageはF7さんのLp使いました。 https://github.com/F7/Lp&#xA;LINE BOT AWARDS https://botawards.line.me これなんですが、この翻訳BOTはある意味今のLINE公式通訳BOTと競合？してるので、どうかなと思いますｗ。 それと元中の人だったので応募するとなんか気まずいところもあって、悩んてるところですｗ。</description>
     </item>
-    
     <item>
       <title>Code review</title>
       <link>https://dongri.github.io/2016/10/code-review/</link>
       <pubDate>Thu, 13 Oct 2016 21:08:26 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2016/10/code-review/</guid>
-      <description>こういうコードレビュー系の記事はたくさんありますが、今まで悩んてたところと気を付けてたところをリストしてみようと思います。
-レビューが終わってるかどうかわからない問題 PR出して半日経ったけど、コメントがない。やっとコメントが入り半日経過。よっし、レビューの修正とコメントに返信しようと思い修正なり、コメントに返事する。しかし、レビュー終わってなかった。また残りのレビューでコメントが入る。この繰り返しが数日続く時もある。こういうレビューの反映はほかのタスクやってうちに割り込みで対応するのでおそらくコードのクオリティよくないでしょう。割り込みで本来のタスクにも影響がでますよね。なのでレビュアーは時間をかけてもいいから一気にレビューして最後にレビュー終わりましたの合図を出すべきです。
-言葉使いの問題 「こうしてください。」「こうしたほうがいい。」「これ意味分からないｗｗｗ」などなど、理由もなしにこういう言い方されるとイラッとしますよね？こうしてくださいの代わりにこういう理由があってこうした方がいいと思います。この部分の意図が理解できないので説明してくれると助かります。などなど、代わりの言葉はいくらでもあると思います。敬語はもちろんで、です、ますだけではなく言い方にも気を付けましょう。
-アサインされても気付かない問題 PR出したけど、なかなか見てくれない。しょうがなくダイレクトメールかチャットでURL送ってお願いする場合もありますね。この問題はツールで解決できる問題だと思います。一日2,3回自分にアサインされて見てないPRをメールか、チャットで催促など、方法はいくらでもあるので、問題ないはずです。しかし、気付いたけどわざと見ないのはその人達間の人間関係の問題で解決方法は別途探しましょう。
-対象ではないことろに触れる問題 プロジェクト全体のコードが理想の形になってない状態で1つの小さなPRでプロジェクト全体に対してのツッコミが入る時があります。それは今回のPRと関係ないです！と返す人もプロジェクト全体のコードを綺麗にしたいレビュアーもどっちも悪くはない思います。やる気あって且つデキる人はわかった全部直してやる！黙々と今回のPRと関係ないところも修正してPRを出し直す人もいれば、この機能のリリースが先だ、そんなの知らないよ！と返す人もいると思います。この辺は優先順位を決めれる人を捕まえて話し合いが必要ですね。
-土日レビューしてくれる人がいない問題 若者が（若者に限らないが）土日やる気出して1つの機能追加してリリースしたいのにレビュー出してもレビューしてくれそうな人がいない時があると思います。月曜日まで待ちたくない、今すぐリリースしたい、こういう時どうすればいいのか？自分でPR作って自分でマージする。コードレビューの意味がなくなってる。そもそもそういう若者をフォロー出来ないのは組織の問題なので、ここではその辺の話には触れたくないです。</description>
+      <description>こういうコードレビュー系の記事はたくさんありますが、今まで悩んてたところと気を付けてたところをリストしてみようと思います。&#xA;レビューが終わってるかどうかわからない問題 PR出して半日経ったけど、コメントがない。やっとコメントが入り半日経過。よっし、レビューの修正とコメントに返信しようと思い修正なり、コメントに返事する。しかし、レビュー終わってなかった。また残りのレビューでコメントが入る。この繰り返しが数日続く時もある。こういうレビューの反映はほかのタスクやってうちに割り込みで対応するのでおそらくコードのクオリティよくないでしょう。割り込みで本来のタスクにも影響がでますよね。なのでレビュアーは時間をかけてもいいから一気にレビューして最後にレビュー終わりましたの合図を出すべきです。&#xA;言葉使いの問題 「こうしてください。」「こうしたほうがいい。」「これ意味分からないｗｗｗ」などなど、理由もなしにこういう言い方されるとイラッとしますよね？こうしてくださいの代わりにこういう理由があってこうした方がいいと思います。この部分の意図が理解できないので説明してくれると助かります。などなど、代わりの言葉はいくらでもあると思います。敬語はもちろんで、です、ますだけではなく言い方にも気を付けましょう。&#xA;アサインされても気付かない問題 PR出したけど、なかなか見てくれない。しょうがなくダイレクトメールかチャットでURL送ってお願いする場合もありますね。この問題はツールで解決できる問題だと思います。一日2,3回自分にアサインされて見てないPRをメールか、チャットで催促など、方法はいくらでもあるので、問題ないはずです。しかし、気付いたけどわざと見ないのはその人達間の人間関係の問題で解決方法は別途探しましょう。&#xA;対象ではないことろに触れる問題 プロジェクト全体のコードが理想の形になってない状態で1つの小さなPRでプロジェクト全体に対してのツッコミが入る時があります。それは今回のPRと関係ないです！と返す人もプロジェクト全体のコードを綺麗にしたいレビュアーもどっちも悪くはない思います。やる気あって且つデキる人はわかった全部直してやる！黙々と今回のPRと関係ないところも修正してPRを出し直す人もいれば、この機能のリリースが先だ、そんなの知らないよ！と返す人もいると思います。この辺は優先順位を決めれる人を捕まえて話し合いが必要ですね。&#xA;土日レビューしてくれる人がいない問題 若者が（若者に限らないが）土日やる気出して1つの機能追加してリリースしたいのにレビュー出してもレビューしてくれそうな人がいない時があると思います。月曜日まで待ちたくない、今すぐリリースしたい、こういう時どうすればいいのか？自分でPR作って自分でマージする。コードレビューの意味がなくなってる。そもそもそういう若者をフォロー出来ないのは組織の問題なので、ここではその辺の話には触れたくないです。</description>
     </item>
-    
     <item>
       <title>Goodbye Instagram</title>
       <link>https://dongri.github.io/2016/08/goodbye-instagram/</link>
       <pubDate>Mon, 15 Aug 2016 00:32:35 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2016/08/goodbye-instagram/</guid>
-      <description>ついにInstagramの写真まで全部消した。API仕様が変わってからずっと投稿してなくて、写真残しても意味ないと思って全部消してしまった。
-Instagramは他のSNSと違って見てると気分がよくなる。 Twitterみたいに他人の悪口も無ければ毒もない。 あるのは綺麗な景色と美味しそうな食べ物と可愛いペット、見ててこの世の中は幸せだなと思うぐらいだ。
-しかし、それがFacebookに買われた後からかどうかは分からないが、タイムラインがFacebookのように 時系列ではなく勝手にユーザーの好みに合わせて表示されるようになったみたい。 猫にいいねたくさんすると猫の写真が優先されたり、美人の写真によくいいねをすると美人の写真が上に表示されたり、とにかく「おまら勝手に！」。
-実はInstagramがWeb版がない時代からAPIを使って「Stagram」という名前でブラウザでInstagramの写真見れるサービス？作って、 趣味でInstagramのiOS、Androidアプリまで作るぐらいInstagramが好きだった。
-https://flic.kr/s/aHskEFaE1Y
-タイムラインが気持ち悪くパソナライズされたのと別に私がやめた理由はAPI制限だった。 前までは楽しいAPIで自分の写真はもちろん、他人の写真まで自分が好きなようにいじれた。 しかしそのAPIが6月1日から変わった、ずっとまえから変わるとブログには書いてあったがついに変わって、 ちゃんとした理由でAPIクライアントを申請して審査通らないとほとんどのAPIが使えない。 APIの制限にはそれなりの理由があると思うが、これ以上付き合いたくなくなった。
-有用性、透明性、正当性、、、俺みたいなやつがプライベートでそんな意識高いのサービス、アプリを作れるのか？！バカヤロー w</description>
+      <description>ついにInstagramの写真まで全部消した。API仕様が変わってからずっと投稿してなくて、写真残しても意味ないと思って全部消してしまった。&#xA;Instagramは他のSNSと違って見てると気分がよくなる。 Twitterみたいに他人の悪口も無ければ毒もない。 あるのは綺麗な景色と美味しそうな食べ物と可愛いペット、見ててこの世の中は幸せだなと思うぐらいだ。&#xA;しかし、それがFacebookに買われた後からかどうかは分からないが、タイムラインがFacebookのように 時系列ではなく勝手にユーザーの好みに合わせて表示されるようになったみたい。 猫にいいねたくさんすると猫の写真が優先されたり、美人の写真によくいいねをすると美人の写真が上に表示されたり、とにかく「おまら勝手に！」。&#xA;実はInstagramがWeb版がない時代からAPIを使って「Stagram」という名前でブラウザでInstagramの写真見れるサービス？作って、 趣味でInstagramのiOS、Androidアプリまで作るぐらいInstagramが好きだった。&#xA;https://flic.kr/s/aHskEFaE1Y&#xA;タイムラインが気持ち悪くパソナライズされたのと別に私がやめた理由はAPI制限だった。 前までは楽しいAPIで自分の写真はもちろん、他人の写真まで自分が好きなようにいじれた。 しかしそのAPIが6月1日から変わった、ずっとまえから変わるとブログには書いてあったがついに変わって、 ちゃんとした理由でAPIクライアントを申請して審査通らないとほとんどのAPIが使えない。 APIの制限にはそれなりの理由があると思うが、これ以上付き合いたくなくなった。&#xA;有用性、透明性、正当性、、、俺みたいなやつがプライベートでそんな意識高いのサービス、アプリを作れるのか？！バカヤロー w</description>
     </item>
-    
     <item>
       <title>認めるエンジニア</title>
       <link>https://dongri.github.io/2016/08/%E8%AA%8D%E3%82%81%E3%82%8B%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2/</link>
       <pubDate>Sat, 13 Aug 2016 20:11:11 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2016/08/%E8%AA%8D%E3%82%81%E3%82%8B%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2/</guid>
-      <description>自分の弱点から言うと人を簡単に認めないこと。例えその人があることですごい成功したとしても気軽く認めないこと。
-でも、今まで認めたエンジニアは二人いる。一人は元L社のチームマネージャー、もう一人のはやめたAndroidエンジニア。
-一人目の元L社のチームマネージャーは検索エンジンや、ゲームプログラミングの出身でiOSの開発には知識はゼロと言っても過言ではない。 しかし途中で自分のコードにメモリリークじゃないの？こうやったほうがいいじゃないの？のアドバイスをしてくれた。 自分も確かにと思いながらやって、プロジェクトの終わりの飲み会でその真実を知った。 &amp;ldquo;大変だったよ、俺はiOSの知識が全く無くてお前らが書いたObjcコードを深夜3,4時まで本読みながら解読して勉強した。まあ過去の話だし、今日は飲もう！&amp;rdquo;
-もう一人はやめたやつだけど、厳しいやつだった。自分が作ったAPIのバグを探すのが趣味みたい。いろんな例外ケースを試してここがだめだ、そこがダメだ、と言ってくる。 言ってることが正しいので、反論することなく修正してあげる。というかあいつはなんでそんな例外ケースを思い出すんだろうと思うぐらいだ。 普段は無口で余計なことはしゃべらず、ただただ論理的にシステムを正しく設計しようとしてた。
-よく考えてみると二人は共通点がある。なにことも終わってから話すことだ。 先にここがもしかしてダメじゃない？とかなくて、自分まず試してから話す、要は手を動かす人達だった。 それにわざわざ仕事のアピールする人ではなかった。どっちも普段無口でコレをやるの宣言してからやるのではなく、コレをやった派だった。</description>
+      <description>自分の弱点から言うと人を簡単に認めないこと。例えその人があることですごい成功したとしても気軽く認めないこと。&#xA;でも、今まで認めたエンジニアは二人いる。一人は元L社のチームマネージャー、もう一人のはやめたAndroidエンジニア。&#xA;一人目の元L社のチームマネージャーは検索エンジンや、ゲームプログラミングの出身でiOSの開発には知識はゼロと言っても過言ではない。 しかし途中で自分のコードにメモリリークじゃないの？こうやったほうがいいじゃないの？のアドバイスをしてくれた。 自分も確かにと思いながらやって、プロジェクトの終わりの飲み会でその真実を知った。 &amp;ldquo;大変だったよ、俺はiOSの知識が全く無くてお前らが書いたObjcコードを深夜3,4時まで本読みながら解読して勉強した。まあ過去の話だし、今日は飲もう！&amp;rdquo;&#xA;もう一人はやめたやつだけど、厳しいやつだった。自分が作ったAPIのバグを探すのが趣味みたい。いろんな例外ケースを試してここがだめだ、そこがダメだ、と言ってくる。 言ってることが正しいので、反論することなく修正してあげる。というかあいつはなんでそんな例外ケースを思い出すんだろうと思うぐらいだ。 普段は無口で余計なことはしゃべらず、ただただ論理的にシステムを正しく設計しようとしてた。&#xA;よく考えてみると二人は共通点がある。なにことも終わってから話すことだ。 先にここがもしかしてダメじゃない？とかなくて、自分まず試してから話す、要は手を動かす人達だった。 それにわざわざ仕事のアピールする人ではなかった。どっちも普段無口でコレをやるの宣言してからやるのではなく、コレをやった派だった。</description>
     </item>
-    
     <item>
       <title>新卒SI</title>
       <link>https://dongri.github.io/2016/07/%E6%96%B0%E5%8D%92si/</link>
       <pubDate>Fri, 22 Jul 2016 02:10:36 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2016/07/%E6%96%B0%E5%8D%92si/</guid>
-      <description>新卒でSIの会社に入った。小さい会社で社員研修もくそもない。
-初日から社長に取引先(現場)に連れて行って面接。面接で初めて気付いた、履歴書に俺の年が2つ上がってる！しかも入社三年目。いろんなシステム開発経験あり、いろんな言語でコード書ける、いろんなデータベース触ったことあることになってる。まあ、しょうがない、知ってるふりして質問に答えた。幸いに面接パスして現場で働けるようになった。
-面接がそんなもんだから、同然現場では新卒扱いされない、いきなりJavaでフレームワーク作りに入る。業務関連の質問はできるけど、技術的な質問はできない雰囲気になってる。Javaもデータベースも知ってるふりしながら家に帰って必死にググる。それが数ヶ月続いたら本当にJavaもデータベースも知るようになった。
-今も偶にその時の社長と飲みに行くんだけど、その時の履歴書改竄の話出ると笑いながら「しょうがないじゃ、現場のマネージャーは新卒はいらないと言ってるから、、、」
-多分その時のよくない経験が影響してるか、その後現場が変わっても転職して別の会社に行っても業務関連の質問はよくするけど、技術的な質問はあんまりしないでググるか、本を買うことになってる。
-幸いに途中で師匠に出会えていろいろ勉強ができた。技術だけではなく、社会人としての常識的なものも勉強できた。
-偶に思うのは、もしちゃんとした社員研修もあって、何でも聞ける先輩がいる会社に新卒で入ったら俺はどれだけできる人間になったかなとwww。その逆もありうるけどね。
-(今日ツイッターで「新卒SI」についてブログ書くと宣言したので、ここまで書くか)</description>
+      <description>新卒でSIの会社に入った。小さい会社で社員研修もくそもない。&#xA;初日から社長に取引先(現場)に連れて行って面接。面接で初めて気付いた、履歴書に俺の年が2つ上がってる！しかも入社三年目。いろんなシステム開発経験あり、いろんな言語でコード書ける、いろんなデータベース触ったことあることになってる。まあ、しょうがない、知ってるふりして質問に答えた。幸いに面接パスして現場で働けるようになった。&#xA;面接がそんなもんだから、同然現場では新卒扱いされない、いきなりJavaでフレームワーク作りに入る。業務関連の質問はできるけど、技術的な質問はできない雰囲気になってる。Javaもデータベースも知ってるふりしながら家に帰って必死にググる。それが数ヶ月続いたら本当にJavaもデータベースも知るようになった。&#xA;今も偶にその時の社長と飲みに行くんだけど、その時の履歴書改竄の話出ると笑いながら「しょうがないじゃ、現場のマネージャーは新卒はいらないと言ってるから、、、」&#xA;多分その時のよくない経験が影響してるか、その後現場が変わっても転職して別の会社に行っても業務関連の質問はよくするけど、技術的な質問はあんまりしないでググるか、本を買うことになってる。&#xA;幸いに途中で師匠に出会えていろいろ勉強ができた。技術だけではなく、社会人としての常識的なものも勉強できた。&#xA;偶に思うのは、もしちゃんとした社員研修もあって、何でも聞ける先輩がいる会社に新卒で入ったら俺はどれだけできる人間になったかなとwww。その逆もありうるけどね。&#xA;(今日ツイッターで「新卒SI」についてブログ書くと宣言したので、ここまで書くか)</description>
     </item>
-    
     <item>
       <title>エンジニア軽蔑チェーン</title>
       <link>https://dongri.github.io/2016/02/%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E8%BB%BD%E8%94%91%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3/</link>
       <pubDate>Tue, 23 Feb 2016 00:05:42 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2016/02/%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E8%BB%BD%E8%94%91%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3/</guid>
-      <description>言語編 Functional Programmingをわかるエンジニアはよくデザインパターンを口にするエンジニアを軽蔑する。 よくデザインパターンを口にするエンジニアは「そのように書くとオブジェクト指向ではない」と言うエンジニアを軽蔑する。 「そのように書くとオブジェクト指向ではない」と言うエンジニアは「重複するコードをfunctionにまとめばいいじゃ」と言ってるエンジニアを軽蔑する。 コードをコピしてあっちこっちに貼り付けるエンジニアはPMを軽蔑する。
-アセンブラ書くエンジニアはC言語書くエンジニアを軽蔑する。 C言語書くエンジニアはC++書くを軽蔑する。 C++書くエンジニアはC#書くエンジニアを軽蔑する。 C#書くエンジニアはHTMLを一種のプログラミング言語と思ってるデザイナーを軽蔑する。
-Python3エンジニアはPython2エンジニアを軽蔑する。
-iOSエンジニアはAndroidエンジニアを軽蔑する。 AndroidエンジニアはWindows Phoneエンジニアを軽蔑する。
-一年のSwift経験あるエンジニアは5年のObjective-C経験持つエンジニアを軽蔑する。 Objective-C書くエンジニアはPhoneGap書くエンジニアを軽蔑する。
-React.js書くエンジニアはAngularJS書くエンジニアを軽蔑する。 AngularJS書くエンジニアはjQuery書くエンジニアを軽蔑する。 jQuery書くエンジニアはVanilla JSを書くエンジニアを軽蔑する。 Vanilla JS書くエンジニアはIE使用者を軽蔑する。
-debuggerを使えるエンジニアはassertを使ってるエンジニアを軽蔑する。 assertを使えるエンジニアはprint()しか書けないエンジニアを軽蔑する。 console.logでdebugするエンジニアはalertでdebugするエンジニアを軽蔑する。
-Ruby on Railsエンジニアはその他すべての言語のエンジニアを軽蔑する。
-すべてのエンジニアはPHPエンジニアを軽蔑する。
-ツール編 text editorを使ってるエンジニアはIDEを使ってるエンジニアを軽蔑する。
-Vim使ってるエンジニアはEmacs使ってるエンジニアを軽蔑する、Emacs使ってるエンジニアはVimを使ってるエンジニアを軽蔑する。 VimとEmacs使ってるエンジニアはほかすべてのtext editorを使ってるエンジニアを軽蔑する。例えば：atom, sublime, windows editor
-Android Studioを使ってるか、IntelliJ IDEAを使ってるエンジニアはEclipse使ってるエンジニアを軽蔑する。 Eclipse使ってるエンジニアはNetBeans使ってるエンジニアを軽蔑する。
-GitかMercurialを使ってるエンジニアはSubversionを使ってるエンジニアを軽蔑する。 Subversionを使ってるエンジニアはDropboxでバージョン管理してるエンジニアを軽蔑する。 Dropboxでバージョン管理してるエンジニアはバージョン管理しないエンジニアを軽蔑する。
-Githubを知ってるエンジニアはGithubを知らないエンジニアを軽蔑する。 Githubでprivate repoを持ってるエンジニアは無料repoのためBitBucketに行っちゃうエンジニアを軽蔑する。
-Zsh使ってるエンジニアはBashを使ってるエンジニアを軽蔑する。 Bashを使ってるエンジニアはCygwinを使ってるエンジニアを軽蔑する。 Cygwinを使ってるエンジニアはGUIツール使ってるエンジニアを軽蔑する。
-IRCを使ってるエンジニアはHipChatを使ってるエンジニアを軽蔑する。 HipChatを使ってるエンジニアはSlackを使ってるデザイナーを軽蔑する。
-reStructuredTextで文章作成するエンジニアはMarkdownで文章作成するエンジニアを軽蔑する。 Markdownで文章作成するエンジニアはHTMLで文章作成するエンジニアを軽蔑する。 HTMLで文章作成するエンジニアは文章書かないエンジニアを軽蔑する。 LaTeX使って文章作成するエンジニアはすべてのエンジニアを軽蔑する
-Nginxを使ってるエンジニアはApacheを使ってるエンジニアを軽蔑する。 Apacheを使ってるエンジニアはIISを使ってるエンジニアを軽蔑する。
-Dockerでサーバー構築するエンジニアはAnsible、Puppetでサーバー構築するエンジニアを軽蔑する。 Ansible、Puppetでサーバー構築するエンジニアはFabricでサーバー構築するエンジニアを軽蔑する。 Fabricでサーバー構築するエンジニアは手動SSHするエンジニアを軽蔑する。
-OS編 Mac OS X使ってるエンジニアはLinux使ってるエンジニアを軽蔑する。 Linux使ってるエンジニアはWindows使ってるエンジニアを軽蔑する。
-Debian使ってるエンジニアはUbuntu使ってるエンジニアを軽蔑する。 Ubuntu使ってるエンジニアは非LTS版Ubuntuを使ってるエンジニアを軽蔑する。
-ハードウエア編 MacBook Pro Retina使ってるエンジニアはMacBook Air使ってるエンジニアを軽蔑する。 MacBook Air使ってるエンジニアはThinkPad使ってるエンジニアを軽蔑する。 そして、Raspberry Piを使ってるエンジニアはMacBook Pro Retinaを使ってるエンジニアを軽蔑する。</description>
+      <description>言語編 Functional Programmingをわかるエンジニアはよくデザインパターンを口にするエンジニアを軽蔑する。 よくデザインパターンを口にするエンジニアは「そのように書くとオブジェクト指向ではない」と言うエンジニアを軽蔑する。 「そのように書くとオブジェクト指向ではない」と言うエンジニアは「重複するコードをfunctionにまとめばいいじゃ」と言ってるエンジニアを軽蔑する。 コードをコピしてあっちこっちに貼り付けるエンジニアはPMを軽蔑する。&#xA;アセンブラ書くエンジニアはC言語書くエンジニアを軽蔑する。 C言語書くエンジニアはC++書くを軽蔑する。 C++書くエンジニアはC#書くエンジニアを軽蔑する。 C#書くエンジニアはHTMLを一種のプログラミング言語と思ってるデザイナーを軽蔑する。&#xA;Python3エンジニアはPython2エンジニアを軽蔑する。&#xA;iOSエンジニアはAndroidエンジニアを軽蔑する。 AndroidエンジニアはWindows Phoneエンジニアを軽蔑する。&#xA;一年のSwift経験あるエンジニアは5年のObjective-C経験持つエンジニアを軽蔑する。 Objective-C書くエンジニアはPhoneGap書くエンジニアを軽蔑する。&#xA;React.js書くエンジニアはAngularJS書くエンジニアを軽蔑する。 AngularJS書くエンジニアはjQuery書くエンジニアを軽蔑する。 jQuery書くエンジニアはVanilla JSを書くエンジニアを軽蔑する。 Vanilla JS書くエンジニアはIE使用者を軽蔑する。&#xA;debuggerを使えるエンジニアはassertを使ってるエンジニアを軽蔑する。 assertを使えるエンジニアはprint()しか書けないエンジニアを軽蔑する。 console.logでdebugするエンジニアはalertでdebugするエンジニアを軽蔑する。&#xA;Ruby on Railsエンジニアはその他すべての言語のエンジニアを軽蔑する。&#xA;すべてのエンジニアはPHPエンジニアを軽蔑する。&#xA;ツール編 text editorを使ってるエンジニアはIDEを使ってるエンジニアを軽蔑する。&#xA;Vim使ってるエンジニアはEmacs使ってるエンジニアを軽蔑する、Emacs使ってるエンジニアはVimを使ってるエンジニアを軽蔑する。 VimとEmacs使ってるエンジニアはほかすべてのtext editorを使ってるエンジニアを軽蔑する。例えば：atom, sublime, windows editor&#xA;Android Studioを使ってるか、IntelliJ IDEAを使ってるエンジニアはEclipse使ってるエンジニアを軽蔑する。 Eclipse使ってるエンジニアはNetBeans使ってるエンジニアを軽蔑する。&#xA;GitかMercurialを使ってるエンジニアはSubversionを使ってるエンジニアを軽蔑する。 Subversionを使ってるエンジニアはDropboxでバージョン管理してるエンジニアを軽蔑する。 Dropboxでバージョン管理してるエンジニアはバージョン管理しないエンジニアを軽蔑する。&#xA;Githubを知ってるエンジニアはGithubを知らないエンジニアを軽蔑する。 Githubでprivate repoを持ってるエンジニアは無料repoのためBitBucketに行っちゃうエンジニアを軽蔑する。&#xA;Zsh使ってるエンジニアはBashを使ってるエンジニアを軽蔑する。 Bashを使ってるエンジニアはCygwinを使ってるエンジニアを軽蔑する。 Cygwinを使ってるエンジニアはGUIツール使ってるエンジニアを軽蔑する。&#xA;IRCを使ってるエンジニアはHipChatを使ってるエンジニアを軽蔑する。 HipChatを使ってるエンジニアはSlackを使ってるデザイナーを軽蔑する。&#xA;reStructuredTextで文章作成するエンジニアはMarkdownで文章作成するエンジニアを軽蔑する。 Markdownで文章作成するエンジニアはHTMLで文章作成するエンジニアを軽蔑する。 HTMLで文章作成するエンジニアは文章書かないエンジニアを軽蔑する。 LaTeX使って文章作成するエンジニアはすべてのエンジニアを軽蔑する&#xA;Nginxを使ってるエンジニアはApacheを使ってるエンジニアを軽蔑する。 Apacheを使ってるエンジニアはIISを使ってるエンジニアを軽蔑する。&#xA;Dockerでサーバー構築するエンジニアはAnsible、Puppetでサーバー構築するエンジニアを軽蔑する。 Ansible、Puppetでサーバー構築するエンジニアはFabricでサーバー構築するエンジニアを軽蔑する。 Fabricでサーバー構築するエンジニアは手動SSHするエンジニアを軽蔑する。&#xA;OS編 Mac OS X使ってるエンジニアはLinux使ってるエンジニアを軽蔑する。 Linux使ってるエンジニアはWindows使ってるエンジニアを軽蔑する。&#xA;Debian使ってるエンジニアはUbuntu使ってるエンジニアを軽蔑する。 Ubuntu使ってるエンジニアは非LTS版Ubuntuを使ってるエンジニアを軽蔑する。&#xA;ハードウエア編 MacBook Pro Retina使ってるエンジニアはMacBook Air使ってるエンジニアを軽蔑する。 MacBook Air使ってるエンジニアはThinkPad使ってるエンジニアを軽蔑する。 そして、Raspberry Piを使ってるエンジニアはMacBook Pro Retinaを使ってるエンジニアを軽蔑する。</description>
     </item>
-    
     <item>
       <title>Hugo</title>
       <link>https://dongri.github.io/2016/01/hugo/</link>
       <pubDate>Sun, 17 Jan 2016 15:20:15 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2016/01/hugo/</guid>
-      <description>macクリーンインストールした後、middlemanのインストールでgemにバージョンとかでいろいろ引っかかったので、hugoに引っ越しするようにした。 もともとビルドが遅いmiddlemanそんなに好きではなかったし、いいきっかけたと思って引越しした。いい感じ。
-hgが必要なのでhgをインストールする $ brew install hg hugoインストール $ go get -v github.com/spf13/hugo site作成 $ hugo new site dongri.github.io テーマを取得 $ cd dongri.github.io $ git clone --recursive https://github.com/spf13/hugoThemes themes テーマ設定 $ vim config.toml ... theme = &amp;#34;boro&amp;#34; ... post作成 $ hugo new post/2016-01-17-hugo.md $ vim post/2016-01-17-hugo.md +++ date = &amp;#34;2016-01-17T15:20:15+09:00&amp;#34; title = &amp;#34;Hugo&amp;#34; tags = [&amp;#34;blog&amp;#34;] +++ hogehoge サーバー起動して確認 $ hugo server -w github pagesにデプロイ hugo siteをrepoAにして、publicをsubtreeで username.github.io にして毎回pushする。
-deploy.sh を作成</description>
+      <description>macクリーンインストールした後、middlemanのインストールでgemにバージョンとかでいろいろ引っかかったので、hugoに引っ越しするようにした。 もともとビルドが遅いmiddlemanそんなに好きではなかったし、いいきっかけたと思って引越しした。いい感じ。&#xA;hgが必要なのでhgをインストールする $ brew install hg hugoインストール $ go get -v github.com/spf13/hugo site作成 $ hugo new site dongri.github.io テーマを取得 $ cd dongri.github.io $ git clone --recursive https://github.com/spf13/hugoThemes themes テーマ設定 $ vim config.toml ... theme = &amp;#34;boro&amp;#34; ... post作成 $ hugo new post/2016-01-17-hugo.md $ vim post/2016-01-17-hugo.md +++ date = &amp;#34;2016-01-17T15:20:15+09:00&amp;#34; title = &amp;#34;Hugo&amp;#34; tags = [&amp;#34;blog&amp;#34;] +++ hogehoge サーバー起動して確認 $ hugo server -w github pagesにデプロイ hugo siteをrepoAにして、publicをsubtreeで username.github.io にして毎回pushする。&#xA;deploy.sh を作成</description>
     </item>
-    
     <item>
       <title>Birthday</title>
       <link>https://dongri.github.io/2015/02/birthday/</link>
       <pubDate>Tue, 03 Feb 2015 11:28:57 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2015/02/birthday/</guid>
-      <description>先月にFacebookの誕生日をOnly Meに設定して、誰も知らないように設定したのが始まり。
-今までは誕生日になると一日中、Facebookの友達から「誕生日おめでとう！」「Happy Birthday!」「생일축하해요」などのメッセージでnotificationが止まらない。 そして、キリの良い時に、全てのメッセージにLikeと「ありがとうございます！」とコメントを残す。で終わり。なんの感情も入ってない。。。
-今年はあえて見えないようにしてみた結果どうなったか？
-朝からWechatで祝いメッセージが来たり、 mixi経由でスタバックスのギフトカード送ってもらって一緒にスタバに行ったり、 Twitterで「今日誕生日って本当？Google Nowがそう言ってるけど」、 Facebookメッセンジャーで「誕生日おめでとうございます！」「どうやって知った？」「Skypeからreminderが来てね w」、 Google+から「생일이에요? 축하해요」だったり、とにかく意外なところから。
-一つ一つのメッセージが嬉しかった。一人一人が親しい友人だから！
-Facebookは隠せたけど、社内カレンダーの誕生日は消せなかったので、会社から素敵な誕生日ケーキで祝ってもらった。 同僚のみなさん、ありがとうございました！</description>
+      <description>先月にFacebookの誕生日をOnly Meに設定して、誰も知らないように設定したのが始まり。&#xA;今までは誕生日になると一日中、Facebookの友達から「誕生日おめでとう！」「Happy Birthday!」「생일축하해요」などのメッセージでnotificationが止まらない。 そして、キリの良い時に、全てのメッセージにLikeと「ありがとうございます！」とコメントを残す。で終わり。なんの感情も入ってない。。。&#xA;今年はあえて見えないようにしてみた結果どうなったか？&#xA;朝からWechatで祝いメッセージが来たり、 mixi経由でスタバックスのギフトカード送ってもらって一緒にスタバに行ったり、 Twitterで「今日誕生日って本当？Google Nowがそう言ってるけど」、 Facebookメッセンジャーで「誕生日おめでとうございます！」「どうやって知った？」「Skypeからreminderが来てね w」、 Google+から「생일이에요? 축하해요」だったり、とにかく意外なところから。&#xA;一つ一つのメッセージが嬉しかった。一人一人が親しい友人だから！&#xA;Facebookは隠せたけど、社内カレンダーの誕生日は消せなかったので、会社から素敵な誕生日ケーキで祝ってもらった。 同僚のみなさん、ありがとうございました！</description>
     </item>
-    
     <item>
       <title>middleman blog</title>
       <link>https://dongri.github.io/2014/04/middleman-blog/</link>
       <pubDate>Mon, 21 Apr 2014 11:28:57 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2014/04/middleman-blog/</guid>
-      <description>Octopress, Jekyll, Cabin いろいろあるみたいけど、Middlemanを使ってみようかと思って設置してみた。
-middleman, middleman-blogインストール $ gem install middleman $ gem install middleman-blog middleman プロジェクト作成 $ middleman init dongri.github.io --template=blog レポジトリ設定 $ cd dongri.github.io $ git init $ git remote add origin git@github.com:dongri/dongri.github.io.git Gemfile を修正 gem &amp;#34;middleman-deploy&amp;#34; gem &amp;#34;middleman-livereload&amp;#34; gem &amp;#34;middleman-syntax&amp;#34; gem &amp;#34;redcarpet&amp;#34; gem &amp;#34;nokogiri&amp;#34; bundle install する。
-config.rb を設定 Time.zone = &amp;#34;Tokyo&amp;#34; page &amp;#34;archives/*&amp;#34;, layout: :post page &amp;#34;archives/index.html&amp;#34;, layout: :layout configure :build do activate :minify_css activate :minify_javascript activate :asset_hash end set :markdown_engine, :redcarpet set :markdown, :fenced_code_blocks =&amp;gt; true, :smartypants =&amp;gt; true activate :livereload activate :directory_indexes activate :syntax, line_numbers: true # デプロイの設定 activate :deploy do |deploy| deploy.</description>
+      <description>Octopress, Jekyll, Cabin いろいろあるみたいけど、Middlemanを使ってみようかと思って設置してみた。&#xA;middleman, middleman-blogインストール $ gem install middleman $ gem install middleman-blog middleman プロジェクト作成 $ middleman init dongri.github.io --template=blog レポジトリ設定 $ cd dongri.github.io $ git init $ git remote add origin git@github.com:dongri/dongri.github.io.git Gemfile を修正 gem &amp;#34;middleman-deploy&amp;#34; gem &amp;#34;middleman-livereload&amp;#34; gem &amp;#34;middleman-syntax&amp;#34; gem &amp;#34;redcarpet&amp;#34; gem &amp;#34;nokogiri&amp;#34; bundle install する。&#xA;config.rb を設定 Time.zone = &amp;#34;Tokyo&amp;#34; page &amp;#34;archives/*&amp;#34;, layout: :post page &amp;#34;archives/index.html&amp;#34;, layout: :layout configure :build do activate :minify_css activate :minify_javascript activate :asset_hash end set :markdown_engine, :redcarpet set :markdown, :fenced_code_blocks =&amp;gt; true, :smartypants =&amp;gt; true activate :livereload activate :directory_indexes activate :syntax, line_numbers: true # デプロイの設定 activate :deploy do |deploy| deploy.</description>
     </item>
-    
     <item>
       <title>Example Article</title>
       <link>https://dongri.github.io/2012/01/example-article/</link>
       <pubDate>Sun, 01 Jan 2012 11:28:57 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2012/01/example-article/</guid>
       <description>This is an example article. You probably want to delete it and write your own articles!</description>
     </item>
-    
   </channel>
 </rss>

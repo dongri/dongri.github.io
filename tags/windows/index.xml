@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>windows on dongri</title>
+    <title>Windows on dongri</title>
     <link>https://dongri.github.io/tags/windows/</link>
-    <description>Recent content in windows on dongri</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Windows on dongri</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Oct 2018 23:55:10 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 14 Oct 2018 23:55:10 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Chromeアドレスバー非表示</title>
       <link>https://dongri.github.io/2018/10/chrome%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%83%90%E3%83%BC%E9%9D%9E%E8%A1%A8%E7%A4%BA/</link>
       <pubDate>Sun, 14 Oct 2018 23:55:10 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2018/10/chrome%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%83%90%E3%83%BC%E9%9D%9E%E8%A1%A8%E7%A4%BA/</guid>
-      <description>ある案件でChromeのアドレスバーを隠す必要があって調べてみたが、以下どれも効かなかった。
-Javascriptでwindow.open時toolbar,locationなどをnoにする方法 Chromeのショートカットキー作成して、開く方法 フルスクリーンモード 2018年10月14日時点で、Windows, Macで確実に隠せる方法。
-Mac $ cd /Applications/Google\ Chrome.app/Contents/MacOS $ sudo ./Google\ Chrome --app=&amp;#34;https://google.com&amp;#34; --incognito Windows &amp;gt; cd &amp;#34;C:\Program Files (x86)\Google\Chrome\Application&amp;#34; &amp;gt; chrome.exe --app=&amp;#34;https://google.com&amp;#34; --incognito </description>
+      <description>ある案件でChromeのアドレスバーを隠す必要があって調べてみたが、以下どれも効かなかった。&#xA;Javascriptでwindow.open時toolbar,locationなどをnoにする方法 Chromeのショートカットキー作成して、開く方法 フルスクリーンモード 2018年10月14日時点で、Windows, Macで確実に隠せる方法。&#xA;Mac $ cd /Applications/Google\ Chrome.app/Contents/MacOS $ sudo ./Google\ Chrome --app=&amp;#34;https://google.com&amp;#34; --incognito Windows &amp;gt; cd &amp;#34;C:\Program Files (x86)\Google\Chrome\Application&amp;#34; &amp;gt; chrome.exe --app=&amp;#34;https://google.com&amp;#34; --incognito </description>
     </item>
-    
   </channel>
 </rss>

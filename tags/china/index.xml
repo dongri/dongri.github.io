@@ -1,64 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>china on dongri</title>
+    <title>China on dongri</title>
     <link>https://dongri.github.io/tags/china/</link>
-    <description>Recent content in china on dongri</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in China on dongri</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 Mar 2019 14:40:34 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/china/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Mar 2019 14:40:34 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/china/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>996.ICUとは？</title>
       <link>https://dongri.github.io/2019/03/996.icu%E3%81%A8%E3%81%AF/</link>
       <pubDate>Sun, 31 Mar 2019 14:40:34 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2019/03/996.icu%E3%81%A8%E3%81%AF/</guid>
-      <description>この数日GitHub上で一番人気の996.icuリポとはなんなのか？
-https://github.com/996icu/996.ICU
-ソースコードは全くなく、markdownのみなのに、一週間も経たないうちに12万Starであのtensorflowを抜いて5位まで登ってきてる。 このブログ書く時点で 125,347 Star
-https://github.com/search?q=stars%3A%3E1
-日本語: https://github.com/996icu/996.ICU/blob/master/i18n/ja_JP.md
-996とは9時出社、9時退社、週6勤務から来てる。
-中国国内ではどう見てるのか？
-良い活動だ。 一週間後は誰も覚えてなくて、今までと変わらないだろう 10年後見ると良い活動だったと思うはずだ 個人的には996ICU Licenseもよいと思う。
-996制度会社では使えない「996ICU License」。（あとで自分もRepoもこのライセンスにしようかな）
-GitHubでStarで一位になって国際で注目されて、中国のIT企業の勤務制度が改善されるといいですね。
-2019-04-01 12:19 更新 133,919 Starで２位 2019-04-14 更新 gen-license-rbでRubyバージョンのPR送ってみたが、理由なしにCloseされた。
-https://github.com/996icu/996.ICU/pull/25546
-有点丢人。。。</description>
+      <description>この数日GitHub上で一番人気の996.icuリポとはなんなのか？&#xA;https://github.com/996icu/996.ICU&#xA;ソースコードは全くなく、markdownのみなのに、一週間も経たないうちに12万Starであのtensorflowを抜いて5位まで登ってきてる。 このブログ書く時点で 125,347 Star&#xA;https://github.com/search?q=stars%3A%3E1&#xA;日本語: https://github.com/996icu/996.ICU/blob/master/i18n/ja_JP.md&#xA;996とは9時出社、9時退社、週6勤務から来てる。&#xA;中国国内ではどう見てるのか？&#xA;良い活動だ。 一週間後は誰も覚えてなくて、今までと変わらないだろう 10年後見ると良い活動だったと思うはずだ 個人的には996ICU Licenseもよいと思う。&#xA;996制度会社では使えない「996ICU License」。（あとで自分もRepoもこのライセンスにしようかな）&#xA;GitHubでStarで一位になって国際で注目されて、中国のIT企業の勤務制度が改善されるといいですね。&#xA;2019-04-01 12:19 更新 133,919 Starで２位 2019-04-14 更新 gen-license-rbでRubyバージョンのPR送ってみたが、理由なしにCloseされた。&#xA;https://github.com/996icu/996.ICU/pull/25546&#xA;有点丢人。。。</description>
     </item>
-    
     <item>
       <title>中国旅行おすすめアプリ</title>
       <link>https://dongri.github.io/2018/11/%E4%B8%AD%E5%9B%BD%E6%97%85%E8%A1%8C%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%82%A2%E3%83%97%E3%83%AA/</link>
       <pubDate>Tue, 13 Nov 2018 17:50:13 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2018/11/%E4%B8%AD%E5%9B%BD%E6%97%85%E8%A1%8C%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%82%A2%E3%83%97%E3%83%AA/</guid>
-      <description>中国旅行時あると便利なアプリをちょっとまとめてみました。
-高德地图 - Gaode App Store / Play Store
-https://www.autonavi.com
-Google Mapが使えないので、これを使います。Baidu Mapもありますが、個人的にこっちのほうが好きです。
-日本語非対応 ユーザー登録必要なし 微信 - WeChat App Store / Play Store
-https://www.wechat.com
-よく中国版LINEと言われてますが、チャットだけではなく飲食店やタクシーでの支払いもできます。仕組みは個人間送金。
-日本語対応 チャージは中国の銀行口座が必要 クレジットカード登録して他人から送金してもらえば決済も可能 支付宝 - Alipay App Store / Play Store
-https://www.alipay.com
-日本語非対応 英語対応 Zhīfùbǎoと発音 日本国内ではOrigami Payが使えるところで使用可能 滴滴出行 - DiDi App Store / Play Store
-https://www.didiglobal.com
-中国版Uber
-日本語対応 日本の電話番号で登録可能 支払いはAlipay, Wechat Payで可能 Visa, Master, Amex, JCBも可能 Google, Facebookでログイン可能 ofo App Store / Play Store
-https://www.ofo.com</description>
+      <description>中国旅行時あると便利なアプリをちょっとまとめてみました。&#xA;高德地图 - Gaode App Store / Play Store&#xA;https://www.autonavi.com&#xA;Google Mapが使えないので、これを使います。Baidu Mapもありますが、個人的にこっちのほうが好きです。&#xA;日本語非対応 ユーザー登録必要なし 微信 - WeChat App Store / Play Store&#xA;https://www.wechat.com&#xA;よく中国版LINEと言われてますが、チャットだけではなく飲食店やタクシーでの支払いもできます。仕組みは個人間送金。&#xA;日本語対応 チャージは中国の銀行口座が必要 クレジットカード登録して他人から送金してもらえば決済も可能 支付宝 - Alipay App Store / Play Store&#xA;https://www.alipay.com&#xA;日本語非対応 英語対応 Zhīfùbǎoと発音 日本国内ではOrigami Payが使えるところで使用可能 滴滴出行 - DiDi App Store / Play Store&#xA;https://www.didiglobal.com&#xA;中国版Uber&#xA;日本語対応 日本の電話番号で登録可能 支払いはAlipay, Wechat Payで可能 Visa, Master, Amex, JCBも可能 Google, Facebookでログイン可能 ofo App Store / Play Store&#xA;https://www.ofo.com</description>
     </item>
-    
     <item>
       <title>我想要(I Want Remix)</title>
       <link>https://dongri.github.io/2018/10/%E6%88%91%E6%83%B3%E8%A6%81i-want-remix/</link>
       <pubDate>Mon, 01 Oct 2018 12:39:07 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2018/10/%E6%88%91%E6%83%B3%E8%A6%81i-want-remix/</guid>
-      <description>Silicon Valley Season 5 Episode 4 Song
-我想要(I Want Remix) 艾福杰尼／BooM黄旭 歌词 </description>
+      <description>Silicon Valley Season 5 Episode 4 Song&#xA;我想要(I Want Remix) 艾福杰尼／BooM黄旭 歌词 </description>
     </item>
-    
   </channel>
 </rss>

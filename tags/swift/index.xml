@@ -1,58 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>swift on dongri</title>
+    <title>Swift on dongri</title>
     <link>https://dongri.github.io/tags/swift/</link>
-    <description>Recent content in swift on dongri</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Swift on dongri</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Dec 2017 23:36:27 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/swift/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Dec 2017 23:36:27 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/swift/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SwiftでgRPC対応する</title>
       <link>https://dongri.github.io/2017/12/swift%E3%81%A7grpc%E5%AF%BE%E5%BF%9C%E3%81%99%E3%82%8B/</link>
       <pubDate>Thu, 14 Dec 2017 23:36:27 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2017/12/swift%E3%81%A7grpc%E5%AF%BE%E5%BF%9C%E3%81%99%E3%82%8B/</guid>
-      <description>サーバー側gRPC対応終わったので、クライアントもgRPC対応してみました。
-サーバー側API https://lgtm.lol/api
-protoファイル準備 protosディレクトリを作成して、↑のドキュメントから api.proto を作成します。
-specファイル作成 api.podspec ファイルを作成
-Pod::Spec.new do |s| s.name = &amp;#34;api&amp;#34; s.version = &amp;#34;0.0.1&amp;#34; s.license = &amp;#34;MIT&amp;#34; s.authors = { &amp;#39;Dongri Jin&amp;#39; =&amp;gt; &amp;#39;dongrify@gmail.com&amp;#39; } s.homepage = &amp;#34;https://github.com/dongri&amp;#34; s.summary = &amp;#34;gRPC API&amp;#34; s.source = { :git =&amp;gt; &amp;#39;https://github.com/dongri/grpc.git&amp;#39; } s.ios.deployment_target = &amp;#34;10.1&amp;#34; src = &amp;#34;./protos&amp;#34; # gRPC Plugin s.dependency &amp;#34;!ProtoCompiler-gRPCPlugin&amp;#34;, &amp;#34;~&amp;gt; 1.0&amp;#34; pods_root = &amp;#39;Pods&amp;#39; protoc_dir = &amp;#34;#{pods_root}/!ProtoCompiler&amp;#34; protoc = &amp;#34;#{protoc_dir}/protoc&amp;#34; plugin = &amp;#34;#{pods_root}/!ProtoCompiler-gRPCPlugin/grpc_objective_c_plugin&amp;#34; dir = &amp;#34;#{pods_root}/#{s.</description>
+      <description>サーバー側gRPC対応終わったので、クライアントもgRPC対応してみました。&#xA;サーバー側API https://lgtm.lol/api&#xA;protoファイル準備 protosディレクトリを作成して、↑のドキュメントから api.proto を作成します。&#xA;specファイル作成 api.podspec ファイルを作成&#xA;Pod::Spec.new do |s| s.name = &amp;#34;api&amp;#34; s.version = &amp;#34;0.0.1&amp;#34; s.license = &amp;#34;MIT&amp;#34; s.authors = { &amp;#39;Dongri Jin&amp;#39; =&amp;gt; &amp;#39;dongrify@gmail.com&amp;#39; } s.homepage = &amp;#34;https://github.com/dongri&amp;#34; s.summary = &amp;#34;gRPC API&amp;#34; s.source = { :git =&amp;gt; &amp;#39;https://github.com/dongri/grpc.git&amp;#39; } s.ios.deployment_target = &amp;#34;10.1&amp;#34; src = &amp;#34;./protos&amp;#34; # gRPC Plugin s.dependency &amp;#34;!ProtoCompiler-gRPCPlugin&amp;#34;, &amp;#34;~&amp;gt; 1.0&amp;#34; pods_root = &amp;#39;Pods&amp;#39; protoc_dir = &amp;#34;#{pods_root}/!ProtoCompiler&amp;#34; protoc = &amp;#34;#{protoc_dir}/protoc&amp;#34; plugin = &amp;#34;#{pods_root}/!ProtoCompiler-gRPCPlugin/grpc_objective_c_plugin&amp;#34; dir = &amp;#34;#{pods_root}/#{s.</description>
     </item>
-    
     <item>
       <title>Carthage</title>
       <link>https://dongri.github.io/2015/01/carthage/</link>
       <pubDate>Thu, 15 Jan 2015 11:28:57 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2015/01/carthage/</guid>
-      <description>OAuthSwiftをCarthageに対応したので、メモとして残します。
-Carthageってなんなの？ https://github.com/Carthage/Carthage
-「カルタゴ」と読んで、Swift対応したライブラリ管理ツールです。
-インストール、使い方はgithubページ見ればわかると思います。
-基本的な使い方は Cartfile 作成して使いたいgithubのライブラリをリストで書いてから 「carthage update」するとCarthage/Buildの下に ******.framework ファイルが出来上がるので それをプロジェクトにドラッグアンドドロップして入れる。
-$ vim Cartfile github &amp;#34;dongri/OAuthSwift&amp;#34; ~&amp;gt; 0.1.7 $ carthage update 既存のライブラリCarthage対応 Targets に 新しい Cocoa Touch Framework Schemeを作る。Shared になってること確認。
-既存ライブラリを新しいTargetに移す
-Swift Compiler設定
-Compile Sourcesに必要なSwiftファイル追加
-Schemeを新しいtargetにしてビルドする。（iOS Deviceにして） エラーになったら自己解決
-carthage buildしてみる。githubに上げる前に、ローカルでビルとして、正常に ******.framework が出来上がるのを確認。
-$ carthage build --no-skip-current githubに上げる。 $ git tag v0.1.0 $ git push origin v0.1.0 以上でcarthage対応完了。
-対応したプロジェクトがこれ。
-https://github.com/dongri/OAuthSwift</description>
+      <description>OAuthSwiftをCarthageに対応したので、メモとして残します。&#xA;Carthageってなんなの？ https://github.com/Carthage/Carthage&#xA;「カルタゴ」と読んで、Swift対応したライブラリ管理ツールです。&#xA;インストール、使い方はgithubページ見ればわかると思います。&#xA;基本的な使い方は Cartfile 作成して使いたいgithubのライブラリをリストで書いてから 「carthage update」するとCarthage/Buildの下に ******.framework ファイルが出来上がるので それをプロジェクトにドラッグアンドドロップして入れる。&#xA;$ vim Cartfile github &amp;#34;dongri/OAuthSwift&amp;#34; ~&amp;gt; 0.1.7 $ carthage update 既存のライブラリCarthage対応 Targets に 新しい Cocoa Touch Framework Schemeを作る。Shared になってること確認。&#xA;既存ライブラリを新しいTargetに移す&#xA;Swift Compiler設定&#xA;Compile Sourcesに必要なSwiftファイル追加&#xA;Schemeを新しいtargetにしてビルドする。（iOS Deviceにして） エラーになったら自己解決&#xA;carthage buildしてみる。githubに上げる前に、ローカルでビルとして、正常に ******.framework が出来上がるのを確認。&#xA;$ carthage build --no-skip-current githubに上げる。 $ git tag v0.1.0 $ git push origin v0.1.0 以上でcarthage対応完了。&#xA;対応したプロジェクトがこれ。&#xA;https://github.com/dongri/OAuthSwift</description>
     </item>
-    
     <item>
       <title>OAuthSwift</title>
       <link>https://dongri.github.io/2014/06/oauthswift/</link>
       <pubDate>Sun, 29 Jun 2014 11:28:57 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2014/06/oauthswift/</guid>
-      <description>先日社内SwiftハッカソンでFlickrのPrivate写真を見せるアプリを作ろうとしたところ、 FlickrのOAuth認証で半日ハマって結局Private写真はだめで、キーワード検索アプリを作った。 その後Githubで検索しても、ちょっと汎用的なiOSのOAuthライブラリがなくて、 Swiftの勉強も含めてOAuthライブラリを書いてみた。(OAuth1.0, OAuth2.0両方対応したつもりであるが)
-Github : https://github.com/dongri/OAuthSwift
-使用例：
-// OAuth1.0 let oauthswift = OAuth1Swift( consumerKey: &amp;#34;********&amp;#34;, consumerSecret: &amp;#34;********&amp;#34;, requestTokenUrl: &amp;#34;https://api.twitter.com/oauth/request_token&amp;#34;, authorizeUrl: &amp;#34;https://api.twitter.com/oauth/authorize&amp;#34;, accessTokenUrl: &amp;#34;https://api.twitter.com/oauth/access_token&amp;#34; ) oauthswift.authorizeWithCallbackURL( NSURL(string: &amp;#34;oauth-swift://oauth-callback/twitter&amp;#34;), success: { credential, response in println(credential.oauth_token) println(credential.oauth_token_secret) }, failure: failureHandler) // OAuth2.0 let oauthswift = OAuth2Swift( consumerKey: &amp;#34;********&amp;#34;, consumerSecret: &amp;#34;********&amp;#34;, authorizeUrl: &amp;#34;https://api.instagram.com/oauth/authorize&amp;#34;, responseType: &amp;#34;token&amp;#34; ) oauthswift.authorizeWithCallbackURL( NSURL(string: &amp;#34;oauth-swift://oauth-callback/instagram&amp;#34;), scope: &amp;#34;likes+comments&amp;#34;, state:&amp;#34;INSTAGRAM&amp;#34;, success: { credential, response in println(credential.oauth_token) }, failure: failureHandler) 各サービスOAuth関連ページ Twitter:</description>
+      <description>先日社内SwiftハッカソンでFlickrのPrivate写真を見せるアプリを作ろうとしたところ、 FlickrのOAuth認証で半日ハマって結局Private写真はだめで、キーワード検索アプリを作った。 その後Githubで検索しても、ちょっと汎用的なiOSのOAuthライブラリがなくて、 Swiftの勉強も含めてOAuthライブラリを書いてみた。(OAuth1.0, OAuth2.0両方対応したつもりであるが)&#xA;Github : https://github.com/dongri/OAuthSwift&#xA;使用例：&#xA;// OAuth1.0 let oauthswift = OAuth1Swift( consumerKey: &amp;#34;********&amp;#34;, consumerSecret: &amp;#34;********&amp;#34;, requestTokenUrl: &amp;#34;https://api.twitter.com/oauth/request_token&amp;#34;, authorizeUrl: &amp;#34;https://api.twitter.com/oauth/authorize&amp;#34;, accessTokenUrl: &amp;#34;https://api.twitter.com/oauth/access_token&amp;#34; ) oauthswift.authorizeWithCallbackURL( NSURL(string: &amp;#34;oauth-swift://oauth-callback/twitter&amp;#34;), success: { credential, response in println(credential.oauth_token) println(credential.oauth_token_secret) }, failure: failureHandler) // OAuth2.0 let oauthswift = OAuth2Swift( consumerKey: &amp;#34;********&amp;#34;, consumerSecret: &amp;#34;********&amp;#34;, authorizeUrl: &amp;#34;https://api.instagram.com/oauth/authorize&amp;#34;, responseType: &amp;#34;token&amp;#34; ) oauthswift.authorizeWithCallbackURL( NSURL(string: &amp;#34;oauth-swift://oauth-callback/instagram&amp;#34;), scope: &amp;#34;likes+comments&amp;#34;, state:&amp;#34;INSTAGRAM&amp;#34;, success: { credential, response in println(credential.oauth_token) }, failure: failureHandler) 各サービスOAuth関連ページ Twitter:</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,49 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>rust on dongri</title>
+    <title>Rust on dongri</title>
     <link>https://dongri.github.io/tags/rust/</link>
-    <description>Recent content in rust on dongri</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Rust on dongri</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Sep 2017 06:50:55 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/rust/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Sep 2017 06:50:55 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/rust/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Qiita:Teamのクローンを作ってみた話</title>
       <link>https://dongri.github.io/2017/09/qiitateam%E3%81%AE%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%B3%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E8%A9%B1/</link>
       <pubDate>Thu, 28 Sep 2017 06:50:55 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2017/09/qiitateam%E3%81%AE%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%B3%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E8%A9%B1/</guid>
-      <description>タイトルのクローンを作ったは嘘ｗ。似たようなものを作ったが本当。
-チームがちょっと大きくなったのと外国籍のエンジニアがQiita嫌いという理由でQiita:Teamやめて 他のツールをいろいろ試してみたがどれも長く続かず、文句言うばかりでした。 結果エンジニアがノウハウなどナレッジを残す場所がなくなったわけですね。
-結局何がダメだったのか？文化の違い？デザインがダメ？私もわかりません。
-ちょっと考えてみたんですが、Qiitaのデザインがだめ、機能がだめだったら俺らが作ればいいんじゃと 思って作ってみたのがteamでした。https://github.com/rusts/team
-業務で使ってるGo言語で作ったらずっと早く簡単に作れたと思うが、社内でRust好きなエンジニアが結構多いなと感じ、 もしRustで作ったらみんなが興味持って機能追加したりメンテして俺達が本当に欲しかったものを作れるんじゃないかと思ってRustにしました。
-で、今どうなったか？
-数人は日報書くのを再開して、数人はTips、技術ノウハウなど共有することになりました。 プロジェクトにコミットする人も現れて、今は自分を含めて二人です。</description>
+      <description>タイトルのクローンを作ったは嘘ｗ。似たようなものを作ったが本当。&#xA;チームがちょっと大きくなったのと外国籍のエンジニアがQiita嫌いという理由でQiita:Teamやめて 他のツールをいろいろ試してみたがどれも長く続かず、文句言うばかりでした。 結果エンジニアがノウハウなどナレッジを残す場所がなくなったわけですね。&#xA;結局何がダメだったのか？文化の違い？デザインがダメ？私もわかりません。&#xA;ちょっと考えてみたんですが、Qiitaのデザインがだめ、機能がだめだったら俺らが作ればいいんじゃと 思って作ってみたのがteamでした。https://github.com/rusts/team&#xA;業務で使ってるGo言語で作ったらずっと早く簡単に作れたと思うが、社内でRust好きなエンジニアが結構多いなと感じ、 もしRustで作ったらみんなが興味持って機能追加したりメンテして俺達が本当に欲しかったものを作れるんじゃないかと思ってRustにしました。&#xA;で、今どうなったか？&#xA;数人は日報書くのを再開して、数人はTips、技術ノウハウなど共有することになりました。 プロジェクトにコミットする人も現れて、今は自分を含めて二人です。</description>
     </item>
-    
     <item>
       <title>Rust on Heroku with Docker</title>
       <link>https://dongri.github.io/2016/08/rust-on-heroku-with-docker/</link>
       <pubDate>Tue, 16 Aug 2016 00:42:53 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2016/08/rust-on-heroku-with-docker/</guid>
-      <description>Rustで書いたhello rustをherokuに載せてみた。 普通ならrust用のBuildpack使うのだが、今回はdockerを使うようにした。 Dockerfile、ソースコードなどはこちら
-https://github.com/dongri/hello-rust
-はじめはalpineで頑張ってみようかと思ったがrustのインストールがうまく行かなくて、ubuntuに変更。 Dockerfileは以下のようになっている。
-FROM ubuntu:latest # rust, cargo buildに必要なソフトウェアインストール RUN apt-get -y update RUN apt-get -y install curl file sudo gcc # rustのインストール RUN curl -sSf https://static.rust-lang.org/rustup.sh | sh RUN mkdir -p /app WORKDIR /app COPY . /app # ビルドして ./target/release/helloバイナリを作る RUN cargo build --release EXPOSE 8080 # 実行 CMD /app/target/release/hello readmeにも書いてあるがherokuはdockerをサポートしていて、pushするだけでローカルのdockerと 同じように動かせる。必要なのは、heroku-container-toolsというheroku plugin。
-$ heroku plugins:install heroku-container-tools $ heroku container:push web これでだけでherokuにアップされて動く。
-https://hello-rust.herokuapp.com/</description>
+      <description>Rustで書いたhello rustをherokuに載せてみた。 普通ならrust用のBuildpack使うのだが、今回はdockerを使うようにした。 Dockerfile、ソースコードなどはこちら&#xA;https://github.com/dongri/hello-rust&#xA;はじめはalpineで頑張ってみようかと思ったがrustのインストールがうまく行かなくて、ubuntuに変更。 Dockerfileは以下のようになっている。&#xA;FROM ubuntu:latest # rust, cargo buildに必要なソフトウェアインストール RUN apt-get -y update RUN apt-get -y install curl file sudo gcc # rustのインストール RUN curl -sSf https://static.rust-lang.org/rustup.sh | sh RUN mkdir -p /app WORKDIR /app COPY . /app # ビルドして ./target/release/helloバイナリを作る RUN cargo build --release EXPOSE 8080 # 実行 CMD /app/target/release/hello readmeにも書いてあるがherokuはdockerをサポートしていて、pushするだけでローカルのdockerと 同じように動かせる。必要なのは、heroku-container-toolsというheroku plugin。&#xA;$ heroku plugins:install heroku-container-tools $ heroku container:push web これでだけでherokuにアップされて動く。&#xA;https://hello-rust.herokuapp.com/</description>
     </item>
-    
     <item>
       <title>Hello Rust</title>
       <link>https://dongri.github.io/2016/07/hello-rust/</link>
       <pubDate>Wed, 13 Jul 2016 23:35:22 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2016/07/hello-rust/</guid>
       <description>Install $ brew search rust multirust rust uncrustify $ brew install rust $ rustc --version rustc 1.10.0 $ hello world $ vim hello.rs fn main() { println!(&amp;#34;Hello Rust!&amp;#34;); } $ rustc hello.rs $ ./hello Hello Rust! $ </description>
     </item>
-    
   </channel>
 </rss>

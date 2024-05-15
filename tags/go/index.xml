@@ -1,42 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>go on dongri</title>
+    <title>Go on dongri</title>
     <link>https://dongri.github.io/tags/go/</link>
-    <description>Recent content in go on dongri</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Go on dongri</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 May 2019 21:03:34 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 May 2019 21:03:34 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GWのアウトプット</title>
       <link>https://dongri.github.io/2019/05/gw%E3%81%AE%E3%82%A2%E3%82%A6%E3%83%88%E3%83%97%E3%83%83%E3%83%88/</link>
       <pubDate>Sun, 05 May 2019 21:03:34 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2019/05/gw%E3%81%AE%E3%82%A2%E3%82%A6%E3%83%88%E3%83%97%E3%83%83%E3%83%88/</guid>
-      <description>ゴールデンウェークの長ーい10連休明日が最後。 元々北海道でも行ってこようかと思ったが飛行機のチケットが高くて諦める。 映画見に行ったり、スーパー銭湯行ったり、友達とあったり、食べる🍺飲むのがメインでした。
-夜は偶にコード書いたりもしてました。どんなものを書いたか？
-Terminalで英単語翻訳ツール
-https://github.com/dongri/fanyi
-GoでRailsみたいなboilerplate
-https://github.com/dongri/candle
-ElectronでTwitterデスクトップアプリ
-https://github.com/dongri/twitter-mini
-あとは、会社の人からもらったGW宿題とか、リンクは貼れない
-一番ハマったのはFit Boxingでしたね。
-https://ec.nintendo.com/JP/ja/titles/70010000004221
-こんな感じで長ーい10連休が終わりそうです。
-さー5月病にならないように頑張ろう。</description>
+      <description>ゴールデンウェークの長ーい10連休明日が最後。 元々北海道でも行ってこようかと思ったが飛行機のチケットが高くて諦める。 映画見に行ったり、スーパー銭湯行ったり、友達とあったり、食べる🍺飲むのがメインでした。&#xA;夜は偶にコード書いたりもしてました。どんなものを書いたか？&#xA;Terminalで英単語翻訳ツール&#xA;https://github.com/dongri/fanyi&#xA;GoでRailsみたいなboilerplate&#xA;https://github.com/dongri/candle&#xA;ElectronでTwitterデスクトップアプリ&#xA;https://github.com/dongri/twitter-mini&#xA;あとは、会社の人からもらったGW宿題とか、リンクは貼れない&#xA;一番ハマったのはFit Boxingでしたね。&#xA;https://ec.nintendo.com/JP/ja/titles/70010000004221&#xA;こんな感じで長ーい10連休が終わりそうです。&#xA;さー5月病にならないように頑張ろう。</description>
     </item>
-    
     <item>
       <title>GoでAmazon SES送信テスト</title>
       <link>https://dongri.github.io/2017/09/go%E3%81%A7amazon-ses%E9%80%81%E4%BF%A1%E3%83%86%E3%82%B9%E3%83%88/</link>
       <pubDate>Sat, 09 Sep 2017 06:50:55 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2017/09/go%E3%81%A7amazon-ses%E9%80%81%E4%BF%A1%E3%83%86%E3%82%B9%E3%83%88/</guid>
-      <description>毎回ハマったりするのでメモ。GolangでAmazon SES送信テスト。
-package main import ( &amp;#34;errors&amp;#34; &amp;#34;log&amp;#34; &amp;#34;github.com/aws/aws-sdk-go/aws&amp;#34; &amp;#34;github.com/aws/aws-sdk-go/aws/credentials&amp;#34; &amp;#34;github.com/aws/aws-sdk-go/aws/session&amp;#34; &amp;#34;github.com/aws/aws-sdk-go/service/ses&amp;#34; ) func main() { from := &amp;#34;noreply@domain.com&amp;#34; to := &amp;#34;dongrify@gmail.com&amp;#34; title := &amp;#34;amazon ses&amp;#34; body := &amp;#34;hello, from ses&amp;#34; err := sendSESEmail(from, to, title, body) if err != nil { log.Println(&amp;#34;mail sending error&amp;#34;) } } func sendSESEmail(from string, to string, title string, body string) error { awsSession := session.New(&amp;amp;aws.Config{ Region: aws.String(&amp;#34;us-east-1&amp;#34;), Credentials: credentials.NewStaticCredentials(&amp;#34;AWS_ACCESS_KEY_ID&amp;#34;, &amp;#34;AWS_SECRET_KEY&amp;#34;, &amp;#34;&amp;#34;), }) svc := ses.</description>
+      <description>毎回ハマったりするのでメモ。GolangでAmazon SES送信テスト。&#xA;package main import ( &amp;#34;errors&amp;#34; &amp;#34;log&amp;#34; &amp;#34;github.com/aws/aws-sdk-go/aws&amp;#34; &amp;#34;github.com/aws/aws-sdk-go/aws/credentials&amp;#34; &amp;#34;github.com/aws/aws-sdk-go/aws/session&amp;#34; &amp;#34;github.com/aws/aws-sdk-go/service/ses&amp;#34; ) func main() { from := &amp;#34;noreply@domain.com&amp;#34; to := &amp;#34;dongrify@gmail.com&amp;#34; title := &amp;#34;amazon ses&amp;#34; body := &amp;#34;hello, from ses&amp;#34; err := sendSESEmail(from, to, title, body) if err != nil { log.Println(&amp;#34;mail sending error&amp;#34;) } } func sendSESEmail(from string, to string, title string, body string) error { awsSession := session.New(&amp;amp;aws.Config{ Region: aws.String(&amp;#34;us-east-1&amp;#34;), Credentials: credentials.NewStaticCredentials(&amp;#34;AWS_ACCESS_KEY_ID&amp;#34;, &amp;#34;AWS_SECRET_KEY&amp;#34;, &amp;#34;&amp;#34;), }) svc := ses.</description>
     </item>
-    
   </channel>
 </rss>

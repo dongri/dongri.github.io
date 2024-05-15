@@ -1,27 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ios on dongri</title>
+    <title>Ios on dongri</title>
     <link>https://dongri.github.io/tags/ios/</link>
-    <description>Recent content in ios on dongri</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Ios on dongri</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 Dec 2017 15:38:35 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Dec 2017 15:38:35 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/ios/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>iOS, Android アプリダウンロード数を取得</title>
       <link>https://dongri.github.io/2017/12/ios-android-%E3%82%A2%E3%83%97%E3%83%AA%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E6%95%B0%E3%82%92%E5%8F%96%E5%BE%97/</link>
       <pubDate>Tue, 19 Dec 2017 15:38:35 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2017/12/ios-android-%E3%82%A2%E3%83%97%E3%83%AA%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E6%95%B0%E3%82%92%E5%8F%96%E5%BE%97/</guid>
-      <description>App Annie、Search Manなどサービスを使えばAPI経由でアプリのダウンロード数を取得する方法いろいろあるようだが、iTunesconnectとPlay Storeから直接取得してみた。
-iOS Reporter https://help.apple.com/itc/appsreporterguide/#/itc0f2481229 ここからReporter.zipをダウンロード。
-1. access tokenをitunesconnectページで発行する。 https://reportingitc2.apple.com/reports.html ページの左にに「レポートについて？」があるので？マークをクリックして「アクセストークン生成」リンクがクリックして生成する。
-2. Reporter.propertiesを編集 AccessToken=********-****-****-****-************ Mode=Normal SalesUrl=https://reportingitc-reporter.apple.com/reportservice/sales/v1 FinanceUrl=https://reportingitc-reporter.apple.com/reportservice/finance/v1 3. javaでレポート取得 $ java -jar Reporter.jar p=Reporter.properties Sales.getVendors ******** 上で取得したVendor Numberを設定
-DATE=&amp;#34;20171216&amp;#34; VENDOR_NUMBER=&amp;#34;********&amp;#34; $ java -jar Reporter.jar p=Reporter.properties Sales.getReport ${VENDOR_NUMBER}, Sales, Summary, Daily, ${DATE} 4. レポート形式 ドキュメントのリンク切れたりして正確なドキュメント見つかってないが、tvsファイルの Product Type Identifierが1のものが新規ダウンロードらしい。 あとはファイルをshellか、何かで読んでunitsを出せば日付別に新規ダウンロード数取得できる。
-Android 1. Google Cloud SDKダウンロード、初期化 https://cloud.google.com/sdk/docs/ からgoogle cloud sdkをダウンロード。
-$ cd google-cloud-sdk $ ./bin/gcloud init 途中でブラウザが起動されて認証を終わらせる
-2. バケットID取得 https://play.google.com/apps/publish/ Play Store Consoleの統計情報ページでアプリを選択して、ページの下に表示されてる「レポートの直接 URI:」の pubsite_prod_rev_*** をメモする。これがdeveloper_bucket_id になる</description>
+      <description>App Annie、Search Manなどサービスを使えばAPI経由でアプリのダウンロード数を取得する方法いろいろあるようだが、iTunesconnectとPlay Storeから直接取得してみた。&#xA;iOS Reporter https://help.apple.com/itc/appsreporterguide/#/itc0f2481229 ここからReporter.zipをダウンロード。&#xA;1. access tokenをitunesconnectページで発行する。 https://reportingitc2.apple.com/reports.html ページの左にに「レポートについて？」があるので？マークをクリックして「アクセストークン生成」リンクがクリックして生成する。&#xA;2. Reporter.propertiesを編集 AccessToken=********-****-****-****-************ Mode=Normal SalesUrl=https://reportingitc-reporter.apple.com/reportservice/sales/v1 FinanceUrl=https://reportingitc-reporter.apple.com/reportservice/finance/v1 3. javaでレポート取得 $ java -jar Reporter.jar p=Reporter.properties Sales.getVendors ******** 上で取得したVendor Numberを設定&#xA;DATE=&amp;#34;20171216&amp;#34; VENDOR_NUMBER=&amp;#34;********&amp;#34; $ java -jar Reporter.jar p=Reporter.properties Sales.getReport ${VENDOR_NUMBER}, Sales, Summary, Daily, ${DATE} 4. レポート形式 ドキュメントのリンク切れたりして正確なドキュメント見つかってないが、tvsファイルの Product Type Identifierが1のものが新規ダウンロードらしい。 あとはファイルをshellか、何かで読んでunitsを出せば日付別に新規ダウンロード数取得できる。&#xA;Android 1. Google Cloud SDKダウンロード、初期化 https://cloud.google.com/sdk/docs/ からgoogle cloud sdkをダウンロード。&#xA;$ cd google-cloud-sdk $ ./bin/gcloud init 途中でブラウザが起動されて認証を終わらせる&#xA;2. バケットID取得 https://play.google.com/apps/publish/ Play Store Consoleの統計情報ページでアプリを選択して、ページの下に表示されてる「レポートの直接 URI:」の pubsite_prod_rev_*** をメモする。これがdeveloper_bucket_id になる</description>
     </item>
-    
   </channel>
 </rss>

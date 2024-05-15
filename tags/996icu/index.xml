@@ -4,29 +4,16 @@
     <title>996icu on dongri</title>
     <link>https://dongri.github.io/tags/996icu/</link>
     <description>Recent content in 996icu on dongri</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 Mar 2019 14:40:34 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/996icu/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Mar 2019 14:40:34 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/996icu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>996.ICUとは？</title>
       <link>https://dongri.github.io/2019/03/996.icu%E3%81%A8%E3%81%AF/</link>
       <pubDate>Sun, 31 Mar 2019 14:40:34 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2019/03/996.icu%E3%81%A8%E3%81%AF/</guid>
-      <description>この数日GitHub上で一番人気の996.icuリポとはなんなのか？
-https://github.com/996icu/996.ICU
-ソースコードは全くなく、markdownのみなのに、一週間も経たないうちに12万Starであのtensorflowを抜いて5位まで登ってきてる。 このブログ書く時点で 125,347 Star
-https://github.com/search?q=stars%3A%3E1
-日本語: https://github.com/996icu/996.ICU/blob/master/i18n/ja_JP.md
-996とは9時出社、9時退社、週6勤務から来てる。
-中国国内ではどう見てるのか？
-良い活動だ。 一週間後は誰も覚えてなくて、今までと変わらないだろう 10年後見ると良い活動だったと思うはずだ 個人的には996ICU Licenseもよいと思う。
-996制度会社では使えない「996ICU License」。（あとで自分もRepoもこのライセンスにしようかな）
-GitHubでStarで一位になって国際で注目されて、中国のIT企業の勤務制度が改善されるといいですね。
-2019-04-01 12:19 更新 133,919 Starで２位 2019-04-14 更新 gen-license-rbでRubyバージョンのPR送ってみたが、理由なしにCloseされた。
-https://github.com/996icu/996.ICU/pull/25546
-有点丢人。。。</description>
+      <description>この数日GitHub上で一番人気の996.icuリポとはなんなのか？&#xA;https://github.com/996icu/996.ICU&#xA;ソースコードは全くなく、markdownのみなのに、一週間も経たないうちに12万Starであのtensorflowを抜いて5位まで登ってきてる。 このブログ書く時点で 125,347 Star&#xA;https://github.com/search?q=stars%3A%3E1&#xA;日本語: https://github.com/996icu/996.ICU/blob/master/i18n/ja_JP.md&#xA;996とは9時出社、9時退社、週6勤務から来てる。&#xA;中国国内ではどう見てるのか？&#xA;良い活動だ。 一週間後は誰も覚えてなくて、今までと変わらないだろう 10年後見ると良い活動だったと思うはずだ 個人的には996ICU Licenseもよいと思う。&#xA;996制度会社では使えない「996ICU License」。（あとで自分もRepoもこのライセンスにしようかな）&#xA;GitHubでStarで一位になって国際で注目されて、中国のIT企業の勤務制度が改善されるといいですね。&#xA;2019-04-01 12:19 更新 133,919 Starで２位 2019-04-14 更新 gen-license-rbでRubyバージョンのPR送ってみたが、理由なしにCloseされた。&#xA;https://github.com/996icu/996.ICU/pull/25546&#xA;有点丢人。。。</description>
     </item>
-    
   </channel>
 </rss>

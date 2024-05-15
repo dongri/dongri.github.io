@@ -1,83 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ethereum on dongri</title>
+    <title>Ethereum on dongri</title>
     <link>https://dongri.github.io/tags/ethereum/</link>
-    <description>Recent content in ethereum on dongri</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Ethereum on dongri</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Jan 2023 18:15:43 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/ethereum/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Jan 2023 18:15:43 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/ethereum/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Merge後のEthereumステーキングの話</title>
       <link>https://dongri.github.io/2023/01/the-merge%E5%BE%8C%E3%81%AEethereum%E3%82%B9%E3%83%86%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0%E3%81%AE%E8%A9%B1/</link>
       <pubDate>Tue, 10 Jan 2023 18:15:43 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2023/01/the-merge%E5%BE%8C%E3%81%AEethereum%E3%82%B9%E3%83%86%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0%E3%81%AE%E8%A9%B1/</guid>
-      <description>2022年9月15日にマージが無事完了。 ステーキングに関してinfura,alchemyなどのRPCがマージ後は使えなくなった。 つまりノードを自分で建てないといけない。2TBのストレージ用意するのは結構なコスト。
-今まではawsで月1万円ちょっとでalexaアプリ開発のクレジット50ドル分があったので、実質5千円ぐらいでステーキングできたのが、2TBストレージのノードまで建てると月7万円まで膨らんだ。クリプトのこの冬にこれはやってられないと思って、自宅でノード建てようと思った。使ってないMacBookでやってみたが1TBストレージが10日間ぐらいでいっぱいになった。外部SSD接続してもよいが、どうせやるならRaspberry Piで遊んでみようと思ってRaspberry Piと4TBのSSDを買って構築。
-ハードウェア Raspberry Pi 4B 8GB 4TB SSD いろいろな問題 いろんな想定外の問題に遭遇したのでリストしてみた
-2TB以上のストレージマウント問題
-OSとデータを4TB SSDで動かそうとして、マウントで2TB以上だとマウントがうまく行かない問題。GPTフォーマットにしないといけない。
-Ethereum on Arm イメージ動かない問題
-https://ethereum-on-arm-documentation.readthedocs.io/en/latest/index.html インストールしたけど、ethereum/etehreumでログインできない。 諦めて自前でRaspberry Pi用のUbuntuを入れる
-4TBストレージが壊れた
-Gethの同期中突然書き込めなくなった。試しに修復コマンドで頑張ってみたがだめだった。
-Geth最後の100 blockぐらいで同期が終わらない問題
-最後の100 blockが12時間経っても同期が終わらない、ディスクI/Oか、bandwidthの問題
-USB 2が遅い問題
-SSDをUSB 2のところに挿してた。
-WiFiが遅い問題
-MacBookではWiFiで問題なくステーキングできたけど、Raspberry PiのWiFiは遅い、LANケーブルに変更
-電源問題
-Raspberry Pi買った時に付いて来た電源を使ってたが、しばらく動かすとsshできなくなり、Raspberry Piが無反応状態になる、PC用の電源に変更。
-Prysmがメモリ食う問題
-Go製のPrysmは8GBのメモリでGethと一緒に動かすとメモリが足りなくてすぐ死ぬ、Rust製のLighthouseに変更
-それでもメモリ足りない問題
-Lighthouseはある程度動かしたけど、数時間立つとvalidator client側が落ちる。 3GBのswapfile作成してswapスペースを確保する
-普段クラウド（aws, gcp）で動かすとなかなか出会えない問題で辛かった。面白かったところもあるけど</description>
+      <description>2022年9月15日にマージが無事完了。 ステーキングに関してinfura,alchemyなどのRPCがマージ後は使えなくなった。 つまりノードを自分で建てないといけない。2TBのストレージ用意するのは結構なコスト。&#xA;今まではawsで月1万円ちょっとでalexaアプリ開発のクレジット50ドル分があったので、実質5千円ぐらいでステーキングできたのが、2TBストレージのノードまで建てると月7万円まで膨らんだ。クリプトのこの冬にこれはやってられないと思って、自宅でノード建てようと思った。使ってないMacBookでやってみたが1TBストレージが10日間ぐらいでいっぱいになった。外部SSD接続してもよいが、どうせやるならRaspberry Piで遊んでみようと思ってRaspberry Piと4TBのSSDを買って構築。&#xA;ハードウェア Raspberry Pi 4B 8GB 4TB SSD いろいろな問題 いろんな想定外の問題に遭遇したのでリストしてみた&#xA;2TB以上のストレージマウント問題&#xA;OSとデータを4TB SSDで動かそうとして、マウントで2TB以上だとマウントがうまく行かない問題。GPTフォーマットにしないといけない。&#xA;Ethereum on Arm イメージ動かない問題&#xA;https://ethereum-on-arm-documentation.readthedocs.io/en/latest/index.html インストールしたけど、ethereum/etehreumでログインできない。 諦めて自前でRaspberry Pi用のUbuntuを入れる&#xA;4TBストレージが壊れた&#xA;Gethの同期中突然書き込めなくなった。試しに修復コマンドで頑張ってみたがだめだった。&#xA;Geth最後の100 blockぐらいで同期が終わらない問題&#xA;最後の100 blockが12時間経っても同期が終わらない、ディスクI/Oか、bandwidthの問題&#xA;USB 2が遅い問題&#xA;SSDをUSB 2のところに挿してた。&#xA;WiFiが遅い問題&#xA;MacBookではWiFiで問題なくステーキングできたけど、Raspberry PiのWiFiは遅い、LANケーブルに変更&#xA;電源問題&#xA;Raspberry Pi買った時に付いて来た電源を使ってたが、しばらく動かすとsshできなくなり、Raspberry Piが無反応状態になる、PC用の電源に変更。&#xA;Prysmがメモリ食う問題&#xA;Go製のPrysmは8GBのメモリでGethと一緒に動かすとメモリが足りなくてすぐ死ぬ、Rust製のLighthouseに変更&#xA;それでもメモリ足りない問題&#xA;Lighthouseはある程度動かしたけど、数時間立つとvalidator client側が落ちる。 3GBのswapfile作成してswapスペースを確保する&#xA;普段クラウド（aws, gcp）で動かすとなかなか出会えない問題で辛かった。面白かったところもあるけど</description>
     </item>
-    
     <item>
       <title>ETH2 Staking</title>
       <link>https://dongri.github.io/2020/12/eth2-staking/</link>
       <pubDate>Sun, 13 Dec 2020 09:46:43 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2020/12/eth2-staking/</guid>
-      <description>ETH2のステーキング方法について、まともな日本語記事がなかったり、あっても会員登録必要だったり、逆にわかりにくかったりしたので、自分がやった手順を書こうと思います。
-Staking ステーキングとはPoS（Proof of Stake）において、仮想通貨を自由に動かせない状態（ロック状態）にしてブロックに追加するデータの承認などの面でネットワークの維持に関わる見返りとして、その報酬を仮想通貨で受け取る仕組みです。 ETH2のステーキングだと年利4.9% ~ 21.6%ですが、stakeするETHが多ければ多いほど下がります。12月12日時点で13%程度です。 デポジットに関しても始まった時の進捗では524,288 ETHまで間に合うか心配してたが、後半になって一気に増えて予定した12月1日のローンチに間に合いました。
-Deposit https://launchpad.ethereum.org/ で32ETHをデポジットします。（注意: デポジットされた32ETHは今のところ2年間ロックされるので注意が必要） デポジット方法は、 https://launchpad.ethereum.org/overview ここの手順のまま進めばできるかと思います。 特に難しいことはありませんでしたが、ETH1とETH2のクライアント選ぶ時もしかすると注意が必要です。後ほどBeacon node起動する時のクライアントと関係してるので。 自分の場合はどっちもGo言語実装のGethとPrysmを選択しました。 デポジットが完了すると、validator_keysファイルを取得できるので、安全な場所に保管します。
-Prysm 環境 https://docs.prylabs.network/docs/install/install-with-script#system-requirements
-Recommended specifications * Processor: Intel Core i7–4770 or AMD FX-8310 or better * Memory: 16GB RAM * Storage: 100GB available space SSD * Internet: Broadband connection ラズパイとかでやってみようかと思ってたけど、このスペックは難しいのでペナルティ受ける可能性のあるawsにしました。 aws, gcp, azureなど大手クラウドサービスだと障害が起きた時大規模のノードが止まる可能性があるので、ペナルティがあるようです。
-EC2インスタンス
-Memory: 16GB Storage: 100GB Beacon node 続いてbeacon chainのnodeを起動する必要あります。 https://docs.prylabs.network/docs/install/install-with-script/ こちらからprysm.shをダウンロードします。 続いて https://docs.prylabs.network/docs/mainnet/joining-eth2 こちらに書いてあるStepでbeacon nodeの起動、validator accountのインポート、validatorの起動順にやっていきます。</description>
+      <description>ETH2のステーキング方法について、まともな日本語記事がなかったり、あっても会員登録必要だったり、逆にわかりにくかったりしたので、自分がやった手順を書こうと思います。&#xA;Staking ステーキングとはPoS（Proof of Stake）において、仮想通貨を自由に動かせない状態（ロック状態）にしてブロックに追加するデータの承認などの面でネットワークの維持に関わる見返りとして、その報酬を仮想通貨で受け取る仕組みです。 ETH2のステーキングだと年利4.9% ~ 21.6%ですが、stakeするETHが多ければ多いほど下がります。12月12日時点で13%程度です。 デポジットに関しても始まった時の進捗では524,288 ETHまで間に合うか心配してたが、後半になって一気に増えて予定した12月1日のローンチに間に合いました。&#xA;Deposit https://launchpad.ethereum.org/ で32ETHをデポジットします。（注意: デポジットされた32ETHは今のところ2年間ロックされるので注意が必要） デポジット方法は、 https://launchpad.ethereum.org/overview ここの手順のまま進めばできるかと思います。 特に難しいことはありませんでしたが、ETH1とETH2のクライアント選ぶ時もしかすると注意が必要です。後ほどBeacon node起動する時のクライアントと関係してるので。 自分の場合はどっちもGo言語実装のGethとPrysmを選択しました。 デポジットが完了すると、validator_keysファイルを取得できるので、安全な場所に保管します。&#xA;Prysm 環境 https://docs.prylabs.network/docs/install/install-with-script#system-requirements&#xA;Recommended specifications * Processor: Intel Core i7–4770 or AMD FX-8310 or better * Memory: 16GB RAM * Storage: 100GB available space SSD * Internet: Broadband connection ラズパイとかでやってみようかと思ってたけど、このスペックは難しいのでペナルティ受ける可能性のあるawsにしました。 aws, gcp, azureなど大手クラウドサービスだと障害が起きた時大規模のノードが止まる可能性があるので、ペナルティがあるようです。&#xA;EC2インスタンス&#xA;Memory: 16GB Storage: 100GB Beacon node 続いてbeacon chainのnodeを起動する必要あります。 https://docs.prylabs.network/docs/install/install-with-script/ こちらからprysm.shをダウンロードします。 続いて https://docs.prylabs.network/docs/mainnet/joining-eth2 こちらに書いてあるStepでbeacon nodeの起動、validator accountのインポート、validatorの起動順にやっていきます。</description>
     </item>
-    
     <item>
       <title>SNSアカウントを使ったETH送金システム</title>
       <link>https://dongri.github.io/2020/05/sns%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9Feth%E9%80%81%E9%87%91%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0/</link>
       <pubDate>Sun, 31 May 2020 00:42:14 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2020/05/sns%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9Feth%E9%80%81%E9%87%91%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0/</guid>
-      <description>プライベートプロジェクトで cryptotako.com というサービスを開発しました。
-相手のイーサリアムアドレスを聞かなくてもシステム通してETHを送金することが可能です。
-サービスの主な機能は以下のようになります
-Twitter, GitHubなどのソーシャルネットワークアカウントでログイン Metamask, Dapperなどのウォレットからログイン Twitter, GitHub, ETH Addressを選択して送金 Twttter, GitHub上での通知 トランザクション履歴 Twitter, GitHubアカウント連携でアドレス生成 秘密鍵エクスポート email, username 変更 法定通貨USD, JPYで換算表示 </description>
+      <description>プライベートプロジェクトで cryptotako.com というサービスを開発しました。&#xA;相手のイーサリアムアドレスを聞かなくてもシステム通してETHを送金することが可能です。&#xA;サービスの主な機能は以下のようになります&#xA;Twitter, GitHubなどのソーシャルネットワークアカウントでログイン Metamask, Dapperなどのウォレットからログイン Twitter, GitHub, ETH Addressを選択して送金 Twttter, GitHub上での通知 トランザクション履歴 Twitter, GitHubアカウント連携でアドレス生成 秘密鍵エクスポート email, username 変更 法定通貨USD, JPYで換算表示 </description>
     </item>
-    
     <item>
       <title>どんぐりコインを作ってみた</title>
       <link>https://dongri.github.io/2018/03/%E3%81%A9%E3%82%93%E3%81%90%E3%82%8A%E3%82%B3%E3%82%A4%E3%83%B3%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</link>
       <pubDate>Tue, 06 Mar 2018 06:39:14 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2018/03/%E3%81%A9%E3%82%93%E3%81%90%E3%82%8A%E3%82%B3%E3%82%A4%E3%83%B3%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
-      <description>ICOで必要な新しい通貨の開発で、自分の中でずっともやもやしてたいくつかの疑問がちょっとはっきりしたので、 メモしながらみんなと共有できればと思います。
-ICOしてる企業は自分独自のブロックチェーンを作ってその上に新しい仮想通貨を発行してる、ずっとそう思って来たが、 それがちょっと違ったみたいでした。そういう企業もあれば、既存のプラットフォーム（Ethereum）でコインを発行するのが普通だったみたいです。
-以下、実際新しいトークンをEthereum上に作ってみた記事になります。
-GitHub: https://github.com/dongri/DongriCoin
-まず、今回の記事で使う用語、ソフトウェア、ツールをまとめます。
-Ethereum (イーサリアム) スマートコントラクトを実行するためのプラットフォーム。 Ethereum Virtual Machine (EVM) https://www.ethereum.org/ Token (トークン) 独自コインのこと ERC20トークン ERC20 は、Ethereum ブロックチェーン上でトークンを発行する際の標準規格。 ERC20 に準拠したトークンであれば、無数に存在する種類のトークンを同じ枠組みで価値移転することができます。 Truffle (トリュフ) Ethereum開発用フレームワーク。 トークン作成、コンパイル、デプロイなど http://truffleframework.com/ Solidity (ソリディティ) スマートコントラクトを記述するための言語。 デファクトスタンダードになりつつある。 https://ethereum.github.io/browser-solidity/ infura.io Ethereumホスティングサービス geth(go-ethereum)でノードの同期などしなくて済む https://infura.io/ metamask.io イーサリアムウォレット https://metamask.io/ 必要なソフトウェアはnodejsのみです。その後はnpmで必要なモジュールをインストールします。
-nodejsインストール $ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash $ nvm ls-remote $ nvm instal 8.9.4 $ nvm alias default 8.9.4 $ node -v v8.9.4 truffleインストール $ npm instal -g truffle プロジェクト作成 $ mkdir DongriCoin $ cd DongriCoin $ truffle init $ ls -l $ npm -f init $ npm install zeppelin-solidity --save $ npm install truffle-hdwallet-provider --save contract作成 $ vim contracts/DongriCoin.</description>
+      <description>ICOで必要な新しい通貨の開発で、自分の中でずっともやもやしてたいくつかの疑問がちょっとはっきりしたので、 メモしながらみんなと共有できればと思います。&#xA;ICOしてる企業は自分独自のブロックチェーンを作ってその上に新しい仮想通貨を発行してる、ずっとそう思って来たが、 それがちょっと違ったみたいでした。そういう企業もあれば、既存のプラットフォーム（Ethereum）でコインを発行するのが普通だったみたいです。&#xA;以下、実際新しいトークンをEthereum上に作ってみた記事になります。&#xA;GitHub: https://github.com/dongri/DongriCoin&#xA;まず、今回の記事で使う用語、ソフトウェア、ツールをまとめます。&#xA;Ethereum (イーサリアム) スマートコントラクトを実行するためのプラットフォーム。 Ethereum Virtual Machine (EVM) https://www.ethereum.org/ Token (トークン) 独自コインのこと ERC20トークン ERC20 は、Ethereum ブロックチェーン上でトークンを発行する際の標準規格。 ERC20 に準拠したトークンであれば、無数に存在する種類のトークンを同じ枠組みで価値移転することができます。 Truffle (トリュフ) Ethereum開発用フレームワーク。 トークン作成、コンパイル、デプロイなど http://truffleframework.com/ Solidity (ソリディティ) スマートコントラクトを記述するための言語。 デファクトスタンダードになりつつある。 https://ethereum.github.io/browser-solidity/ infura.io Ethereumホスティングサービス geth(go-ethereum)でノードの同期などしなくて済む https://infura.io/ metamask.io イーサリアムウォレット https://metamask.io/ 必要なソフトウェアはnodejsのみです。その後はnpmで必要なモジュールをインストールします。&#xA;nodejsインストール $ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash $ nvm ls-remote $ nvm instal 8.9.4 $ nvm alias default 8.9.4 $ node -v v8.9.4 truffleインストール $ npm instal -g truffle プロジェクト作成 $ mkdir DongriCoin $ cd DongriCoin $ truffle init $ ls -l $ npm -f init $ npm install zeppelin-solidity --save $ npm install truffle-hdwallet-provider --save contract作成 $ vim contracts/DongriCoin.</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,68 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>security on dongri</title>
+    <title>Security on dongri</title>
     <link>https://dongri.github.io/tags/security/</link>
-    <description>Recent content in security on dongri</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Security on dongri</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Jul 2015 11:28:57 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Jul 2015 11:28:57 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Android Stagefright</title>
       <link>https://dongri.github.io/2015/07/android-stagefright/</link>
       <pubDate>Tue, 28 Jul 2015 11:28:57 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2015/07/android-stagefright/</guid>
-      <description>詳しいことはこちら。
-Androidに最悪の脆弱性発見―ビデオメッセージを受信するだけでデバイスが乗っ取られる
-ということで、まずSIMを抜いてOSのバージョンアップするようにした。
-CyanogenMod: Recent Stagefright issues
-Zip Fileダウンロードしてインストール こちらから最新版cm-12.1をダウンロード。
-https://download.cyanogenmod.org/?device=bacon
-$ adb push cm-12.1-20150728-NIGHTLY-bacon.zip /sdcard/ TWRPでinstallを選択して、cm-12.1-20150728-NIGHTLY-bacon.zipを選択してインストール
-Google Appsインストール CMではデフォルトでGoogle Apps入ってないので、追加でインストールする。 こちらからarmバージョンをダウンロードする。
-https://github.com/cgapps/vendor_google
-$ adb push gapps-5.1-arm-2015-07-17-13-29.zip /sdcard/ TWRPでinstallを選択して、gapps-5.1-arm-2015-07-17-13-29.zipを選択してインストール</description>
+      <description>詳しいことはこちら。&#xA;Androidに最悪の脆弱性発見―ビデオメッセージを受信するだけでデバイスが乗っ取られる&#xA;ということで、まずSIMを抜いてOSのバージョンアップするようにした。&#xA;CyanogenMod: Recent Stagefright issues&#xA;Zip Fileダウンロードしてインストール こちらから最新版cm-12.1をダウンロード。&#xA;https://download.cyanogenmod.org/?device=bacon&#xA;$ adb push cm-12.1-20150728-NIGHTLY-bacon.zip /sdcard/ TWRPでinstallを選択して、cm-12.1-20150728-NIGHTLY-bacon.zipを選択してインストール&#xA;Google Appsインストール CMではデフォルトでGoogle Apps入ってないので、追加でインストールする。 こちらからarmバージョンをダウンロードする。&#xA;https://github.com/cgapps/vendor_google&#xA;$ adb push gapps-5.1-arm-2015-07-17-13-29.zip /sdcard/ TWRPでinstallを選択して、gapps-5.1-arm-2015-07-17-13-29.zipを選択してインストール</description>
     </item>
-    
     <item>
       <title>GHOST (CVE-2015-0235)</title>
       <link>https://dongri.github.io/2015/01/ghost-cve-2015-0235/</link>
       <pubDate>Wed, 28 Jan 2015 11:28:57 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2015/01/ghost-cve-2015-0235/</guid>
-      <description>クラウドセキュリティ企業Qualysの研究者が、Linux GNU Cライブラリ（glibc）に深刻なセキュリティホールである「GHOST」（CVE-2015-0235）を発見したらしい。
-http://www.openwall.com/lists/oss-security/2015/01/27/9
-このセキュリティホールは、glibc-2.2（2000年11月10日にリリース）を使用してビルドされたすべてのLinuxシステムに存在する。Qualysによれば、このバグは実際には、2013年5月21日にリリースされた、glibc-2.17とglibc-2.18の間のバグフィックスで修正されている。
-ポイントはglibcのバージョンで判断するのではなく、パッチを当てたかどうか。
-対応前 /lib/libc.so.6 /lib64/libc.so.6 /lib/i386-linux-gnu/libc.so.6 /lib/x86_64-linux-gnu/libc.so.6 $ /lib64/libc.so.6 GNU C Library stable release version 2.12, by Roland McGrath et al. Copyright (C) 2010 Free Software Foundation, Inc. This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. Compiled by GNU CC version 4.4.7 20120313 (Red Hat 4.4.7-4). Compiled on a Linux 2.</description>
+      <description>クラウドセキュリティ企業Qualysの研究者が、Linux GNU Cライブラリ（glibc）に深刻なセキュリティホールである「GHOST」（CVE-2015-0235）を発見したらしい。&#xA;http://www.openwall.com/lists/oss-security/2015/01/27/9&#xA;このセキュリティホールは、glibc-2.2（2000年11月10日にリリース）を使用してビルドされたすべてのLinuxシステムに存在する。Qualysによれば、このバグは実際には、2013年5月21日にリリースされた、glibc-2.17とglibc-2.18の間のバグフィックスで修正されている。&#xA;ポイントはglibcのバージョンで判断するのではなく、パッチを当てたかどうか。&#xA;対応前 /lib/libc.so.6 /lib64/libc.so.6 /lib/i386-linux-gnu/libc.so.6 /lib/x86_64-linux-gnu/libc.so.6 $ /lib64/libc.so.6 GNU C Library stable release version 2.12, by Roland McGrath et al. Copyright (C) 2010 Free Software Foundation, Inc. This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. Compiled by GNU CC version 4.4.7 20120313 (Red Hat 4.4.7-4). Compiled on a Linux 2.</description>
     </item>
-    
     <item>
       <title>ShellShock</title>
       <link>https://dongri.github.io/2014/09/shellshock/</link>
       <pubDate>Sun, 28 Sep 2014 11:28:57 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2014/09/shellshock/</guid>
-      <description> 3日ほど経ちましたが、あのshellshockについて見かけた記事ををまとめてみた。
-当日は社内で二人で「楽しく」対応したが、ある意味面白かった。
-BASHの脆弱性でCGIスクリプトにアレさせてみました
-http://www.walbrix.com/jp/blog/2014-09-bash-code-injection.html
-先程から騒ぎになっているbashの脆弱性について
-http://blog.ueda.asia/?p=3967
-bashの脆弱性(CVE-2014-6271) #ShellShock の関連リンクをまとめてみた
-http://d.hatena.ne.jp/Kango/20140925/1411612246
-bashの脆弱性がヤバすぎる件
-https://x86-64.jp/blog/CVE-2014-6271
-bash脆弱性への対応
-http://qiita.com/tomohisaota/items/8a8049eea11ece3781b3
-2014/09/24に発表されたBash脆弱性と解決法(RedHat系)
-http://qiita.com/richmikan@github/items/5f54114a46e64178133d﻿
-AWS Elastic Beanstalk bash脆弱性への対応
-http://qiita.com/dongri/items/5a1fd49e091438ef37d7
-この後もいろんな記事出たが、省略
-対応内容 $ env x=&amp;#39;() { :;}; echo vulnerable&amp;#39; bash -c &amp;#39;echo bash test&amp;#39; vulnerable bash test $ sudo yum clean all $ sudo yum update bash $ env x=&amp;#39;() { :;}; echo vulnerable&amp;#39; bash -c &amp;#39;echo bash test&amp;#39; bash test $ </description>
+      <description> 3日ほど経ちましたが、あのshellshockについて見かけた記事ををまとめてみた。&#xA;当日は社内で二人で「楽しく」対応したが、ある意味面白かった。&#xA;BASHの脆弱性でCGIスクリプトにアレさせてみました&#xA;http://www.walbrix.com/jp/blog/2014-09-bash-code-injection.html&#xA;先程から騒ぎになっているbashの脆弱性について&#xA;http://blog.ueda.asia/?p=3967&#xA;bashの脆弱性(CVE-2014-6271) #ShellShock の関連リンクをまとめてみた&#xA;http://d.hatena.ne.jp/Kango/20140925/1411612246&#xA;bashの脆弱性がヤバすぎる件&#xA;https://x86-64.jp/blog/CVE-2014-6271&#xA;bash脆弱性への対応&#xA;http://qiita.com/tomohisaota/items/8a8049eea11ece3781b3&#xA;2014/09/24に発表されたBash脆弱性と解決法(RedHat系)&#xA;http://qiita.com/richmikan@github/items/5f54114a46e64178133d﻿&#xA;AWS Elastic Beanstalk bash脆弱性への対応&#xA;http://qiita.com/dongri/items/5a1fd49e091438ef37d7&#xA;この後もいろんな記事出たが、省略&#xA;対応内容 $ env x=&amp;#39;() { :;}; echo vulnerable&amp;#39; bash -c &amp;#39;echo bash test&amp;#39; vulnerable bash test $ sudo yum clean all $ sudo yum update bash $ env x=&amp;#39;() { :;}; echo vulnerable&amp;#39; bash -c &amp;#39;echo bash test&amp;#39; bash test $ </description>
     </item>
-    
   </channel>
 </rss>

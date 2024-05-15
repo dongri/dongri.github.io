@@ -1,74 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>amazon on dongri</title>
+    <title>Amazon on dongri</title>
     <link>https://dongri.github.io/tags/amazon/</link>
-    <description>Recent content in amazon on dongri</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Amazon on dongri</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Jan 2019 21:42:00 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/amazon/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Jan 2019 21:42:00 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/amazon/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Amazon DocumentDBを試してみた</title>
       <link>https://dongri.github.io/2019/01/amazon-documentdb%E3%82%92%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/</link>
       <pubDate>Mon, 14 Jan 2019 21:42:00 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2019/01/amazon-documentdb%E3%82%92%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
-      <description>AmazonからMongoDBと互換性を持つDocumentDBをリリースしたと言ってるので試してみた。 クラスタを作成するためにVPCが必要だったのでVPCを一つ作成。VPCの他にアベイラビリティゾーン２つ必要なので、違うアベイラビリティゾーンを持つサブネット２つ作成。これでクラスタ作成できる。
-インスタンスタイプは最低でもdb.r4.largeで15.25GBのメモリ。値段は$0.277
-エンドポイントはPublicにできないので、sshトンネル作って接続するようにする。
-SSHトンネル $ ssh -L 27017:docdb-2019-01-14-13-34-21.cluster-crgjmmxnvvix.us-east-1.docdb.amazonaws.com:27017 -i ~/.ssh/{pem file} -p 22 ec2-user@{bastion ip} bastionをssh configに設定済みであれば以下のようにしてもOK
-$ ssh -L 27017:docdb-2019-01-14-13-34-21.cluster-crgjmmxnvvix.us-east-1.docdb.amazonaws.com:27017 {bastion} mongo cliで接続してみる $ wget https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem $ mongo --ssl --host localhost:27017 --sslCAFile ./rds-combined-ca-bundle.pem --username {user} --password {password} --sslAllowInvalidHostnames MongoDB shell version v4.0.1 connecting to: mongodb://localhost:12345/ MongoDB server version: 3.6.0 rs0:PRIMARY&amp;gt; show dbs docdb-2019-01-14-13-34-21 0.000GB rs0:PRIMARY&amp;gt; use docdb-2019-01-14-13-34-21 switched to db docdb-2019-01-14-13-34-21 rs0:PRIMARY&amp;gt; show collections users mongriで接続してみる https://github.com/dongri/mongri
-$ vim config/mongo.</description>
+      <description>AmazonからMongoDBと互換性を持つDocumentDBをリリースしたと言ってるので試してみた。 クラスタを作成するためにVPCが必要だったのでVPCを一つ作成。VPCの他にアベイラビリティゾーン２つ必要なので、違うアベイラビリティゾーンを持つサブネット２つ作成。これでクラスタ作成できる。&#xA;インスタンスタイプは最低でもdb.r4.largeで15.25GBのメモリ。値段は$0.277&#xA;エンドポイントはPublicにできないので、sshトンネル作って接続するようにする。&#xA;SSHトンネル $ ssh -L 27017:docdb-2019-01-14-13-34-21.cluster-crgjmmxnvvix.us-east-1.docdb.amazonaws.com:27017 -i ~/.ssh/{pem file} -p 22 ec2-user@{bastion ip} bastionをssh configに設定済みであれば以下のようにしてもOK&#xA;$ ssh -L 27017:docdb-2019-01-14-13-34-21.cluster-crgjmmxnvvix.us-east-1.docdb.amazonaws.com:27017 {bastion} mongo cliで接続してみる $ wget https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem $ mongo --ssl --host localhost:27017 --sslCAFile ./rds-combined-ca-bundle.pem --username {user} --password {password} --sslAllowInvalidHostnames MongoDB shell version v4.0.1 connecting to: mongodb://localhost:12345/ MongoDB server version: 3.6.0 rs0:PRIMARY&amp;gt; show dbs docdb-2019-01-14-13-34-21 0.000GB rs0:PRIMARY&amp;gt; use docdb-2019-01-14-13-34-21 switched to db docdb-2019-01-14-13-34-21 rs0:PRIMARY&amp;gt; show collections users mongriで接続してみる https://github.com/dongri/mongri&#xA;$ vim config/mongo.</description>
     </item>
-    
     <item>
       <title>Alexa Skill 審査通ってリリースできた</title>
       <link>https://dongri.github.io/2018/01/alexa-skill-%E5%AF%A9%E6%9F%BB%E9%80%9A%E3%81%A3%E3%81%A6%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%81%A7%E3%81%8D%E3%81%9F/</link>
       <pubDate>Wed, 31 Jan 2018 23:12:53 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2018/01/alexa-skill-%E5%AF%A9%E6%9F%BB%E9%80%9A%E3%81%A3%E3%81%A6%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%81%A7%E3%81%8D%E3%81%9F/</guid>
-      <description>先日の 「RebuildのAlexa Skillを作ってリジェクトされた話」 は諦めましたが、「カフェの音」というスキルは頑張ってリリース出来ました。今回も三回リジェクトされ四回目でやっとな感じで、審査について書いてみます。
-一回目 Amazon Alexaスキルカタログに申請されたスキルに関して、第三者の商標またはブランドが使用されていたため、認定を却下いたしました。
-アイコンにコーヒーカップに「カフェ・ベローチェ」文字があったのでダメでした。アイコンを変えて再申請
-二回目 スキルの詳細カードに表示される説明には、ユーザーがスキルの使用方法について正確な情報が含まれていません。
-一時停止と停止を分けて記述してくださいとのことだったのでその通りに修正して再申請
-三回目 Alexa Skills Kitの今後のバージョンでは、既存のプロパティとの後方互換性を維持しながら、JSONリクエストおよび応答のフォーマットに新しいプロパティが追加される場合があります。追加されたパラメーターを指定してスキルを呼び出した際、受け入れられると想定される場合にスキルがリクエストを拒否します。そのため、このタイプの変更に柔軟に対応できるコードを作成する必要があります。 たとえば、JSONリクエストをデシリアライズするコードは、新しい、不明なプロパティを検出しても停止しないようにすることが必要です。
-これは意味不明で良くわからない。メールに書いてある「問い合わせ」リンク先も500エラーで落ちてるので、知るか！と思いそのまま再申請
-四回目 この度は カフェの音で集中力アップ スキルを申請いただき、誠にありがとうございます。 おめでとうございます。スキルは認定プロセスに合格し、まもなくスキルストアに公開されます。 スキルストアに公開されると、サービスへのトラフィックが増えることが見込まれます。十分なキャパシティがあることをご確認ください。　また、ユーザーが想定外のオペレーションを行なった場合にもサービスが機能し続けることを確認してください。
-通ったが、三回目は何だったんですかね？
-ログを仕込んでアクセスが来るとBotで通知来るようにしたので、審査が始まると通知が来てました。
-朝10時頃から始まるらしい 複数人がやるみたいで、10時、13時、15時で3,4回集中してアクセスが来る 意外と細かくテストしてる模様 </description>
+      <description>先日の 「RebuildのAlexa Skillを作ってリジェクトされた話」 は諦めましたが、「カフェの音」というスキルは頑張ってリリース出来ました。今回も三回リジェクトされ四回目でやっとな感じで、審査について書いてみます。&#xA;一回目 Amazon Alexaスキルカタログに申請されたスキルに関して、第三者の商標またはブランドが使用されていたため、認定を却下いたしました。&#xA;アイコンにコーヒーカップに「カフェ・ベローチェ」文字があったのでダメでした。アイコンを変えて再申請&#xA;二回目 スキルの詳細カードに表示される説明には、ユーザーがスキルの使用方法について正確な情報が含まれていません。&#xA;一時停止と停止を分けて記述してくださいとのことだったのでその通りに修正して再申請&#xA;三回目 Alexa Skills Kitの今後のバージョンでは、既存のプロパティとの後方互換性を維持しながら、JSONリクエストおよび応答のフォーマットに新しいプロパティが追加される場合があります。追加されたパラメーターを指定してスキルを呼び出した際、受け入れられると想定される場合にスキルがリクエストを拒否します。そのため、このタイプの変更に柔軟に対応できるコードを作成する必要があります。 たとえば、JSONリクエストをデシリアライズするコードは、新しい、不明なプロパティを検出しても停止しないようにすることが必要です。&#xA;これは意味不明で良くわからない。メールに書いてある「問い合わせ」リンク先も500エラーで落ちてるので、知るか！と思いそのまま再申請&#xA;四回目 この度は カフェの音で集中力アップ スキルを申請いただき、誠にありがとうございます。 おめでとうございます。スキルは認定プロセスに合格し、まもなくスキルストアに公開されます。 スキルストアに公開されると、サービスへのトラフィックが増えることが見込まれます。十分なキャパシティがあることをご確認ください。　また、ユーザーが想定外のオペレーションを行なった場合にもサービスが機能し続けることを確認してください。&#xA;通ったが、三回目は何だったんですかね？&#xA;ログを仕込んでアクセスが来るとBotで通知来るようにしたので、審査が始まると通知が来てました。&#xA;朝10時頃から始まるらしい 複数人がやるみたいで、10時、13時、15時で3,4回集中してアクセスが来る 意外と細かくテストしてる模様 </description>
     </item>
-    
     <item>
       <title>RebuildのAlexa Skillを作ってリジェクトされた話</title>
       <link>https://dongri.github.io/2018/01/rebuild%E3%81%AEalexa-skill%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%83%AA%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%95%E3%82%8C%E3%81%9F%E8%A9%B1/</link>
       <pubDate>Tue, 23 Jan 2018 23:13:19 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2018/01/rebuild%E3%81%AEalexa-skill%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%83%AA%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%95%E3%82%8C%E3%81%9F%E8%A9%B1/</guid>
-      <description>Echo Dotが届いたのでAlexa Skillを作ってみることにしました。オフィスに届いた当日はSlackで使ってたhubot deployをAlexaからデプロイできるようにと遊んでみたがちゃんとしたものを作ろうと思って週末に http://rebuild.fm をAmazon Echoで聞けるようにしてみました。
-以下実装上で困った話をしようと思います
-xml2jsonをrequireすると反応しない http://feeds.rebuild.fm/rebuildfm RSSなのでxmlをパースする必要があり、nodejsでxmlパーサを探してみた結果これでした。 しかしrequireした時点でAlexa（Lambda）が反応しなくなりました。深く検証してませんが、おそらくnodejs 6.10にサポートしてないのが原因かと思われます。
-xml2jsファイルパースで無反応 xml2jsonがサポートしてないので、xml2jsで試してみました、こいつは正しく動いてるように見えますが、でかいファイルのパースにはダメでした。http://feeds.rebuild.fm/rebuildfm 実はこいつのxmlが意外とでかくて数千行もありましたね。。。
-自前のサーバーでやろう http://feeds.rebuild.fm/rebuildfm このfeedを定期的に取ってきて必要な情報だけjsonに変換してS3に突っ込んでそこから情報を取るようにしました。
-mp3が再生できない問題 Rebuildのfeedに書いてあるデフォルトのmp3ファイルだとURLがhttpのため this.response.audioPlayerPlay では再生できませんでした。 これもなんとかしようとして自前のS3にアップロードしてhttps対応しました。
-自動化 一時間おきにrebuildのfeedから最新のxmlからjsonに変換して、追加されたmp3ファイルをS3にアップロードするようにしました。
-リジェクト 気軽く申請してみようと思い申請したものの、案の定リレクトされました。理由は
-使用されている第三者の知的財産: 「Rebuild.fm」 第三者の知的財産が使用されていたメタデータ: スキル名、スキルアイコン、呼び出し名、スキル詳細ページ Amazonにとってカスタマーへの透明性は非常に重要なものです。これらの問題への対策としては、以下の2つが考えられます。 A. ブランド所有者が「Rebuild.fm」の知的財産の使用を許可することを明記した署名入りの書面、またはライセンス契約等を提出する。 • 商標、知的財産、ブランドを正当に利用するスキルがある場合、そのスキルの認証を申請する際に、これらの使用許諾を所有することを示し、明示的に証明する。開発者ポータルの「Publishing Information」ページでテスト手順フォームを使用して、必要に応じて外部リンクと連絡先情報を含めてこの情報を入力し、スキルに必要な使用許諾があることを認定チームが判断できるようにする。 まあ、そうでしょうね。
-やってみてわかったこと Podcast系は所有者の承認を得ること ステップごとにヘルプ、ストップ、終了して、を認識させること Audio Playerの場合、一時停止、再開を認識させること 意外とちゃんとテストしてること 参考にコードをgithubに上げときます https://github.com/dongri/alexa-rebuild/
-index.jsがalexa skillで、main.goが rebuildのfeedからxmlをjsonに変換し、mp3をS3にアップロードしてるスクリプトです。
-以上でした。</description>
+      <description>Echo Dotが届いたのでAlexa Skillを作ってみることにしました。オフィスに届いた当日はSlackで使ってたhubot deployをAlexaからデプロイできるようにと遊んでみたがちゃんとしたものを作ろうと思って週末に http://rebuild.fm をAmazon Echoで聞けるようにしてみました。&#xA;以下実装上で困った話をしようと思います&#xA;xml2jsonをrequireすると反応しない http://feeds.rebuild.fm/rebuildfm RSSなのでxmlをパースする必要があり、nodejsでxmlパーサを探してみた結果これでした。 しかしrequireした時点でAlexa（Lambda）が反応しなくなりました。深く検証してませんが、おそらくnodejs 6.10にサポートしてないのが原因かと思われます。&#xA;xml2jsファイルパースで無反応 xml2jsonがサポートしてないので、xml2jsで試してみました、こいつは正しく動いてるように見えますが、でかいファイルのパースにはダメでした。http://feeds.rebuild.fm/rebuildfm 実はこいつのxmlが意外とでかくて数千行もありましたね。。。&#xA;自前のサーバーでやろう http://feeds.rebuild.fm/rebuildfm このfeedを定期的に取ってきて必要な情報だけjsonに変換してS3に突っ込んでそこから情報を取るようにしました。&#xA;mp3が再生できない問題 Rebuildのfeedに書いてあるデフォルトのmp3ファイルだとURLがhttpのため this.response.audioPlayerPlay では再生できませんでした。 これもなんとかしようとして自前のS3にアップロードしてhttps対応しました。&#xA;自動化 一時間おきにrebuildのfeedから最新のxmlからjsonに変換して、追加されたmp3ファイルをS3にアップロードするようにしました。&#xA;リジェクト 気軽く申請してみようと思い申請したものの、案の定リレクトされました。理由は&#xA;使用されている第三者の知的財産: 「Rebuild.fm」 第三者の知的財産が使用されていたメタデータ: スキル名、スキルアイコン、呼び出し名、スキル詳細ページ Amazonにとってカスタマーへの透明性は非常に重要なものです。これらの問題への対策としては、以下の2つが考えられます。 A. ブランド所有者が「Rebuild.fm」の知的財産の使用を許可することを明記した署名入りの書面、またはライセンス契約等を提出する。 • 商標、知的財産、ブランドを正当に利用するスキルがある場合、そのスキルの認証を申請する際に、これらの使用許諾を所有することを示し、明示的に証明する。開発者ポータルの「Publishing Information」ページでテスト手順フォームを使用して、必要に応じて外部リンクと連絡先情報を含めてこの情報を入力し、スキルに必要な使用許諾があることを認定チームが判断できるようにする。 まあ、そうでしょうね。&#xA;やってみてわかったこと Podcast系は所有者の承認を得ること ステップごとにヘルプ、ストップ、終了して、を認識させること Audio Playerの場合、一時停止、再開を認識させること 意外とちゃんとテストしてること 参考にコードをgithubに上げときます https://github.com/dongri/alexa-rebuild/&#xA;index.jsがalexa skillで、main.goが rebuildのfeedからxmlをjsonに変換し、mp3をS3にアップロードしてるスクリプトです。&#xA;以上でした。</description>
     </item>
-    
     <item>
       <title>GoでAmazon SES送信テスト</title>
       <link>https://dongri.github.io/2017/09/go%E3%81%A7amazon-ses%E9%80%81%E4%BF%A1%E3%83%86%E3%82%B9%E3%83%88/</link>
       <pubDate>Sat, 09 Sep 2017 06:50:55 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2017/09/go%E3%81%A7amazon-ses%E9%80%81%E4%BF%A1%E3%83%86%E3%82%B9%E3%83%88/</guid>
-      <description>毎回ハマったりするのでメモ。GolangでAmazon SES送信テスト。
-package main import ( &amp;#34;errors&amp;#34; &amp;#34;log&amp;#34; &amp;#34;github.com/aws/aws-sdk-go/aws&amp;#34; &amp;#34;github.com/aws/aws-sdk-go/aws/credentials&amp;#34; &amp;#34;github.com/aws/aws-sdk-go/aws/session&amp;#34; &amp;#34;github.com/aws/aws-sdk-go/service/ses&amp;#34; ) func main() { from := &amp;#34;noreply@domain.com&amp;#34; to := &amp;#34;dongrify@gmail.com&amp;#34; title := &amp;#34;amazon ses&amp;#34; body := &amp;#34;hello, from ses&amp;#34; err := sendSESEmail(from, to, title, body) if err != nil { log.Println(&amp;#34;mail sending error&amp;#34;) } } func sendSESEmail(from string, to string, title string, body string) error { awsSession := session.New(&amp;amp;aws.Config{ Region: aws.String(&amp;#34;us-east-1&amp;#34;), Credentials: credentials.NewStaticCredentials(&amp;#34;AWS_ACCESS_KEY_ID&amp;#34;, &amp;#34;AWS_SECRET_KEY&amp;#34;, &amp;#34;&amp;#34;), }) svc := ses.</description>
+      <description>毎回ハマったりするのでメモ。GolangでAmazon SES送信テスト。&#xA;package main import ( &amp;#34;errors&amp;#34; &amp;#34;log&amp;#34; &amp;#34;github.com/aws/aws-sdk-go/aws&amp;#34; &amp;#34;github.com/aws/aws-sdk-go/aws/credentials&amp;#34; &amp;#34;github.com/aws/aws-sdk-go/aws/session&amp;#34; &amp;#34;github.com/aws/aws-sdk-go/service/ses&amp;#34; ) func main() { from := &amp;#34;noreply@domain.com&amp;#34; to := &amp;#34;dongrify@gmail.com&amp;#34; title := &amp;#34;amazon ses&amp;#34; body := &amp;#34;hello, from ses&amp;#34; err := sendSESEmail(from, to, title, body) if err != nil { log.Println(&amp;#34;mail sending error&amp;#34;) } } func sendSESEmail(from string, to string, title string, body string) error { awsSession := session.New(&amp;amp;aws.Config{ Region: aws.String(&amp;#34;us-east-1&amp;#34;), Credentials: credentials.NewStaticCredentials(&amp;#34;AWS_ACCESS_KEY_ID&amp;#34;, &amp;#34;AWS_SECRET_KEY&amp;#34;, &amp;#34;&amp;#34;), }) svc := ses.</description>
     </item>
-    
   </channel>
 </rss>

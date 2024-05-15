@@ -4,24 +4,16 @@
     <title>Ubuntu on dongri</title>
     <link>https://dongri.github.io/tags/ubuntu/</link>
     <description>Recent content in Ubuntu on dongri</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Jan 2017 23:25:44 +0900</lastBuildDate><atom:link href="https://dongri.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Jan 2017 23:25:44 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>開発環境をLinuxにした</title>
       <link>https://dongri.github.io/2017/01/%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%82%92linux%E3%81%AB%E3%81%97%E3%81%9F/</link>
       <pubDate>Sat, 14 Jan 2017 23:25:44 +0900</pubDate>
-      
       <guid>https://dongri.github.io/2017/01/%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%82%92linux%E3%81%AB%E3%81%97%E3%81%9F/</guid>
-      <description>開発者のMac離れ?(去年からそういう噂があるけど)の流れで年末帰国時に買って来た Mi Notebook Air (http://www.mi.com/mibookair/) にLinuxを入れて開発環境を構築してみた。 Mi Notebook Airは1.07kgでMacBook Air1.35kgより軽くてリュックが非常に軽くなった。
-Macが嫌いになった理由 自分は強烈なApple, Macファンでもないが、常に新しいMacBookを買って開発環境にしてた。しかし、 今回のMacBook TouchBarにはがっかりした。なかなか慣れないキーボードのパチパチ感、仕様にはバッテリーで 最大10時間使えると書いてあるのに実はフル充電から４時間ほどしか使えないし、macOSのバージョンアップで バッテリ残量の残り時間も消したりしてappleに対しての不信感が増してきた。
-Ubuntuにした理由 別にLinux OSとvimさえあればいいというエンジニアもいるかも知らないが、自分の場合は業務開発端末としては ある程度GUIツールを使わないといけないのでLinux Desktopでシェアが一番高いUbuntuにした。 実はUbuntu Desktopにもいろんなディストリビューションがあって選択が非常に多くて、 3日かけて以下の順に試してみたが、最終的にはUbuntuにした。
-ubuntu -&amp;gt; kubuntu -&amp;gt; xubuntu -&amp;gt; budgie -&amp;gt; gnome -&amp;gt; mate -&amp;gt; elementary os -&amp;gt; ubuntu xubuntuは非常に軽い、budgieは非常に格好いい、elementary osはインタフェースがmacと似ていて操作しやすい。 それぞれメリットもあればデメリットもあった。dropboxのアイコンが表示されなかったり同期できなかったり、 OS Update後起動できなくなかったり、Chromeがクラッシュしたりと不安定なものもあった。 サードパーティ製のアプリ見ても標準ubuntuでは絶対正しく動くように開発されてるので、GUIツールをある程度使う ためにはubuntuを使う必要があった。以上の理由からUbuntuにした。
-引越して困ったこと 言わなくてもわかるようにiOSの開発ができなくなった。覚悟した上で引っ越ししたので家にも会社にもMacを用意した。
-引越しで一番頑張って設定してみようとして失敗したのがVPNだった。VPN PPTPはデフォルトでサポートしてるが l2tp ipsecは入ってなくて自前でなんとかしないといけなくて以下のツール使って頑張ったけどダメだった。
-https://github.com/nm-l2tp/network-manager-l2tp https://github.com/hwdsl2/setup-ipsec-vpn あとは1password。こいつは最初どうしようと思ったが、1pass CUIが何個かあってなんとかなった。
-https://github.com/georgebrock/1pass https://github.com/oggy/1pass https://github.com/dlokesh/1pass 引越して良かったこと プライベートも会社も開発環境がすべてDockerだったので、Docker for Macとさようならできたのがよかった。 そいつが使いにくいわけではないが、本来のDockerを使う感じがよかった。 brew より apt-get が好きだった。 LINE, Wechatなど余計なアプリ入れてなくて、terminal, chrome, atom しか入れてないんでコード書くのにもっと集中できる。</description>
+      <description>開発者のMac離れ?(去年からそういう噂があるけど)の流れで年末帰国時に買って来た Mi Notebook Air (http://www.mi.com/mibookair/) にLinuxを入れて開発環境を構築してみた。 Mi Notebook Airは1.07kgでMacBook Air1.35kgより軽くてリュックが非常に軽くなった。&#xA;Macが嫌いになった理由 自分は強烈なApple, Macファンでもないが、常に新しいMacBookを買って開発環境にしてた。しかし、 今回のMacBook TouchBarにはがっかりした。なかなか慣れないキーボードのパチパチ感、仕様にはバッテリーで 最大10時間使えると書いてあるのに実はフル充電から４時間ほどしか使えないし、macOSのバージョンアップで バッテリ残量の残り時間も消したりしてappleに対しての不信感が増してきた。&#xA;Ubuntuにした理由 別にLinux OSとvimさえあればいいというエンジニアもいるかも知らないが、自分の場合は業務開発端末としては ある程度GUIツールを使わないといけないのでLinux Desktopでシェアが一番高いUbuntuにした。 実はUbuntu Desktopにもいろんなディストリビューションがあって選択が非常に多くて、 3日かけて以下の順に試してみたが、最終的にはUbuntuにした。&#xA;ubuntu -&amp;gt; kubuntu -&amp;gt; xubuntu -&amp;gt; budgie -&amp;gt; gnome -&amp;gt; mate -&amp;gt; elementary os -&amp;gt; ubuntu xubuntuは非常に軽い、budgieは非常に格好いい、elementary osはインタフェースがmacと似ていて操作しやすい。 それぞれメリットもあればデメリットもあった。dropboxのアイコンが表示されなかったり同期できなかったり、 OS Update後起動できなくなかったり、Chromeがクラッシュしたりと不安定なものもあった。 サードパーティ製のアプリ見ても標準ubuntuでは絶対正しく動くように開発されてるので、GUIツールをある程度使う ためにはubuntuを使う必要があった。以上の理由からUbuntuにした。&#xA;引越して困ったこと 言わなくてもわかるようにiOSの開発ができなくなった。覚悟した上で引っ越ししたので家にも会社にもMacを用意した。&#xA;引越しで一番頑張って設定してみようとして失敗したのがVPNだった。VPN PPTPはデフォルトでサポートしてるが l2tp ipsecは入ってなくて自前でなんとかしないといけなくて以下のツール使って頑張ったけどダメだった。&#xA;https://github.com/nm-l2tp/network-manager-l2tp https://github.com/hwdsl2/setup-ipsec-vpn あとは1password。こいつは最初どうしようと思ったが、1pass CUIが何個かあってなんとかなった。&#xA;https://github.com/georgebrock/1pass https://github.com/oggy/1pass https://github.com/dlokesh/1pass 引越して良かったこと プライベートも会社も開発環境がすべてDockerだったので、Docker for Macとさようならできたのがよかった。 そいつが使いにくいわけではないが、本来のDockerを使う感じがよかった。 brew より apt-get が好きだった。 LINE, Wechatなど余計なアプリ入れてなくて、terminal, chrome, atom しか入れてないんでコード書くのにもっと集中できる。</description>
     </item>
-    
   </channel>
 </rss>
