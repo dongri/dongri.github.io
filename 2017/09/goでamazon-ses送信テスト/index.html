@@ -87,7 +87,7 @@
 
             <div id="follow-icons">
 	<a href="http://github.com/dongri" rel="me" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
-	<a href="http://twitter.com/dongrify" rel="me" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+	<a href="http://twitter.com/dongrium" rel="me" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
 	<a href="http://linkedin.com/in/dongri" rel="me" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
 	<a href="https://plus.google.com/u/0/100052427264226218799" rel="author" target="_blank"><i class="fa fa-google-plus-square fa-2x"></i></a>
 	<a href="https://www.facebook.com/profile.php?id=100002573679774" rel="me" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
@@ -134,7 +134,7 @@ import (
 
 func main() {
   from := &#34;noreply@domain.com&#34;
-  to := &#34;dongrify@gmail.com&#34;
+  to := &#34;dongrium@gmail.com&#34;
   title := &#34;amazon ses&#34;
   body := &#34;hello, from ses&#34;
   err := sendSESEmail(from, to, title, body)
@@ -178,7 +178,7 @@ func sendSESEmail(from string, to string, title string, body string) error {
 }
 </code></pre><p>Amazon SESを有効にしただけではデフォルトsandboxモードになっていて認証済みのメールアドレス宛にしか送れない。
 以下のエラーが出る。</p>
-<pre tabindex="0"><code>MessageRejected: Email address is not verified. The following identities failed the check in region US-EAST-1: dongrify@gmail.com
+<pre tabindex="0"><code>MessageRejected: Email address is not verified. The following identities failed the check in region US-EAST-1: dongrium@gmail.com
   status code: 400, request id: c219f19b-94de-11e7-9a09-5d9282910f87
 </code></pre><p>supportに「Request a Sending Limit Increase」申請する。</p>
 
