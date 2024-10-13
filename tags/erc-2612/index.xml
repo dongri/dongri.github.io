@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ERC-2612 on dongri</title>
+    <link>https://dongri.github.io/tags/erc-2612/</link>
+    <description>Recent content in ERC-2612 on dongri</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Jun 2024 10:02:16 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/erc-2612/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>メタトランザクションの実装例</title>
+      <link>https://dongri.github.io/2024/06/%E3%83%A1%E3%82%BF%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B6%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E5%AE%9F%E8%A3%85%E4%BE%8B/</link>
+      <pubDate>Sun, 23 Jun 2024 10:02:16 +0900</pubDate>
+      <guid>https://dongri.github.io/2024/06/%E3%83%A1%E3%82%BF%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B6%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E5%AE%9F%E8%A3%85%E4%BE%8B/</guid>
+      <description>&lt;p&gt;Ethereumのメタトランザクション（Meta-Transaction）とは、ユーザーがガス代を支払うことなくトランザクションを実行することを可能にする仕組みです。通常、Ethereum上のトランザクションを実行するには、ユーザーが自分のウォレットからガス代（ETH）を支払う必要があります。しかし、メタトランザクションを使用すると、ガス代を第三者（リレーアー、relayer）が支払い、ユーザーはETHを持っていなくてもトランザクションを送信できるようになります。（とChatGPTがおっしゃいました）&lt;/p&gt;&#xA;&lt;h2 id=&#34;eip-712&#34;&gt;EIP-712&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://eips.ethereum.org/EIPS/eip-712&#34;&gt;https://eips.ethereum.org/EIPS/eip-712&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Typed structured data hashing and signing をしてより人間にとって理解しやすいメッセージを署名する方式、以下の各EIPで使用されます。&lt;/p&gt;&#xA;&lt;h2 id=&#34;eip-2612&#34;&gt;EIP-2612&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://eips.ethereum.org/EIPS/eip-2612&#34;&gt;https://eips.ethereum.org/EIPS/eip-2612&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;permit&lt;/code&gt; 関数を用意して中で &lt;code&gt;_approve&lt;/code&gt; を行います。ユーザーがフロントエンドでEIP712署名を行って、relayerサーバーにsignatureを送ってrelayerが &lt;code&gt;transferFrom&lt;/code&gt; 処理を行います。&lt;/p&gt;&#xA;&lt;h2 id=&#34;eip-3009&#34;&gt;EIP-3009&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://eips.ethereum.org/EIPS/eip-3009&#34;&gt;https://eips.ethereum.org/EIPS/eip-3009&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;transferWithAuthorization&lt;/code&gt; 関数を用意して中で &lt;code&gt;ERC20._transfer&lt;/code&gt; を行います。ユーザーがフロントエンドでEIP712署名を行って、Relayerサーバーにsignatureを送って、relayerが &lt;code&gt;transferWithAuthorization&lt;/code&gt; を呼び出してtransfer処理を行います。&lt;/p&gt;&#xA;&lt;h2 id=&#34;eip-2771&#34;&gt;EIP-2771&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://eips.ethereum.org/EIPS/eip-2771&#34;&gt;https://eips.ethereum.org/EIPS/eip-2771&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;trustedForwarder&lt;/code&gt; というスマートコントラクトを用意してTokenContractに設定します。ユーザーはフロントエンドでverifyingContractをforwarderAddressにしてEIP712署名を行って、Relayerサーバーにデータとsignatureを送ります。RelayerはデータとSignatureを使って &lt;code&gt;forwarderContract&lt;/code&gt; の &lt;code&gt;execute&lt;/code&gt; を呼び出してtransfer処理を行う。&#xA;forwarder contractとrelayサーバーを自前で構築するか、saasを使うことが可能です。relayサーバーは分散化GSN(Gas Station Network)もあります。&lt;/p&gt;&#xA;&lt;h2 id=&#34;実装&#34;&gt;実装&lt;/h2&gt;&#xA;&lt;p&gt;実際動くものを作ってみないとものを言えないタイプなので、各EIPを実装してみました。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/dongri/ERC-2612&#34;&gt;https://github.com/dongri/ERC-2612&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/dongri/ERC-3009&#34;&gt;https://github.com/dongri/ERC-3009&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/dongri/ERC-2771&#34;&gt;https://github.com/dongri/ERC-2771&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

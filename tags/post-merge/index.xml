@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Post-Merge on dongri</title>
+    <link>https://dongri.github.io/tags/post-merge/</link>
+    <description>Recent content in Post-Merge on dongri</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Jan 2023 18:15:43 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/post-merge/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Merge後のEthereumステーキングの話</title>
+      <link>https://dongri.github.io/2023/01/the-merge%E5%BE%8C%E3%81%AEethereum%E3%82%B9%E3%83%86%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0%E3%81%AE%E8%A9%B1/</link>
+      <pubDate>Tue, 10 Jan 2023 18:15:43 +0900</pubDate>
+      <guid>https://dongri.github.io/2023/01/the-merge%E5%BE%8C%E3%81%AEethereum%E3%82%B9%E3%83%86%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0%E3%81%AE%E8%A9%B1/</guid>
+      <description>&lt;p&gt;2022年9月15日にマージが無事完了。&#xA;ステーキングに関してinfura,alchemyなどのRPCがマージ後は使えなくなった。&#xA;つまりノードを自分で建てないといけない。2TBのストレージ用意するのは結構なコスト。&lt;/p&gt;&#xA;&lt;p&gt;今まではawsで月1万円ちょっとでalexaアプリ開発のクレジット50ドル分があったので、実質5千円ぐらいでステーキングできたのが、2TBストレージのノードまで建てると月7万円まで膨らんだ。クリプトのこの冬にこれはやってられないと思って、自宅でノード建てようと思った。使ってないMacBookでやってみたが1TBストレージが10日間ぐらいでいっぱいになった。外部SSD接続してもよいが、どうせやるならRaspberry Piで遊んでみようと思ってRaspberry Piと4TBのSSDを買って構築。&lt;/p&gt;&#xA;&lt;h2 id=&#34;ハードウェア&#34;&gt;ハードウェア&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Raspberry Pi 4B 8GB&#xA;4TB SSD&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;いろいろな問題&#34;&gt;いろいろな問題&lt;/h2&gt;&#xA;&lt;p&gt;いろんな想定外の問題に遭遇したのでリストしてみた&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;2TB以上のストレージマウント問題&lt;br&gt;&#xA;OSとデータを4TB SSDで動かそうとして、マウントで2TB以上だとマウントがうまく行かない問題。GPTフォーマットにしないといけない。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Ethereum on Arm イメージ動かない問題&lt;br&gt;&#xA;&lt;a href=&#34;https://ethereum-on-arm-documentation.readthedocs.io/en/latest/index.html&#34;&gt;https://ethereum-on-arm-documentation.readthedocs.io/en/latest/index.html&lt;/a&gt;&#xA;インストールしたけど、ethereum/etehreumでログインできない。&#xA;諦めて自前でRaspberry Pi用のUbuntuを入れる&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;4TBストレージが壊れた&lt;br&gt;&#xA;Gethの同期中突然書き込めなくなった。試しに修復コマンドで頑張ってみたがだめだった。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Geth最後の100 blockぐらいで同期が終わらない問題&lt;br&gt;&#xA;最後の100 blockが12時間経っても同期が終わらない、ディスクI/Oか、bandwidthの問題&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;USB 2が遅い問題&lt;br&gt;&#xA;SSDをUSB 2のところに挿してた。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;WiFiが遅い問題&lt;br&gt;&#xA;MacBookではWiFiで問題なくステーキングできたけど、Raspberry PiのWiFiは遅い、LANケーブルに変更&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;電源問題&lt;br&gt;&#xA;Raspberry Pi買った時に付いて来た電源を使ってたが、しばらく動かすとsshできなくなり、Raspberry Piが無反応状態になる、PC用の電源に変更。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Prysmがメモリ食う問題&lt;br&gt;&#xA;Go製のPrysmは8GBのメモリでGethと一緒に動かすとメモリが足りなくてすぐ死ぬ、Rust製のLighthouseに変更&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;それでもメモリ足りない問題&lt;br&gt;&#xA;Lighthouseはある程度動かしたけど、数時間立つとvalidator client側が落ちる。&#xA;3GBのswapfile作成してswapスペースを確保する&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;普段クラウド（aws, gcp）で動かすとなかなか出会えない問題で辛かった。面白かったところもあるけど&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://dongri.github.io/images/post/2023-01-10/raspberry-pi.png&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

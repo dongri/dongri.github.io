@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>996 on dongri</title>
+    <link>https://dongri.github.io/tags/996/</link>
+    <description>Recent content in 996 on dongri</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 31 Mar 2019 14:40:34 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/996/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>996.ICUとは？</title>
+      <link>https://dongri.github.io/2019/03/996.icu%E3%81%A8%E3%81%AF/</link>
+      <pubDate>Sun, 31 Mar 2019 14:40:34 +0900</pubDate>
+      <guid>https://dongri.github.io/2019/03/996.icu%E3%81%A8%E3%81%AF/</guid>
+      <description>&lt;p&gt;この数日GitHub上で一番人気の996.icuリポとはなんなのか？&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/996icu/996.ICU&#34;&gt;https://github.com/996icu/996.ICU&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;ソースコードは全くなく、markdownのみなのに、一週間も経たないうちに12万Starであのtensorflowを抜いて5位まで登ってきてる。&#xA;このブログ書く時点で 125,347 Star&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/search?q=stars%3A%3E1&#34;&gt;https://github.com/search?q=stars%3A%3E1&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;日本語: &lt;a href=&#34;https://github.com/996icu/996.ICU/blob/master/i18n/ja_JP.md&#34;&gt;https://github.com/996icu/996.ICU/blob/master/i18n/ja_JP.md&lt;/a&gt;&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;996とは9時出社、9時退社、週6勤務から来てる。&lt;/p&gt;&#xA;&lt;p&gt;中国国内ではどう見てるのか？&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;良い活動だ。&lt;/li&gt;&#xA;&lt;li&gt;一週間後は誰も覚えてなくて、今までと変わらないだろう&lt;/li&gt;&#xA;&lt;li&gt;10年後見ると良い活動だったと思うはずだ&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;個人的には996ICU Licenseもよいと思う。&lt;/p&gt;&#xA;&lt;p&gt;996制度会社では使えない「996ICU License」。（あとで自分もRepoもこのライセンスにしようかな）&lt;/p&gt;&#xA;&lt;p&gt;GitHubでStarで一位になって国際で注目されて、中国のIT企業の勤務制度が改善されるといいですね。&lt;/p&gt;&#xA;&lt;h1 id=&#34;2019-04-01-1219-更新&#34;&gt;2019-04-01 12:19 更新&lt;/h1&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h3 id=&#34;133919-starで２位&#34;&gt;133,919 Starで２位&lt;/h3&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;2019-04-14-更新&#34;&gt;2019-04-14 更新&lt;/h1&gt;&#xA;&lt;p&gt;gen-license-rbでRubyバージョンのPR送ってみたが、理由なしにCloseされた。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/996icu/996.ICU/pull/25546&#34;&gt;https://github.com/996icu/996.ICU/pull/25546&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;有点丢人。。。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

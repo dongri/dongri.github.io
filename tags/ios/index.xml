@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ios on dongri</title>
+    <link>https://dongri.github.io/tags/ios/</link>
+    <description>Recent content in Ios on dongri</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 19 Dec 2017 15:38:35 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>iOS, Android アプリダウンロード数を取得</title>
+      <link>https://dongri.github.io/2017/12/ios-android-%E3%82%A2%E3%83%97%E3%83%AA%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E6%95%B0%E3%82%92%E5%8F%96%E5%BE%97/</link>
+      <pubDate>Tue, 19 Dec 2017 15:38:35 +0900</pubDate>
+      <guid>https://dongri.github.io/2017/12/ios-android-%E3%82%A2%E3%83%97%E3%83%AA%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E6%95%B0%E3%82%92%E5%8F%96%E5%BE%97/</guid>
+      <description>&lt;p&gt;App Annie、Search Manなどサービスを使えばAPI経由でアプリのダウンロード数を取得する方法いろいろあるようだが、iTunesconnectとPlay Storeから直接取得してみた。&lt;/p&gt;&#xA;&lt;h1 id=&#34;ios-reporter&#34;&gt;iOS Reporter&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://help.apple.com/itc/appsreporterguide/#/itc0f2481229&#34;&gt;https://help.apple.com/itc/appsreporterguide/#/itc0f2481229&lt;/a&gt; ここからReporter.zipをダウンロード。&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-access-tokenをitunesconnectページで発行する&#34;&gt;1. access tokenをitunesconnectページで発行する。&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://reportingitc2.apple.com/reports.html&#34;&gt;https://reportingitc2.apple.com/reports.html&lt;/a&gt; ページの左にに「レポートについて？」があるので？マークをクリックして「アクセストークン生成」リンクがクリックして生成する。&lt;/p&gt;&#xA;&lt;h3 id=&#34;2-reporterpropertiesを編集&#34;&gt;2. Reporter.propertiesを編集&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;AccessToken=********-****-****-****-************&#xA;&#xA;Mode=Normal&#xA;&#xA;SalesUrl=https://reportingitc-reporter.apple.com/reportservice/sales/v1&#xA;FinanceUrl=https://reportingitc-reporter.apple.com/reportservice/finance/v1&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;3-javaでレポート取得&#34;&gt;3. javaでレポート取得&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ java -jar Reporter.jar p=Reporter.properties Sales.getVendors&#xA;********&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;上で取得したVendor Numberを設定&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;DATE=&amp;#34;20171216&amp;#34;&#xA;VENDOR_NUMBER=&amp;#34;********&amp;#34;&#xA;$ java -jar Reporter.jar p=Reporter.properties Sales.getReport ${VENDOR_NUMBER}, Sales, Summary, Daily, ${DATE}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;4-レポート形式&#34;&gt;4. レポート形式&lt;/h3&gt;&#xA;&lt;p&gt;ドキュメントのリンク切れたりして正確なドキュメント見つかってないが、tvsファイルの&#xA;Product Type Identifierが1のものが新規ダウンロードらしい。&#xA;あとはファイルをshellか、何かで読んでunitsを出せば日付別に新規ダウンロード数取得できる。&lt;/p&gt;&#xA;&lt;h1 id=&#34;android&#34;&gt;Android&lt;/h1&gt;&#xA;&lt;h3 id=&#34;1-google-cloud-sdkダウンロード初期化&#34;&gt;1. Google Cloud SDKダウンロード、初期化&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://cloud.google.com/sdk/docs/&#34;&gt;https://cloud.google.com/sdk/docs/&lt;/a&gt; からgoogle cloud sdkをダウンロード。&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ cd google-cloud-sdk&#xA;$ ./bin/gcloud init&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;途中でブラウザが起動されて認証を終わらせる&lt;/p&gt;&#xA;&lt;h3 id=&#34;2-バケットid取得&#34;&gt;2. バケットID取得&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://play.google.com/apps/publish/&#34;&gt;https://play.google.com/apps/publish/&lt;/a&gt; Play Store Consoleの統計情報ページでアプリを選択して、ページの下に表示されてる「レポートの直接 URI:」の &lt;code&gt;pubsite_prod_rev_***&lt;/code&gt; をメモする。これが&lt;code&gt;developer_bucket_id&lt;/code&gt; になる&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rust on dongri</title>
+    <link>https://dongri.github.io/tags/rust/</link>
+    <description>Recent content in Rust on dongri</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Sep 2017 06:50:55 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/rust/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Qiita:Teamのクローンを作ってみた話</title>
+      <link>https://dongri.github.io/2017/09/qiitateam%E3%81%AE%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%B3%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E8%A9%B1/</link>
+      <pubDate>Thu, 28 Sep 2017 06:50:55 +0900</pubDate>
+      <guid>https://dongri.github.io/2017/09/qiitateam%E3%81%AE%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%B3%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E8%A9%B1/</guid>
+      <description>&lt;p&gt;タイトルのクローンを作ったは嘘ｗ。似たようなものを作ったが本当。&lt;/p&gt;&#xA;&lt;p&gt;チームがちょっと大きくなったのと外国籍のエンジニアがQiita嫌いという理由でQiita:Teamやめて&#xA;他のツールをいろいろ試してみたがどれも長く続かず、文句言うばかりでした。&#xA;結果エンジニアがノウハウなどナレッジを残す場所がなくなったわけですね。&lt;/p&gt;&#xA;&lt;p&gt;結局何がダメだったのか？文化の違い？デザインがダメ？私もわかりません。&lt;/p&gt;&#xA;&lt;p&gt;ちょっと考えてみたんですが、Qiitaのデザインがだめ、機能がだめだったら俺らが作ればいいんじゃと&#xA;思って作ってみたのがteamでした。https://github.com/rusts/team&lt;/p&gt;&#xA;&lt;p&gt;業務で使ってるGo言語で作ったらずっと早く簡単に作れたと思うが、社内でRust好きなエンジニアが結構多いなと感じ、&#xA;もしRustで作ったらみんなが興味持って機能追加したりメンテして俺達が本当に欲しかったものを作れるんじゃないかと思ってRustにしました。&lt;/p&gt;&#xA;&lt;p&gt;で、今どうなったか？&lt;/p&gt;&#xA;&lt;p&gt;数人は日報書くのを再開して、数人はTips、技術ノウハウなど共有することになりました。&#xA;プロジェクトにコミットする人も現れて、今は自分を含めて二人です。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Rust on Heroku with Docker</title>
+      <link>https://dongri.github.io/2016/08/rust-on-heroku-with-docker/</link>
+      <pubDate>Tue, 16 Aug 2016 00:42:53 +0900</pubDate>
+      <guid>https://dongri.github.io/2016/08/rust-on-heroku-with-docker/</guid>
+      <description>&lt;p&gt;Rustで書いたhello rustをherokuに載せてみた。&#xA;普通ならrust用のBuildpack使うのだが、今回はdockerを使うようにした。&#xA;Dockerfile、ソースコードなどはこちら&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/dongri/hello-rust&#34;&gt;https://github.com/dongri/hello-rust&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;はじめはalpineで頑張ってみようかと思ったがrustのインストールがうまく行かなくて、ubuntuに変更。&#xA;Dockerfileは以下のようになっている。&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;FROM ubuntu:latest&#xA;&#xA;# rust, cargo buildに必要なソフトウェアインストール&#xA;RUN apt-get -y update&#xA;RUN apt-get -y install curl file sudo gcc&#xA;&#xA;# rustのインストール&#xA;RUN curl -sSf https://static.rust-lang.org/rustup.sh | sh&#xA;&#xA;RUN mkdir -p /app&#xA;WORKDIR /app&#xA;COPY . /app&#xA;&#xA;# ビルドして ./target/release/helloバイナリを作る&#xA;RUN cargo build --release&#xA;&#xA;EXPOSE 8080&#xA;&#xA;# 実行&#xA;CMD /app/target/release/hello&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;readmeにも書いてあるがherokuはdockerをサポートしていて、pushするだけでローカルのdockerと&#xA;同じように動かせる。必要なのは、heroku-container-toolsというheroku plugin。&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ heroku plugins:install heroku-container-tools&#xA;$ heroku container:push web&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;これでだけでherokuにアップされて動く。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://hello-rust.herokuapp.com/&#34;&gt;https://hello-rust.herokuapp.com/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hello Rust</title>
+      <link>https://dongri.github.io/2016/07/hello-rust/</link>
+      <pubDate>Wed, 13 Jul 2016 23:35:22 +0900</pubDate>
+      <guid>https://dongri.github.io/2016/07/hello-rust/</guid>
+      <description>&lt;h1 id=&#34;install&#34;&gt;Install&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ brew search rust&#xA;multirust    rust    uncrustify&#xA;$ brew install rust&#xA;&#xA;$ rustc --version&#xA;rustc 1.10.0&#xA;$&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;hello-world&#34;&gt;hello world&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ vim hello.rs&#xA;fn main() {&#xA;    println!(&amp;#34;Hello Rust!&amp;#34;);&#xA;}&#xA;&#xA;$ rustc hello.rs&#xA;$ ./hello&#xA;Hello Rust!&#xA;$&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Elixir on dongri</title>
+    <link>https://dongri.github.io/tags/elixir/</link>
+    <description>Recent content in Elixir on dongri</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Mar 2020 18:42:14 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/elixir/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Elixir 触って一ヶ月</title>
+      <link>https://dongri.github.io/2020/03/elixir-%E8%A7%A6%E3%81%A3%E3%81%A6%E4%B8%80%E3%83%B6%E6%9C%88/</link>
+      <pubDate>Mon, 02 Mar 2020 18:42:14 +0900</pubDate>
+      <guid>https://dongri.github.io/2020/03/elixir-%E8%A7%A6%E3%81%A3%E3%81%A6%E4%B8%80%E3%83%B6%E6%9C%88/</guid>
+      <description>&lt;p&gt;無職になってから新しい言語でも触ってみようと思い、Elixirを勉強し始めました。&lt;/p&gt;&#xA;&lt;p&gt;8歳になるElixirをなんで今さら触るかと言うと、Webベースのプロジェクトを作ろうと相談を受けて、またRoRでやる？それともGo？&#xA;RoR確かに早く書ける、しかしプロジェクトが大きくなるとパフォーマンスの問題とメンテナンスで若干苦労する感じがしました。&#xA;型のあるGoで書くとパフォーマンスもメンテナンスも心配ないが、飽きたと言うかなんとなく選択肢から外れました。&lt;/p&gt;&#xA;&lt;p&gt;相談受けたプロジェクトはそんなに急ぎのものでもないし、新しい言語、フレームワークでやってみようといろいろググったら出てきたのがElixir。&#xA;Erlang触ったことなかったので、はじめは若干怖い気持ちでしたが、読んでるうちにRubyじゃん！？と思ったときもありましたｗ&lt;/p&gt;&#xA;&lt;p&gt;Web向けのフレームワークはPhoenixがメジャーのようです。こいつもRailsじゃん！？とはじめはそう思いました。しかし、書いてるうちに全然違うことに気付きました。&#xA;Railsのような魔法がなくてよかったです。&lt;/p&gt;&#xA;&lt;p&gt;プロジェクトは2/3ぐらい終わったつもりだが、まだまだElixirのコアな部分は触れてません。途中でパターンマッチが楽しくなってif書いたら負け！と感じたこともありました。&lt;/p&gt;&#xA;&lt;p&gt;そもそもこの言語最高とか、このフレームワーク最高とか言うと絶対叩かれるので、そんなことは言いません。心からそう思ってもないし。&#xA;RoRに比べると確かにメンテナンスしやすい、Phoenixは魔法のようなものが少ないので初心者に優しいという感想でした。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

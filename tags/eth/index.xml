@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ETH on dongri</title>
+    <link>https://dongri.github.io/tags/eth/</link>
+    <description>Recent content in ETH on dongri</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 31 May 2020 00:42:14 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/eth/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SNSアカウントを使ったETH送金システム</title>
+      <link>https://dongri.github.io/2020/05/sns%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9Feth%E9%80%81%E9%87%91%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0/</link>
+      <pubDate>Sun, 31 May 2020 00:42:14 +0900</pubDate>
+      <guid>https://dongri.github.io/2020/05/sns%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9Feth%E9%80%81%E9%87%91%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0/</guid>
+      <description>&lt;p&gt;プライベートプロジェクトで &lt;a href=&#34;https://cryptotako.com&#34;&gt;cryptotako.com&lt;/a&gt; というサービスを開発しました。&lt;/p&gt;&#xA;&lt;p&gt;相手のイーサリアムアドレスを聞かなくてもシステム通してETHを送金することが可能です。&lt;/p&gt;&#xA;&lt;p&gt;サービスの主な機能は以下のようになります&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Twitter, GitHubなどのソーシャルネットワークアカウントでログイン&lt;/li&gt;&#xA;&lt;li&gt;Metamask, Dapperなどのウォレットからログイン&lt;/li&gt;&#xA;&lt;li&gt;Twitter, GitHub, ETH Addressを選択して送金&lt;/li&gt;&#xA;&lt;li&gt;Twttter, GitHub上での通知&lt;/li&gt;&#xA;&lt;li&gt;トランザクション履歴&lt;/li&gt;&#xA;&lt;li&gt;Twitter, GitHubアカウント連携でアドレス生成&lt;/li&gt;&#xA;&lt;li&gt;秘密鍵エクスポート&lt;/li&gt;&#xA;&lt;li&gt;email, username 変更&lt;/li&gt;&#xA;&lt;li&gt;法定通貨USD, JPYで換算表示&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://dongri.github.io/images/post/2020-05-31/cryptotako1.png&#34; alt=&#34;image1&#34;&gt;&#xA;&lt;img src=&#34;https://dongri.github.io/images/post/2020-05-31/cryptotako2.png&#34; alt=&#34;image2&#34;&gt;&#xA;&lt;img src=&#34;https://dongri.github.io/images/post/2020-05-31/cryptotako3.png&#34; alt=&#34;image3&#34;&gt;&#xA;&lt;img src=&#34;https://dongri.github.io/images/post/2020-05-31/cryptotako4.png&#34; alt=&#34;image4&#34;&gt;&#xA;&lt;img src=&#34;https://dongri.github.io/images/post/2020-05-31/cryptotako5.png&#34; alt=&#34;image5&#34;&gt;&#xA;&lt;img src=&#34;https://dongri.github.io/images/post/2020-05-31/cryptotako6.png&#34; alt=&#34;image6&#34;&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

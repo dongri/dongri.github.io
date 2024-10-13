@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Airdrop on dongri</title>
+    <link>https://dongri.github.io/tags/airdrop/</link>
+    <description>Recent content in Airdrop on dongri</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 May 2024 20:53:16 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/airdrop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitHubがお金になった話</title>
+      <link>https://dongri.github.io/2024/05/github%E3%81%8C%E3%81%8A%E9%87%91%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F%E8%A9%B1/</link>
+      <pubDate>Wed, 15 May 2024 20:53:16 +0900</pubDate>
+      <guid>https://dongri.github.io/2024/05/github%E3%81%8C%E3%81%8A%E9%87%91%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F%E8%A9%B1/</guid>
+      <description>&lt;p&gt;2017年にこんな記事を書いてました。&#xA;&lt;a href=&#34;https://dongri.github.io/2017/12/oss%E3%81%8C%E3%81%8A%E9%87%91%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F%E8%A9%B1/&#34;&gt;OSSがお金になった話&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;7年過ぎた今はこんな話をしてみようと思います。&#xA;「GitHubがお金になった話」&lt;/p&gt;&#xA;&lt;p&gt;この数年GitHubでブロックチェーン関連のプロジェクトにコミットしたり、issue立てたり、自分が書いたコードを公開したりと活動してました。&#xA;正直どんなプロジェクトで具体的にどんなことやったかははっきり思い出せない状態です。&lt;/p&gt;&#xA;&lt;h2 id=&#34;celestiaの例&#34;&gt;Celestiaの例&lt;/h2&gt;&#xA;&lt;p&gt;2023年9月のある日あるDiscordのチャンネルでCelestiaのエアドロップにGitHubアカウントが対象になってるからどんぐりさんのアカウントでチェックしてみてと言われてチェックしてみたら対象でした。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://twitter.com/CelestiaOrg/status/1706671258757468414&#34;&gt;https://twitter.com/CelestiaOrg/status/1706671258757468414&lt;/a&gt;&#xA;&lt;img src=&#34;https://dongri.github.io/images/post/2024-05-15/celestia.png&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://blog.celestia.org/genesis-drop/&#34;&gt;https://blog.celestia.org/genesis-drop/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;当初のCelestiaはそんなに注目されてなくて実際対象になってるGitHubアカウントもClaimせずにいたらしく、残りの枠をClaim申請したアカウントに分配されたようです。もらった $TIA をピーク時に売ったら800万円はあるかと思いますが、トレーダーではない自分には当然そんなことができませんでしたｗ&lt;/p&gt;&#xA;&lt;h2 id=&#34;fluenceの例&#34;&gt;Fluenceの例&lt;/h2&gt;&#xA;&lt;p&gt;2024年3月のある日一通のメールが届きました、お前のGitHubアカウントが &lt;a href=&#34;https://fluence.network&#34;&gt;https://fluence.network&lt;/a&gt; の Developer Rewards 対象になってる、お金払うからそのアカウントに俺のウォレットアドレスを紐付けてほしいと。最初はGmailのスパム機能を疑ってましたが、メールちゃんと見て、fluenceのサイトでチェックしてみたら本当でした。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://blog.fluence.network/the-future-is-cloudless-fluences-depin-computing-platform-and-flt-token-are-now-live/&#34;&gt;The Future is Cloudless: Fluence’s DePIN computing platform DAO and FLT token are now live&lt;/a&gt;&#xA;&lt;img src=&#34;https://dongri.github.io/images/post/2024-05-15/fluence.png&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;ロックアップ期間があってすぐ取引できなかったんですが、今日二ヶ月のロックアップが解除で今の値段だと70万円ぐらいありました。&lt;/p&gt;&#xA;&lt;h2 id=&#34;taikoの例&#34;&gt;Taikoの例&lt;/h2&gt;&#xA;&lt;p&gt;2024年6月6日、Taikoのエアドロップが開始されました。602 $TKOで30万円ぐらいの価値がありました。&#xA;&lt;img src=&#34;https://dongri.github.io/images/post/2024-05-15/taiko.png&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;感謝&#34;&gt;感謝&lt;/h2&gt;&#xA;&lt;p&gt;このように開発者の貢献を評価してエアドロップしてくれるプロジェクトに感謝します。&#xA;引き続きGitHubでいろんなプロジェクトに貢献して大事に使おうと思います。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

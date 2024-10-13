@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on dongri</title>
+    <link>https://dongri.github.io/tags/python/</link>
+    <description>Recent content in Python on dongri</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 14 Apr 2018 03:13:44 +0800</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>短縮URLサービスを作ってみた</title>
+      <link>https://dongri.github.io/2018/04/%E7%9F%AD%E7%B8%AEurl%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</link>
+      <pubDate>Sat, 14 Apr 2018 03:13:44 +0800</pubDate>
+      <guid>https://dongri.github.io/2018/04/%E7%9F%AD%E7%B8%AEurl%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
+      <description>&lt;p&gt;goo.glサービス終了のニュースで「短縮URLサービス作ってみた」の記事見かけで、ちょうど自分も一ヶ月ほど前に作ったものがあってその解説をしようと思います。&#xA;作ってみたきっかけはサイドプロジェクトでSMS送信する必要があったのですが、140文字の制限で長いURLは送れませんでした。それでGo言語用の &lt;a href=&#34;https://github.com/dongri/go-shortener&#34;&gt;go-shortener&lt;/a&gt; というライブラリ？まで作りました。&lt;/p&gt;&#xA;&lt;p&gt;その後５日間の休みを取って海外旅行したので、飛行機の中と旅行先で自前の短縮URLサービスを作ってみたくなって作りました。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://shortener.nilth.com&#34;&gt;https://shortener.nilth.com&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;del&gt;clacky.org ドメインは旅行先のシンガポールClarke Quayから来てます。（ドメインは短くないですが）&lt;/del&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;一定長さの文字列にする&#34;&gt;一定長さの文字列にする&lt;/h3&gt;&#xA;&lt;p&gt;ハッシュ関数を使ってすべての文字列を一定長さにする方法もありますが、&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;MD5    - 32文字&#xA;sha1   - 40文字&#xA;sha256 - 64文字&#xA;sha512 - 128文字&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;どれも短くありません。&lt;/p&gt;&#xA;&lt;h3 id=&#34;ランダム文字列にしてデータベースに保存&#34;&gt;ランダム文字列にしてデータベースに保存&lt;/h3&gt;&#xA;&lt;p&gt;一定長さのランダム文字列を生成してデータベースに保存して、マッピング表を作ります。同じランダム文字列のキーがあったらもう一回ランダム文字列を生成して同じキーがないところまで処理を繰り返します。これは短い文字列生成の目的は達成できますが、データの量が多くなると一つの処理で数千、数万、データの数分データベースにクエリを発行することになります。データベースに対しての負荷が大きすぎるので、現実的ではありませんでした。&lt;/p&gt;&#xA;&lt;h3 id=&#34;データベースのidを62進数に変換する&#34;&gt;データベースのIDを62進数に変換する&lt;/h3&gt;&#xA;&lt;p&gt;&lt;code&gt;小文字、大文字アルファベット + 数字 = 62文字&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;URLをデータベースに保存して発行される連番IDを62進数に変換して短縮URLのキーにします。100億件のデータも62進数に変換すると6桁（aUKYOA）だけなので十分短いです。&lt;/p&gt;&#xA;&lt;h3 id=&#34;pythonコード&#34;&gt;pythonコード&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;chars = &amp;#34;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJELMNOPQRSTUVWXYZ&amp;#34;&#xA;&#xA;def encode62(num, chars=chars):&#xA;    base = len(chars)&#xA;    string = &amp;#34;&amp;#34;&#xA;    while True:&#xA;        string = chars[num % base] + string&#xA;        num = num // base&#xA;        if num == 0:&#xA;            break&#xA;    return string&#xA;&#xA;def decode62(string, chars=chars):&#xA;    base = len(chars)&#xA;    num = 0&#xA;    for char in string:&#xA;        num = num * base + chars.index(char)&#xA;    return num&#xA;&#xA;e = encode62(99999999999)&#xA;print(e)  # 1L9zO9N&#xA;&#xA;d = decode62(&amp;#39;1L9zO9N&amp;#39;)&#xA;print(d)  # 99999999999&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;ちょっと工夫&#34;&gt;ちょっと工夫&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;数字アルファベット順にするとランダム性ないので、charsをシャッフルしてから設定&lt;/li&gt;&#xA;&lt;li&gt;238327件でやっとZZZなのでencode62(id+238327)して3桁、4桁にしてそれぽく見せる&lt;/li&gt;&#xA;&lt;li&gt;連番だと62進数も連番で増えていくのでランダムを求めるためにIDをreverseする&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;これで&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

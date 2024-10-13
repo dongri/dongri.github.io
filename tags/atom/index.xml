@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Atom on dongri</title>
+    <link>https://dongri.github.io/tags/atom/</link>
+    <description>Recent content in Atom on dongri</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 03 Oct 2017 21:22:21 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/atom/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>atomからvscodeに浮気</title>
+      <link>https://dongri.github.io/2017/10/atom%E3%81%8B%E3%82%89vscode%E3%81%AB%E6%B5%AE%E6%B0%97/</link>
+      <pubDate>Tue, 03 Oct 2017 21:22:21 +0900</pubDate>
+      <guid>https://dongri.github.io/2017/10/atom%E3%81%8B%E3%82%89vscode%E3%81%AB%E6%B5%AE%E6%B0%97/</guid>
+      <description>&lt;p&gt;atomの時はgithub中の人からInvitation Codeもらって人より早く使えてpackageも作ったり楽しかった。&lt;/p&gt;&#xA;&lt;p&gt;しかし最近はGoのビルドや、プロジェクトを開くスピードなどいろいろ遅くてなんとかしたいところだった。&#xA;が、長く使ってたのでなかなか他のエディターにするのは難しかった。でもなんとかしたいと思って今日からvscodeを使ってみることにした。&#xA;今までvscodeを使ってない理由としてはMSが好きではなかったからだ。ｗ&#xA;使ってみると、確かに人々言うようにatomより軽い、早い。そこでちょっと不便だったものを便利にしたメモを書いておこう。&lt;/p&gt;&#xA;&lt;h2 id=&#34;code-での不具合&#34;&gt;「code .」での不具合&lt;/h2&gt;&#xA;&lt;p&gt;shellでcodeコマンドをインストールしてterminalからcodeコマンドで起動するとcmd+vが効かない問題。いろいろ試してみたがどうも公式shellの問題のようだ。以前公式がサポートされる前の方法だと正しく動いてくれるようになった。&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ vim ~/.zshrc&#xA;&#xA;e () { VSCODE_CWD=&amp;#34;$PWD&amp;#34; open -n -b &amp;#34;com.microsoft.VSCode&amp;#34; --args $* }&#xA;$ source ~/.zshrc&#xA;$ e .&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;ファイルのgit-status色&#34;&gt;ファイルのgit status色&lt;/h2&gt;&#xA;&lt;p&gt;atomの時はgitで管理してるプロジェクトで新規追加されたファイルは緑色、編集されたファイルは黄色と見やすかったのが、vscodeでは探してみたけどそれらしきextensionが見当たらなかった。同僚がググってくれたのがこれを試してみたらできた。&#xA;&lt;a href=&#34;https://github.com/karabaja4/vscode-explorer-git-status&#34;&gt;https://github.com/karabaja4/vscode-explorer-git-status&lt;/a&gt;&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git clone git@github.com:karabaja4/vscode-explorer-git-status.git&#xA;$ cd vscode-explorer-git-status&#xA;$ npm install&#xA;$ gulp install&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;書かれた通り&lt;/p&gt;&#xA;&lt;h2 id=&#34;使ってみた感想&#34;&gt;使ってみた感想&lt;/h2&gt;&#xA;&lt;p&gt;atomのpackageよりvscodeのextensionの概念が優れてる気がした。特にatomのgo-plusとvscodeのGoを比べてみると。&lt;/p&gt;&#xA;&lt;p&gt;楽しいvscode生活を送ろう。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Developer on dongri</title>
+    <link>https://dongri.github.io/tags/developer/</link>
+    <description>Recent content in Developer on dongri</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 12 Dec 2019 00:00:00 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/developer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I Love Netskope</title>
+      <link>https://dongri.github.io/2019/12/i-love-netskope/</link>
+      <pubDate>Thu, 12 Dec 2019 00:00:00 +0900</pubDate>
+      <guid>https://dongri.github.io/2019/12/i-love-netskope/</guid>
+      <description>&lt;p&gt;&lt;code&gt;Maxごめん、復活させた&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Netskope大好きでちょっと便利なコマンド書いてみた。&lt;/p&gt;&#xA;&lt;h3 id=&#34;永遠にさようなら&#34;&gt;永遠にさようなら&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ vim goodbye.sh&#xA;&#xA;#!/bin/sh&#xA;&#xA;sudo ps aux | grep Netskope | grep -v grep | awk &amp;#39;{ print &amp;#34;kill -9&amp;#34;, $2 }&amp;#39; | sh&#xA;echo &amp;#39;[✓] Kill Netskope Process&amp;#39;&#xA;&#xA;sudo rm -rf /Applications/Remove\ Netskope\ Client.app&#xA;echo &amp;#39;[✓] Removed Remove Netskope Client.app&amp;#39;&#xA;&#xA;sudo rm -rf /Library/Application\ Support/Netskope&#xA;echo &amp;#39;[✓] Removed Agent of Netskope Client.app&amp;#39;&#xA;&#xA;echo &amp;#39;Successfully uninstalled.&amp;#39;&#xA;&#xA;$ sh goodbye.sh&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;しばらく消えて&#34;&gt;しばらく消えて&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ vim ~/.bashrc&#xA;&#xA;netskope () {&#xA;  case &amp;#34;$1&amp;#34; in&#xA;    pause)&#xA;      sudo launchctl unload /Library/LaunchDaemons/com.netskope.stagentsvc.plist&#xA;      echo &amp;#34;...Pause&amp;#34;&#xA;      ;;&#xA;    resume)&#xA;      sudo launchctl load /Library/LaunchDaemons/com.netskope.stagentsvc.plist&#xA;      echo &amp;#34;...Resume&amp;#34;&#xA;      ;;&#xA;    *)&#xA;      echo -e &amp;#34;netskope [pause|resume]&amp;#34;&#xA;  esac&#xA;}&#xA;&#xA;$ source ~/.bashrc&#xA;&#xA;$ netskope pause&#xA;$ curl ipconfig.io&#xA;&#xA;$ netskope resume&#xA;$ curl ipconfig.io&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;以上！開発者達の仕事が捗ると何よりです！&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

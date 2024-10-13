@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMTXKDBFCF"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-NMTXKDBFCF');
+        </script>
+
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <link rel="icon" type="image/png" href="/images/avatar.png">
+
+        <meta property="og:title" content=" RebuildのAlexa Skillを作ってリジェクトされた話 &middot;  dongri" />
+        <meta property="og:site_name" content="dongri" />
+        <meta property="og:url" content="https://dongri.github.io/2018/01/rebuild%E3%81%AEalexa-skill%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%83%AA%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%95%E3%82%8C%E3%81%9F%E8%A9%B1/" />
+
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:published_time" content="2018-01-23T23:13:19&#43;09:00" />
+        <meta property="og:article:tag" content="alexa" />
+        <meta property="og:article:tag" content="amazon" />
+        
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@" />
+        <meta name="twitter:creator" content="@" />
+        <meta name="twitter:title" content="RebuildのAlexa Skillを作ってリジェクトされた話" />
+        <meta name="twitter:description" content="" />
+        <meta name="twitter:url" content="https://dongri.github.io/2018/01/rebuild%E3%81%AEalexa-skill%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%83%AA%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%95%E3%82%8C%E3%81%9F%E8%A9%B1/" />
+    
+
+        <title> RebuildのAlexa Skillを作ってリジェクトされた話 &middot;  dongri</title>
+
+    
+        <meta name="description" content="" />
+    
+
+        <meta name="p:domain_verify" content="fc173d84e3a4de948ed4bda2908afd3e"/>
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        
+        
+
+    
+        <link href="https://dongri.github.io/index.xml" rel="alternate" type="application/rss+xml" title="dongri" />
+    
+
+    
+        <link rel="canonical" href="https://dongri.github.io/2018/01/rebuild%E3%81%AEalexa-skill%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%83%AA%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%95%E3%82%8C%E3%81%9F%E8%A9%B1/" />
+
+    
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "RebuildのAlexa Skillを作ってリジェクトされた話",
+        "author": {
+            "@type": "Person",
+            "name": "http://profiles.google.com/?rel=author"
+        },
+        "datePublished": "2018-01-23",
+        "description": "",
+        "wordCount":  51 
+    }
+    </script>
+    
+
+    <link type="text/css" href="https://dongri.github.io/css/crisp.css" rel="stylesheet"/>
+
+    </head>
+    <body>
+        <header id="header">
+            <a id="logo" href="https://dongri.github.io/"><img src="/images/avatar.png" alt="dongri" /></a>
+            
+            <p>Hello World</p>
+
+            <div id="follow-icons">
+	<a href="http://github.com/dongri" rel="me" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	<a href="http://twitter.com/dongrify" rel="me" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+	<a href="http://linkedin.com/in/dongri" rel="me" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+	<a href="https://plus.google.com/u/0/100052427264226218799" rel="author" target="_blank"><i class="fa fa-google-plus-square fa-2x"></i></a>
+	<a href="https://www.facebook.com/profile.php?id=100002573679774" rel="me" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
+	<a href="https://dongri.github.io/index.xml" rel="me" target="_blank"><i class="fa fa-rss-square fa-2x"></i></a>
+</div>
+
+            
+
+        </header>
+
+<main id="content">
+
+<article id="" class="post">
+    <div class="post-stamp">
+        <time datetime="2018-01-23T23:13:19&#43;09:00">
+            23 Jan 2018
+        </time>
+        <span class="taglist">
+        
+        &middot;
+        
+            <a href="https://dongri.github.io/tags/alexa/">alexa</a>
+        
+            <a href="https://dongri.github.io/tags/amazon/">amazon</a>
+        
+        
+        </span>
+    </div>
+    <h1 class="post-title">RebuildのAlexa Skillを作ってリジェクトされた話</h1>
+    <p>Echo Dotが届いたのでAlexa Skillを作ってみることにしました。オフィスに届いた当日はSlackで使ってたhubot deployをAlexaからデプロイできるようにと遊んでみたがちゃんとしたものを作ろうと思って週末に <a href="http://rebuild.fm">http://rebuild.fm</a> をAmazon Echoで聞けるようにしてみました。</p>
+<!-- raw HTML omitted -->
+<p>以下実装上で困った話をしようと思います</p>
+<h2 id="xml2jsonをrequireすると反応しない">xml2jsonをrequireすると反応しない</h2>
+<p><a href="http://feeds.rebuild.fm/rebuildfm">http://feeds.rebuild.fm/rebuildfm</a> RSSなのでxmlをパースする必要があり、nodejsでxmlパーサを探してみた結果これでした。
+しかしrequireした時点でAlexa（Lambda）が反応しなくなりました。深く検証してませんが、おそらくnodejs 6.10にサポートしてないのが原因かと思われます。</p>
+<h2 id="xml2jsファイルパースで無反応">xml2jsファイルパースで無反応</h2>
+<p>xml2jsonがサポートしてないので、xml2jsで試してみました、こいつは正しく動いてるように見えますが、でかいファイルのパースにはダメでした。http://feeds.rebuild.fm/rebuildfm 実はこいつのxmlが意外とでかくて数千行もありましたね。。。</p>
+<h2 id="自前のサーバーでやろう">自前のサーバーでやろう</h2>
+<p><a href="http://feeds.rebuild.fm/rebuildfm">http://feeds.rebuild.fm/rebuildfm</a> このfeedを定期的に取ってきて必要な情報だけjsonに変換してS3に突っ込んでそこから情報を取るようにしました。</p>
+<h2 id="mp3が再生できない問題">mp3が再生できない問題</h2>
+<p>Rebuildのfeedに書いてあるデフォルトのmp3ファイルだとURLがhttpのため <code>this.response.audioPlayerPlay</code> では再生できませんでした。
+これもなんとかしようとして自前のS3にアップロードしてhttps対応しました。</p>
+<h2 id="自動化">自動化</h2>
+<p>一時間おきにrebuildのfeedから最新のxmlからjsonに変換して、追加されたmp3ファイルをS3にアップロードするようにしました。</p>
+<h2 id="リジェクト">リジェクト</h2>
+<p>気軽く申請してみようと思い申請したものの、案の定リレクトされました。理由は</p>
+<pre tabindex="0"><code>使用されている第三者の知的財産: 「Rebuild.fm」
+第三者の知的財産が使用されていたメタデータ: スキル名、スキルアイコン、呼び出し名、スキル詳細ページ 
+
+Amazonにとってカスタマーへの透明性は非常に重要なものです。これらの問題への対策としては、以下の2つが考えられます。 
+
+A. ブランド所有者が「Rebuild.fm」の知的財産の使用を許可することを明記した署名入りの書面、またはライセンス契約等を提出する。 • 商標、知的財産、ブランドを正当に利用するスキルがある場合、そのスキルの認証を申請する際に、これらの使用許諾を所有することを示し、明示的に証明する。開発者ポータルの「Publishing Information」ページでテスト手順フォームを使用して、必要に応じて外部リンクと連絡先情報を含めてこの情報を入力し、スキルに必要な使用許諾があることを認定チームが判断できるようにする。
+</code></pre><p>まあ、そうでしょうね。</p>
+<h2 id="やってみてわかったこと">やってみてわかったこと</h2>
+<ul>
+<li>Podcast系は所有者の承認を得ること</li>
+<li>ステップごとにヘルプ、ストップ、終了して、を認識させること</li>
+<li>Audio Playerの場合、一時停止、再開を認識させること</li>
+<li>意外とちゃんとテストしてること</li>
+</ul>
+<h2 id="参考にコードをgithubに上げときます">参考にコードをgithubに上げときます</h2>
+<p><a href="https://github.com/dongri/alexa-rebuild/">https://github.com/dongri/alexa-rebuild/</a></p>
+<p>index.jsがalexa skillで、main.goが rebuildのfeedからxmlをjsonに変換し、mp3をS3にアップロードしてるスクリプトです。</p>
+<p>以上でした。</p>
+
+    
+
+    
+
+    
+</article>
+
+</main>
+		<footer id="footer">
+			<section id="footer-message">Powered by Hugo.  &copy; 2014 dongri</section>
+		</footer>
+
+    <script>
+      (function(c,f){asyncLoader=function(i,h){i.foreach(function(k,j){e(j,d(j),h)});if(typeof h.callback=="function"){var g=setInterval(function(){if(f.readyState==="complete"){clearInterval(g);h.callback()}},10)}};var d=function(g){var h=g.split(".");return h[h.length-1]},e=function(h,i,g){switch(i){case"js":a(h,g);break;case"css":b(h);break;default:break}},a=function(i,h){var g=document.createElement("script");g.type="text/javascript";g.async=true;g.src=i;document.getElementsByTagName("head")[0].appendChild(g)},b=function(g){var h=document.createElement("link");h.type="text/css";h.rel="stylesheet";h.href=g;document.getElementsByTagName("head")[0].appendChild(h)};Array.prototype.foreach=function(h){for(var g=0;g<this.length;g++){h(g,this[g])}}})(this,document);
+
+      var WebFontConfig={google:{families:["Open Sans:300italic,700italic,300,700","Bree+Serif"]}};
+      asyncLoader([
+        "//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css",
+        "//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js",
+        "//cdnjs.cloudflare.com/ajax/libs/webfont/1.5.16/webfontloader.js",
+        "//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"
+      ],{
+        callback:function(){
+          asyncLoader([
+            "https:\/\/dongri.github.io\/css/rrssb.css",
+            "https:\/\/dongri.github.io\/js/gist.min.js",
+            "https:\/\/dongri.github.io\/js/rrssb.min.js",
+            "//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css"
+          ], { callback:function() {
+              hljs.initHighlighting();
+          }});
+        }
+      });
+    </script>
+	
+  <script src="//insight.nilth.com/js/in.js" type="text/javascript"></script>
+	</body>
+</html>
+

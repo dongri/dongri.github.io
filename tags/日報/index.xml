@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>日報 on dongri</title>
+    <link>https://dongri.github.io/tags/%E6%97%A5%E5%A0%B1/</link>
+    <description>Recent content in 日報 on dongri</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Sep 2017 06:50:55 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/%E6%97%A5%E5%A0%B1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Qiita:Teamのクローンを作ってみた話</title>
+      <link>https://dongri.github.io/2017/09/qiitateam%E3%81%AE%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%B3%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E8%A9%B1/</link>
+      <pubDate>Thu, 28 Sep 2017 06:50:55 +0900</pubDate>
+      <guid>https://dongri.github.io/2017/09/qiitateam%E3%81%AE%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%B3%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E8%A9%B1/</guid>
+      <description>&lt;p&gt;タイトルのクローンを作ったは嘘ｗ。似たようなものを作ったが本当。&lt;/p&gt;&#xA;&lt;p&gt;チームがちょっと大きくなったのと外国籍のエンジニアがQiita嫌いという理由でQiita:Teamやめて&#xA;他のツールをいろいろ試してみたがどれも長く続かず、文句言うばかりでした。&#xA;結果エンジニアがノウハウなどナレッジを残す場所がなくなったわけですね。&lt;/p&gt;&#xA;&lt;p&gt;結局何がダメだったのか？文化の違い？デザインがダメ？私もわかりません。&lt;/p&gt;&#xA;&lt;p&gt;ちょっと考えてみたんですが、Qiitaのデザインがだめ、機能がだめだったら俺らが作ればいいんじゃと&#xA;思って作ってみたのがteamでした。https://github.com/rusts/team&lt;/p&gt;&#xA;&lt;p&gt;業務で使ってるGo言語で作ったらずっと早く簡単に作れたと思うが、社内でRust好きなエンジニアが結構多いなと感じ、&#xA;もしRustで作ったらみんなが興味持って機能追加したりメンテして俺達が本当に欲しかったものを作れるんじゃないかと思ってRustにしました。&lt;/p&gt;&#xA;&lt;p&gt;で、今どうなったか？&lt;/p&gt;&#xA;&lt;p&gt;数人は日報書くのを再開して、数人はTips、技術ノウハウなど共有することになりました。&#xA;プロジェクトにコミットする人も現れて、今は自分を含めて二人です。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

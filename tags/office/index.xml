@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Office on dongri</title>
+    <link>https://dongri.github.io/tags/office/</link>
+    <description>Recent content in Office on dongri</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Dec 2017 15:39:07 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/office/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>勤怠打刻について考えてみた</title>
+      <link>https://dongri.github.io/2017/12/%E5%8B%A4%E6%80%A0%E6%89%93%E5%88%BB%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%80%83%E3%81%88%E3%81%A6%E3%81%BF%E3%81%9F/</link>
+      <pubDate>Wed, 20 Dec 2017 15:39:07 +0900</pubDate>
+      <guid>https://dongri.github.io/2017/12/%E5%8B%A4%E6%80%A0%E6%89%93%E5%88%BB%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%80%83%E3%81%88%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
+      <description>&lt;p&gt;打刻システム投入でちょっと考えてみた。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;朝打刻忘れた&lt;/li&gt;&#xA;&lt;li&gt;朝早起きして作業してたら出社するの忘れた&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;こんなの一々上長に打刻修正申請してもいいのだが、上長も忙しいし自分でなんとか解決しようと考えてみた。&lt;/p&gt;&#xA;&lt;h1 id=&#34;hubotで打刻通知&#34;&gt;hubotで打刻通知&lt;/h1&gt;&#xA;&lt;p&gt;定時10分前に @channel でみんな打刻しろの通知を送る。&lt;/p&gt;&#xA;&lt;p&gt;dakoku.coffee&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cronJob = require(&amp;#39;cron&amp;#39;).CronJob&#xA;&#xA;module.exports = (robot) -&amp;gt;&#xA;  cronjob = new cronJob(&amp;#39;50 0 * * 1,2,3,4,5&amp;#39;, () =&amp;gt;&#xA;    channel = room: &amp;#34;random&amp;#34;&#xA;    message = &amp;#34;&amp;lt;!channel&amp;gt; 打刻した？&amp;#34;&#xA;    robot.send channel, message&#xA;  )&#xA;  cronjob.start()&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;オフィスにいなくても位置情報をオフィスにして打刻する&#34;&gt;オフィスにいなくても位置情報をオフィスにして打刻する&lt;/h1&gt;&#xA;&lt;p&gt;Chromeからだとchange locationを使えば良さそう。デベロッパーツールで一々変更してもいいのだが、on, offでやりたいので&#xA;&lt;a href=&#34;https://chrome.google.com/webstore/detail/change-geolocation/njjpmclekpigefnogajiknnheheacoaj?hl=ja&#34;&gt;Change GeoLocation&lt;/a&gt; というextensionを使う。ラベルにオフィスを入れてlatitudeとlongitudeを調べて保存すればOK。後は普通に打刻すればOKなはず。&lt;/p&gt;&#xA;&lt;p&gt;Androidアプリからだと&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.lexa.fakegps&#34;&gt;Fake GPS location&lt;/a&gt; みたいなアプリ大量にあるのでどれか使えば良さそう。&lt;/p&gt;&#xA;&lt;h1 id=&#34;どうせならcronで出来ない&#34;&gt;どうせならcronで出来ない？&lt;/h1&gt;&#xA;&lt;p&gt;まずシステムのAPIはおそらくないと思って調べてない、絶対ないだろう。&lt;/p&gt;&#xA;&lt;p&gt;後は自前でなんとかしてシステムを騙すか。&lt;/p&gt;&#xA;&lt;p&gt;打刻のリクエスト見ると&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;curl &amp;#39;https://hoge.force.com/apexremote&amp;#39; --data-binary &amp;#39;{&amp;#34;action&amp;#34;:&amp;#34;hogeCtl&amp;#34;,&amp;#34;method&amp;#34;:&amp;#34;inputTime&amp;#34;,&amp;#34;data&amp;#34;:[&amp;#34;{\&amp;#34;flag\&amp;#34;:1,\&amp;#34;face\&amp;#34;:0,\&amp;#34;comment\&amp;#34;:\&amp;#34;\&amp;#34;,\&amp;#34;device\&amp;#34;:\&amp;#34;TS1\&amp;#34;,\&amp;#34;latitude\&amp;#34;:35.660464,\&amp;#34;longitude\&amp;#34;:139.729249}&amp;#34;],&amp;#34;type&amp;#34;:&amp;#34;rpc&amp;#34;,&amp;#34;tid&amp;#34;:7,&amp;#34;ctx&amp;#34;:{&amp;#34;csrf&amp;#34;:&amp;#34;hoge&amp;#34;}}&amp;#39;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;headerとか書いてないが大体こんな感じ。あとはlatitudeとlongitudeをオフィスにしてcurlすればいけるはず。問題はcsrfだな。こいつはブラウザ開かないとわからないやつなので、難しい。もしくはcurlでwebページ取ってきて中のcsrfを取得してcurlするとか？&lt;/p&gt;&#xA;&lt;h1 id=&#34;以上&#34;&gt;以上&lt;/h1&gt;&#xA;&lt;p&gt;どれもまだ試してないですが、今後進展あったら共有します。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

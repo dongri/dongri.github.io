@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project on dongri</title>
+    <link>https://dongri.github.io/tags/project/</link>
+    <description>Recent content in Project on dongri</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 16 Jun 2018 14:39:28 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>二週間で2つのプロジェクトリリースしてみた</title>
+      <link>https://dongri.github.io/2018/06/%E4%BA%8C%E9%80%B1%E9%96%93%E3%81%A72%E3%81%A4%E3%81%AE%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/</link>
+      <pubDate>Sat, 16 Jun 2018 14:39:28 +0900</pubDate>
+      <guid>https://dongri.github.io/2018/06/%E4%BA%8C%E9%80%B1%E9%96%93%E3%81%A72%E3%81%A4%E3%81%AE%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
+      <description>&lt;p&gt;仕事のコードは飽きだし、やる気出して新しいことやろうとすると政治かなにかでうまく行かないし、まあこの辺の話は別の機会でゆっくり話すことにして、今日は2週間プライベートサイドプロジェクトでやったことを書こうと思います。&lt;/p&gt;&#xA;&lt;p&gt;今月1日仙台言ってRubyKaigi参加して来ました。印象に残ってるのは牡蠣でしたね。本当にうまかったんです。普段勉強会、カンファレンスまったく行かない自分にはRubyKaigiが結構新鮮な感じでした。世界中からRubyを愛してる人達が集まって三日間Rubyについて語るのがすごいと思いました。三日間もあるし、Rubyも結構久しぶりだし、これを機会にRubyでなんか作ってみようと思いました。いろいろ悩んだ結果投げ銭サービスを作ることにしました。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://merci.nilth.com&#34;&gt;https://merci.nilth.com&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Ruby, Sinatra, Postgres, Bulma, Stripe, Docker を使って構築されてます。Twitterログインでアカウント作って、Twitter Usernameでユーザー検索して少額のお金を投げる非常にシンプルなサービスです。&lt;/p&gt;&#xA;&lt;p&gt;バックグラウンドイメージをアクセス毎に変わるようにしたのですが、使ってるpcisum.photosが若干遅くて、Tokyo Regionで少しでも早く表示できるようにして作ったのがvia photosでした。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://via.photos&#34;&gt;https://via.photos&lt;/a&gt; (shutdown)&lt;/p&gt;&#xA;&lt;p&gt;Nodejs, Coffeescript, Dockerを使って構築されてます。&#xA;写真はunsplash.comのものを使って、作ったChrome Extensionで新しいタブを開く度に画像をサーバーにダウンロードして溜まっていきます。そのデータを使ってリクエスト来ると指定されたサイズで返すようにしてます。Webページデザインする時とか、アプリ作る時とかダミーのイメージでテストできるので便利かと思います。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

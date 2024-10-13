@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Phone on dongri</title>
+    <link>https://dongri.github.io/tags/phone/</link>
+    <description>Recent content in Phone on dongri</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 05 Apr 2017 23:45:40 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/phone/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Smartisan M1</title>
+      <link>https://dongri.github.io/2017/04/smartisan-m1/</link>
+      <pubDate>Wed, 05 Apr 2017 23:45:40 +0900</pubDate>
+      <guid>https://dongri.github.io/2017/04/smartisan-m1/</guid>
+      <description>&lt;p&gt;二ヶ月待ってたSmartisan M1が今日やっと届いた。触ってみた感じめっちゃよかった。&#xA;一時期使ってたOnePlus Oneに比べると天と地の差？&lt;/p&gt;&#xA;&lt;h1 id=&#34;google-play-services&#34;&gt;Google Play Services&lt;/h1&gt;&#xA;&lt;p&gt;デフォルトではGoogle Play Servicesが入ってないので、Googleアカウントと連携できない。&#xA;「谷歌安装器」というアプリをインストールしてGoogle Play Servicesをインストール。&#xA;インストールするとGoogle Play Storeもインストールボタンがあるが、押して見るとroot権限がないよ言われる。&#xA;Google Play Storeは別途検索してインストールすればOK.インストール環境して、Googleアカウント連携すると&#xA;連絡先、写真、カレンダーなどが同期できる。&lt;/p&gt;&#xA;&lt;h3 id=&#34;追記&#34;&gt;追記&lt;/h3&gt;&#xA;&lt;p&gt;SmartisanのStoreでGoogle Play StoreインストールするとGoogle Play Servicesが先にインストール&#xA;されて再起動される、その後Play Storeがインストールさるので、その後Googleアカウント連携できる。&lt;/p&gt;&#xA;&lt;h1 id=&#34;iijモバイルネットワーク設定&#34;&gt;iijモバイルネットワーク設定&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;APN: iijmio.jp&#xA;ユーザー名: 必要なし&#xA;パスワード: 必要なし&#xA;認証タイプ: PAPまたはCHAP&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;これで楽しいSmartisan生活が始まる。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

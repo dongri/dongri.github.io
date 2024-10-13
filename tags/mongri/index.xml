@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mongri on dongri</title>
+    <link>https://dongri.github.io/tags/mongri/</link>
+    <description>Recent content in Mongri on dongri</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 14 Jan 2019 21:42:00 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/mongri/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Amazon DocumentDBを試してみた</title>
+      <link>https://dongri.github.io/2019/01/amazon-documentdb%E3%82%92%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/</link>
+      <pubDate>Mon, 14 Jan 2019 21:42:00 +0900</pubDate>
+      <guid>https://dongri.github.io/2019/01/amazon-documentdb%E3%82%92%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
+      <description>&lt;p&gt;AmazonからMongoDBと互換性を持つDocumentDBをリリースしたと言ってるので試してみた。&#xA;クラスタを作成するためにVPCが必要だったのでVPCを一つ作成。VPCの他にアベイラビリティゾーン２つ必要なので、違うアベイラビリティゾーンを持つサブネット２つ作成。これでクラスタ作成できる。&lt;/p&gt;&#xA;&lt;p&gt;インスタンスタイプは最低でもdb.r4.largeで15.25GBのメモリ。値段は$0.277&lt;/p&gt;&#xA;&lt;p&gt;エンドポイントはPublicにできないので、sshトンネル作って接続するようにする。&lt;/p&gt;&#xA;&lt;h3 id=&#34;sshトンネル&#34;&gt;SSHトンネル&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ ssh -L 27017:docdb-2019-01-14-13-34-21.cluster-crgjmmxnvvix.us-east-1.docdb.amazonaws.com:27017 -i ~/.ssh/{pem file} -p 22 ec2-user@{bastion ip}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;bastionをssh configに設定済みであれば以下のようにしてもOK&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ ssh -L 27017:docdb-2019-01-14-13-34-21.cluster-crgjmmxnvvix.us-east-1.docdb.amazonaws.com:27017 {bastion}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;mongo-cliで接続してみる&#34;&gt;mongo cliで接続してみる&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ wget https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem&#xA;&#xA;$ mongo --ssl --host localhost:27017 --sslCAFile ./rds-combined-ca-bundle.pem --username {user} --password {password} --sslAllowInvalidHostnames&#xA;&#xA;MongoDB shell version v4.0.1&#xA;connecting to: mongodb://localhost:12345/&#xA;MongoDB server version: 3.6.0&#xA;rs0:PRIMARY&amp;gt; show dbs&#xA;docdb-2019-01-14-13-34-21  0.000GB&#xA;rs0:PRIMARY&amp;gt; use docdb-2019-01-14-13-34-21&#xA;switched to db docdb-2019-01-14-13-34-21&#xA;rs0:PRIMARY&amp;gt; show collections&#xA;users&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;mongriで接続してみる&#34;&gt;mongriで接続してみる&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/dongri/mongri&#34;&gt;https://github.com/dongri/mongri&lt;/a&gt;&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ vim config/mongo.json&#xA;&#xA;  &amp;#34;docdb&amp;#34;: {&#xA;    &amp;#34;uri&amp;#34;: &amp;#34;mongodb://{user}:{password}@localhost:27017/{docdb-2019-01-14-13-34-21}&amp;#34;,&#xA;    &amp;#34;opts&amp;#34;: {&#xA;      &amp;#34;poolSize&amp;#34;: 20,&#xA;      &amp;#34;useNewUrlParser&amp;#34;: true,&#xA;      &amp;#34;ssl&amp;#34;: true&#xA;    }&#xA;  },&#xA;&#xA;$ NODE_ENV=docdb node app.js&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;感想&#34;&gt;感想&lt;/h1&gt;&#xA;&lt;p&gt;本当にmongodbと互換性があったｗ&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Prysm on dongri</title>
+    <link>https://dongri.github.io/tags/prysm/</link>
+    <description>Recent content in Prysm on dongri</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 13 Dec 2020 09:46:43 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/prysm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ETH2 Staking</title>
+      <link>https://dongri.github.io/2020/12/eth2-staking/</link>
+      <pubDate>Sun, 13 Dec 2020 09:46:43 +0900</pubDate>
+      <guid>https://dongri.github.io/2020/12/eth2-staking/</guid>
+      <description>&lt;p&gt;ETH2のステーキング方法について、まともな日本語記事がなかったり、あっても会員登録必要だったり、逆にわかりにくかったりしたので、自分がやった手順を書こうと思います。&lt;/p&gt;&#xA;&lt;h2 id=&#34;staking&#34;&gt;Staking&lt;/h2&gt;&#xA;&lt;p&gt;ステーキングとはPoS（Proof of Stake）において、仮想通貨を自由に動かせない状態（ロック状態）にしてブロックに追加するデータの承認などの面でネットワークの維持に関わる見返りとして、その報酬を仮想通貨で受け取る仕組みです。&#xA;ETH2のステーキングだと年利4.9% ~ 21.6%ですが、stakeするETHが多ければ多いほど下がります。12月12日時点で13%程度です。&#xA;デポジットに関しても始まった時の進捗では524,288 ETHまで間に合うか心配してたが、後半になって一気に増えて予定した12月1日のローンチに間に合いました。&lt;/p&gt;&#xA;&lt;h2 id=&#34;deposit&#34;&gt;Deposit&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://launchpad.ethereum.org/&#34;&gt;https://launchpad.ethereum.org/&lt;/a&gt; で32ETHをデポジットします。（注意: デポジットされた32ETHは今のところ2年間ロックされるので注意が必要）&#xA;デポジット方法は、 &lt;a href=&#34;https://launchpad.ethereum.org/overview&#34;&gt;https://launchpad.ethereum.org/overview&lt;/a&gt; ここの手順のまま進めばできるかと思います。&#xA;特に難しいことはありませんでしたが、ETH1とETH2のクライアント選ぶ時もしかすると注意が必要です。後ほどBeacon node起動する時のクライアントと関係してるので。&#xA;自分の場合はどっちもGo言語実装のGethとPrysmを選択しました。&#xA;デポジットが完了すると、validator_keysファイルを取得できるので、安全な場所に保管します。&lt;/p&gt;&#xA;&lt;h2 id=&#34;prysm-環境&#34;&gt;Prysm 環境&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.prylabs.network/docs/install/install-with-script#system-requirements&#34;&gt;https://docs.prylabs.network/docs/install/install-with-script#system-requirements&lt;/a&gt;&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Recommended specifications&#xA;* Processor: Intel Core i7–4770 or AMD FX-8310 or better&#xA;* Memory: 16GB RAM&#xA;* Storage: 100GB available space SSD&#xA;* Internet: Broadband connection&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;ラズパイとかでやってみようかと思ってたけど、このスペックは難しいのでペナルティ受ける可能性のあるawsにしました。&#xA;aws, gcp, azureなど大手クラウドサービスだと障害が起きた時大規模のノードが止まる可能性があるので、ペナルティがあるようです。&lt;/p&gt;&#xA;&lt;p&gt;EC2インスタンス&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Memory: 16GB&#xA;Storage: 100GB&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;beacon-node&#34;&gt;Beacon node&lt;/h2&gt;&#xA;&lt;p&gt;続いてbeacon chainのnodeを起動する必要あります。&#xA;&lt;a href=&#34;https://docs.prylabs.network/docs/install/install-with-script/&#34;&gt;https://docs.prylabs.network/docs/install/install-with-script/&lt;/a&gt; こちらからprysm.shをダウンロードします。&#xA;続いて &lt;a href=&#34;https://docs.prylabs.network/docs/mainnet/joining-eth2&#34;&gt;https://docs.prylabs.network/docs/mainnet/joining-eth2&lt;/a&gt; こちらに書いてあるStepでbeacon nodeの起動、validator accountのインポート、validatorの起動順にやっていきます。&lt;/p&gt;&#xA;&lt;h3 id=&#34;prysmshダウンロード&#34;&gt;prysm.shダウンロード&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ mkdir prysm &amp;amp;&amp;amp; cd prysm&#xA;$ curl https://raw.githubusercontent.com/prysmaticlabs/prysm/master/prysm.sh --output prysm.sh &amp;amp;&amp;amp; chmod +x prysm.sh&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;beacon-node-1&#34;&gt;Beacon node&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ ./prysm.sh beacon-chain --http-web3provider=https://mainnet.infura.io/v3/****&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;自前のETH1ノード使いたくなかったので、infuraを使うようにしました。もちろん自前のETHノードでも問題ないです。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

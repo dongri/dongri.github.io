@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Onion on dongri</title>
+    <link>https://dongri.github.io/tags/onion/</link>
+    <description>Recent content in Onion on dongri</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Apr 2017 01:01:48 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/onion/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Onion Router</title>
+      <link>https://dongri.github.io/2017/04/the-onion-router/</link>
+      <pubDate>Mon, 03 Apr 2017 01:01:48 +0900</pubDate>
+      <guid>https://dongri.github.io/2017/04/the-onion-router/</guid>
+      <description>&lt;p&gt;弊社CTOが最近Torについて研究してるらしく、私に一度やってみたほうがいいよと言われたのでやってみた。&lt;/p&gt;&#xA;&lt;p&gt;新しいインスタンス立ち上げようかと思ったが、おそらくリソースそんなに必要ないだろうと判断し既存のサーバー入れてみた。&lt;/p&gt;&#xA;&lt;h2 id=&#34;レポジトリ追加&#34;&gt;レポジトリ追加&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ vim /etc/yum.repos.d/torproject.repo&#xA;&#xA;[tor]&#xA;name=Tor repo&#xA;enabled=1&#xA;baseurl=https://deb.torproject.org/torproject.org/rpm/el/7/$basearch/&#xA;gpgcheck=1&#xA;gpgkey=https://deb.torproject.org/torproject.org/rpm/RPM-GPG-KEY-torproject.org.asc&#xA;&#xA;[tor-source]&#xA;name=Tor source repo&#xA;enabled=1&#xA;autorefresh=0&#xA;baseurl=https://deb.torproject.org/torproject.org/rpm/el/7/SRPMS&#xA;gpgcheck=1&#xA;gpgkey=https://deb.torproject.org/torproject.org/rpm/RPM-GPG-KEY-torproject.org.asc&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;インストール&#34;&gt;インストール&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ sudo yum -y install tor&#xA;&#xA;$ sudo /etc/init.d/tor status&#xA;tor apparently not running (no pid file)&#xA;&#xA;$ ls -l /etc/tor/&#xA;total 28&#xA;-rw-r--r-- 1 root _tor 9543 Dec 11  2015 torrc&#xA;-rw-r--r-- 1 root _tor 9543 Dec 11  2015 torrc.sample&#xA;-rw-r--r-- 1 root _tor  419 Dec 11  2015 tor-rpm-defaults-torrc&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;設定&#34;&gt;設定&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ sudo vim /etc/tor/torrc&#xA;&#xA;HiddenServiceDir /var/lib/tor/hidden_service/&#xA;HiddenServicePort 80 127.0.0.1:80&#xA;&#xA;$ sudo /etc/init.d/tor start&#xA;Starting tor...done.&#xA;$ sudo /etc/init.d/tor status&#xA;tor (pid 8199) running&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;onionドメイン確認&#34;&gt;onionドメイン確認&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ sudo less /var/lib/tor/hidden_service/hostname&#xA;xxxxxxxxxxxxxxxx.onion&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&#34;https://www.torproject.org/download/download-easy.html.en&#34;&gt;Tor Browser&lt;/a&gt;インストールしてアクセスしてみる。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

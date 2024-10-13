@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Twitter on dongri</title>
+    <link>https://dongri.github.io/tags/twitter/</link>
+    <description>Recent content in Twitter on dongri</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 31 May 2020 00:42:14 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/twitter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SNSアカウントを使ったETH送金システム</title>
+      <link>https://dongri.github.io/2020/05/sns%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9Feth%E9%80%81%E9%87%91%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0/</link>
+      <pubDate>Sun, 31 May 2020 00:42:14 +0900</pubDate>
+      <guid>https://dongri.github.io/2020/05/sns%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9Feth%E9%80%81%E9%87%91%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0/</guid>
+      <description>&lt;p&gt;プライベートプロジェクトで &lt;a href=&#34;https://cryptotako.com&#34;&gt;cryptotako.com&lt;/a&gt; というサービスを開発しました。&lt;/p&gt;&#xA;&lt;p&gt;相手のイーサリアムアドレスを聞かなくてもシステム通してETHを送金することが可能です。&lt;/p&gt;&#xA;&lt;p&gt;サービスの主な機能は以下のようになります&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Twitter, GitHubなどのソーシャルネットワークアカウントでログイン&lt;/li&gt;&#xA;&lt;li&gt;Metamask, Dapperなどのウォレットからログイン&lt;/li&gt;&#xA;&lt;li&gt;Twitter, GitHub, ETH Addressを選択して送金&lt;/li&gt;&#xA;&lt;li&gt;Twttter, GitHub上での通知&lt;/li&gt;&#xA;&lt;li&gt;トランザクション履歴&lt;/li&gt;&#xA;&lt;li&gt;Twitter, GitHubアカウント連携でアドレス生成&lt;/li&gt;&#xA;&lt;li&gt;秘密鍵エクスポート&lt;/li&gt;&#xA;&lt;li&gt;email, username 変更&lt;/li&gt;&#xA;&lt;li&gt;法定通貨USD, JPYで換算表示&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://dongri.github.io/images/post/2020-05-31/cryptotako1.png&#34; alt=&#34;image1&#34;&gt;&#xA;&lt;img src=&#34;https://dongri.github.io/images/post/2020-05-31/cryptotako2.png&#34; alt=&#34;image2&#34;&gt;&#xA;&lt;img src=&#34;https://dongri.github.io/images/post/2020-05-31/cryptotako3.png&#34; alt=&#34;image3&#34;&gt;&#xA;&lt;img src=&#34;https://dongri.github.io/images/post/2020-05-31/cryptotako4.png&#34; alt=&#34;image4&#34;&gt;&#xA;&lt;img src=&#34;https://dongri.github.io/images/post/2020-05-31/cryptotako5.png&#34; alt=&#34;image5&#34;&gt;&#xA;&lt;img src=&#34;https://dongri.github.io/images/post/2020-05-31/cryptotako6.png&#34; alt=&#34;image6&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Twitterを愛してた</title>
+      <link>https://dongri.github.io/2017/05/twitter%E3%82%92%E6%84%9B%E3%81%97%E3%81%A6%E3%81%9F/</link>
+      <pubDate>Fri, 05 May 2017 16:17:12 +0900</pubDate>
+      <guid>https://dongri.github.io/2017/05/twitter%E3%82%92%E6%84%9B%E3%81%97%E3%81%A6%E3%81%9F/</guid>
+      <description>&lt;p&gt;Twitterやらなくなって二ヶ月ほど経ちますが、支障なく生きています。今はたまに開いてニュース見たり、aws障害検索したりするぐらいです。&lt;/p&gt;&#xA;&lt;p&gt;かつてはTwitterを愛してました。9年ぐらい前はTwitterのお陰で会ったこともない人と一緒にiPhoneアプリ作って出したり、&#xA;7年前はTwitterのお陰で転職できたし、テック系イベント参加するとフォロワーが増えてコミュニケーションしたり、いいことばかりでした。&lt;/p&gt;&#xA;&lt;p&gt;#腹減ったー #ラーメンうまい #githubダウンした などなどどうでもいいツイートばかりで、&#xA;偶に毒吐いたりして周りに迷惑かけたりすることもしました。酒を飲むと特に&lt;/p&gt;&#xA;&lt;p&gt;徐々に人間関係にも影響が出始めました。Twitterを愛してる人から見るとフォローから外れるということはもう絶交と同じでしたね。&#xA;Twitterにキレイな自分しか出さない人達からは嫌われ始めたし、絡まなくなると嫌われ始めたし、&#xA;正直この数年はTwitterのお陰で何が良かったことはありませんでしたね。&lt;/p&gt;&#xA;&lt;p&gt;「腹減ったー」「酒飲みたい」は呟きたい、しかしTwitterは嫌だ。結果として自分でTwitterみたいなのを作って呟くことにしました。&lt;/p&gt;&#xA;&lt;p&gt;今のところ数人のフォロワーしかいないけど、楽しく呟いてます、なぜかReplyが多いですね。&lt;/p&gt;&#xA;&lt;p&gt;昔みたいに酒飲みながら話に集中するのではなくTwitter開いて見たり、呟いたりしなくなったのと、&#xA;仕事中のTwitter割り込みもなくなって、少しDeep Workできた気がします。&lt;/p&gt;&#xA;&lt;p&gt;去年はInstagramのアカウント削除して、AndroidからFacebookアプリ消して、最近はTwitterやらなくなって、これはもう「年だね」と思いますね。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

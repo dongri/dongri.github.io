@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on dongri</title>
+    <link>https://dongri.github.io/tags/programming/</link>
+    <description>Recent content in Programming on dongri</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 Aug 2016 00:42:53 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rust on Heroku with Docker</title>
+      <link>https://dongri.github.io/2016/08/rust-on-heroku-with-docker/</link>
+      <pubDate>Tue, 16 Aug 2016 00:42:53 +0900</pubDate>
+      <guid>https://dongri.github.io/2016/08/rust-on-heroku-with-docker/</guid>
+      <description>&lt;p&gt;Rustで書いたhello rustをherokuに載せてみた。&#xA;普通ならrust用のBuildpack使うのだが、今回はdockerを使うようにした。&#xA;Dockerfile、ソースコードなどはこちら&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/dongri/hello-rust&#34;&gt;https://github.com/dongri/hello-rust&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;はじめはalpineで頑張ってみようかと思ったがrustのインストールがうまく行かなくて、ubuntuに変更。&#xA;Dockerfileは以下のようになっている。&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;FROM ubuntu:latest&#xA;&#xA;# rust, cargo buildに必要なソフトウェアインストール&#xA;RUN apt-get -y update&#xA;RUN apt-get -y install curl file sudo gcc&#xA;&#xA;# rustのインストール&#xA;RUN curl -sSf https://static.rust-lang.org/rustup.sh | sh&#xA;&#xA;RUN mkdir -p /app&#xA;WORKDIR /app&#xA;COPY . /app&#xA;&#xA;# ビルドして ./target/release/helloバイナリを作る&#xA;RUN cargo build --release&#xA;&#xA;EXPOSE 8080&#xA;&#xA;# 実行&#xA;CMD /app/target/release/hello&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;readmeにも書いてあるがherokuはdockerをサポートしていて、pushするだけでローカルのdockerと&#xA;同じように動かせる。必要なのは、heroku-container-toolsというheroku plugin。&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ heroku plugins:install heroku-container-tools&#xA;$ heroku container:push web&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;これでだけでherokuにアップされて動く。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://hello-rust.herokuapp.com/&#34;&gt;https://hello-rust.herokuapp.com/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hello Rust</title>
+      <link>https://dongri.github.io/2016/07/hello-rust/</link>
+      <pubDate>Wed, 13 Jul 2016 23:35:22 +0900</pubDate>
+      <guid>https://dongri.github.io/2016/07/hello-rust/</guid>
+      <description>&lt;h1 id=&#34;install&#34;&gt;Install&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ brew search rust&#xA;multirust    rust    uncrustify&#xA;$ brew install rust&#xA;&#xA;$ rustc --version&#xA;rustc 1.10.0&#xA;$&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;hello-world&#34;&gt;hello world&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ vim hello.rs&#xA;fn main() {&#xA;    println!(&amp;#34;Hello Rust!&amp;#34;);&#xA;}&#xA;&#xA;$ rustc hello.rs&#xA;$ ./hello&#xA;Hello Rust!&#xA;$&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMTXKDBFCF"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-NMTXKDBFCF');
+        </script>
+
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <link rel="icon" type="image/png" href="/images/avatar.png">
+
+        <meta property="og:title" content=" SwiftでgRPC対応する &middot;  dongri" />
+        <meta property="og:site_name" content="dongri" />
+        <meta property="og:url" content="https://dongri.github.io/2017/12/swift%E3%81%A7grpc%E5%AF%BE%E5%BF%9C%E3%81%99%E3%82%8B/" />
+
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:published_time" content="2017-12-14T23:36:27&#43;09:00" />
+        <meta property="og:article:tag" content="swift" />
+        <meta property="og:article:tag" content="grpc" />
+        
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@" />
+        <meta name="twitter:creator" content="@" />
+        <meta name="twitter:title" content="SwiftでgRPC対応する" />
+        <meta name="twitter:description" content="" />
+        <meta name="twitter:url" content="https://dongri.github.io/2017/12/swift%E3%81%A7grpc%E5%AF%BE%E5%BF%9C%E3%81%99%E3%82%8B/" />
+    
+
+        <title> SwiftでgRPC対応する &middot;  dongri</title>
+
+    
+        <meta name="description" content="" />
+    
+
+        <meta name="p:domain_verify" content="fc173d84e3a4de948ed4bda2908afd3e"/>
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        
+        
+
+    
+        <link href="https://dongri.github.io/index.xml" rel="alternate" type="application/rss+xml" title="dongri" />
+    
+
+    
+        <link rel="canonical" href="https://dongri.github.io/2017/12/swift%E3%81%A7grpc%E5%AF%BE%E5%BF%9C%E3%81%99%E3%82%8B/" />
+
+    
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "SwiftでgRPC対応する",
+        "author": {
+            "@type": "Person",
+            "name": "http://profiles.google.com/?rel=author"
+        },
+        "datePublished": "2017-12-14",
+        "description": "",
+        "wordCount":  281 
+    }
+    </script>
+    
+
+    <link type="text/css" href="https://dongri.github.io/css/crisp.css" rel="stylesheet"/>
+
+    </head>
+    <body>
+        <header id="header">
+            <a id="logo" href="https://dongri.github.io/"><img src="/images/avatar.png" alt="dongri" /></a>
+            
+            <p>Hello World</p>
+
+            <div id="follow-icons">
+	<a href="http://github.com/dongri" rel="me" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	<a href="http://twitter.com/dongrify" rel="me" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+	<a href="http://linkedin.com/in/dongri" rel="me" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+	<a href="https://plus.google.com/u/0/100052427264226218799" rel="author" target="_blank"><i class="fa fa-google-plus-square fa-2x"></i></a>
+	<a href="https://www.facebook.com/profile.php?id=100002573679774" rel="me" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
+	<a href="https://dongri.github.io/index.xml" rel="me" target="_blank"><i class="fa fa-rss-square fa-2x"></i></a>
+</div>
+
+            
+
+        </header>
+
+<main id="content">
+
+<article id="" class="post">
+    <div class="post-stamp">
+        <time datetime="2017-12-14T23:36:27&#43;09:00">
+            14 Dec 2017
+        </time>
+        <span class="taglist">
+        
+        &middot;
+        
+            <a href="https://dongri.github.io/tags/swift/">swift</a>
+        
+            <a href="https://dongri.github.io/tags/grpc/">grpc</a>
+        
+        
+        </span>
+    </div>
+    <h1 class="post-title">SwiftでgRPC対応する</h1>
+    <p>サーバー側gRPC対応終わったので、クライアントもgRPC対応してみました。</p>
+<h2 id="サーバー側api">サーバー側API</h2>
+<p><a href="https://lgtm.lol/api">https://lgtm.lol/api</a></p>
+<h2 id="protoファイル準備">protoファイル準備</h2>
+<p>protosディレクトリを作成して、↑のドキュメントから <code>api.proto</code> を作成します。</p>
+<h2 id="specファイル作成">specファイル作成</h2>
+<p><code>api.podspec</code> ファイルを作成</p>
+<pre tabindex="0"><code>Pod::Spec.new do |s|
+  s.name     = &#34;api&#34;
+  s.version  = &#34;0.0.1&#34;
+  s.license  = &#34;MIT&#34;
+  s.authors  = { &#39;Dongri Jin&#39; =&gt; &#39;dongrify@gmail.com&#39; }
+  s.homepage = &#34;https://github.com/dongri&#34;
+  s.summary = &#34;gRPC API&#34;
+  s.source = { :git =&gt; &#39;https://github.com/dongri/grpc.git&#39; }
+
+  s.ios.deployment_target = &#34;10.1&#34;
+
+  src = &#34;./protos&#34;
+
+  # gRPC Plugin
+  s.dependency &#34;!ProtoCompiler-gRPCPlugin&#34;, &#34;~&gt; 1.0&#34;
+
+  pods_root = &#39;Pods&#39;
+
+  protoc_dir = &#34;#{pods_root}/!ProtoCompiler&#34;
+  protoc = &#34;#{protoc_dir}/protoc&#34;
+  plugin = &#34;#{pods_root}/!ProtoCompiler-gRPCPlugin/grpc_objective_c_plugin&#34;
+
+  dir = &#34;#{pods_root}/#{s.name}&#34;
+
+  # source files
+  s.prepare_command = &lt;&lt;-CMD
+    mkdir -p #{dir}
+    #{protoc} \
+        --plugin=protoc-gen-grpc=#{plugin} \
+        --objc_out=#{dir} \
+        --grpc_out=#{dir} \
+        -I #{src} \
+        -I #{protoc_dir} \
+        #{src}/api.proto
+  CMD
+
+  # subspec
+  s.subspec &#34;Messages&#34; do |ms|
+    ms.source_files = &#34;#{dir}/*.pbobjc.{h,m}&#34;, &#34;#{dir}/**/*.pbobjc.{h,m}&#34;
+    ms.header_mappings_dir = dir
+    ms.requires_arc = false
+    ms.dependency &#34;Protobuf&#34;
+  end
+
+  # subspec
+  s.subspec &#34;Services&#34; do |ss|
+    ss.source_files = &#34;#{dir}/*.pbrpc.{h,m}&#34;, &#34;#{dir}/**/*.pbrpc.{h,m}&#34;
+    ss.header_mappings_dir = dir
+    ss.requires_arc = true
+    ss.dependency &#34;gRPC-ProtoRPC&#34;
+    ss.dependency &#34;#{s.name}/Messages&#34;
+  end
+
+  s.pod_target_xcconfig = {
+    &#39;GCC_PREPROCESSOR_DEFINITIONS&#39; =&gt; &#39;$(inherited) GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS=1&#39;,
+    &#39;CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES&#39; =&gt; &#39;YES&#39;,
+  }
+end
+</code></pre><pre tabindex="0"><code>.
+├── LGTM
+├── Podfile
+├── Podfile.lock
+├── api.podspec
+└── protos
+    └── api.proto
+</code></pre><h2 id="install">install</h2>
+<pre tabindex="0"><code>$ pod init
+$ pod install
+</code></pre><p>これで <code>Pods -&gt; Development Pods -&gt; api</code> ができるので <code>Bridging-Header.h</code> ファイルを作成してimpoorします。</p>
+<h2 id="bridging-headerh">Bridging-Header.h</h2>
+<pre tabindex="0"><code>#ifndef Bridging_Header_h
+#define Bridging_Header_h
+
+#import &lt;GRPCClient/GRPCCall+ChannelArg.h&gt;
+#import &lt;GRPCClient/GRPCCall+Tests.h&gt;
+#import &lt;api/Api.pbrpc.h&gt;
+
+#endif /* Bridging_Header_h */
+</code></pre><h2 id="call-grpc-api">Call gRPC API</h2>
+<pre tabindex="0"><code>import UIKit
+import api
+
+class FirstViewController: UIViewController {
+
+    let hostAddress = &#34;159.203.119.125:5555&#34;
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        GRPCCall.useInsecureConnections(forHost: hostAddress)
+        GRPCCall.setUserAgentPrefix(&#34;api/1.0&#34;, forHost: hostAddress)
+        
+        let client = LGTM(host: hostAddress)
+        let request = ItemsRequest()
+        request.page = Int64(0)
+
+        client.items(with: request, handler: { (res: ItemsResponse?, error: Error?) -&gt; Void in
+            if let res = res {
+                let items: NSMutableArray = res.itemsArray
+                for item in items {
+                    let i = item as! Item
+                    print(&#34;id = &#34; + String(i.id_p))
+                    print(&#34;url = &#34; + i.url)
+                }
+            }
+        })
+    }
+}
+</code></pre><p><a href="http://techblog.reraku.co.jp/entry/2016/12/22/082556">http://techblog.reraku.co.jp/entry/2016/12/22/082556</a> 大変参考になりました。</p>
+
+    
+
+    
+
+    
+</article>
+
+</main>
+		<footer id="footer">
+			<section id="footer-message">Powered by Hugo.  &copy; 2014 dongri</section>
+		</footer>
+
+    <script>
+      (function(c,f){asyncLoader=function(i,h){i.foreach(function(k,j){e(j,d(j),h)});if(typeof h.callback=="function"){var g=setInterval(function(){if(f.readyState==="complete"){clearInterval(g);h.callback()}},10)}};var d=function(g){var h=g.split(".");return h[h.length-1]},e=function(h,i,g){switch(i){case"js":a(h,g);break;case"css":b(h);break;default:break}},a=function(i,h){var g=document.createElement("script");g.type="text/javascript";g.async=true;g.src=i;document.getElementsByTagName("head")[0].appendChild(g)},b=function(g){var h=document.createElement("link");h.type="text/css";h.rel="stylesheet";h.href=g;document.getElementsByTagName("head")[0].appendChild(h)};Array.prototype.foreach=function(h){for(var g=0;g<this.length;g++){h(g,this[g])}}})(this,document);
+
+      var WebFontConfig={google:{families:["Open Sans:300italic,700italic,300,700","Bree+Serif"]}};
+      asyncLoader([
+        "//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css",
+        "//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js",
+        "//cdnjs.cloudflare.com/ajax/libs/webfont/1.5.16/webfontloader.js",
+        "//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"
+      ],{
+        callback:function(){
+          asyncLoader([
+            "https:\/\/dongri.github.io\/css/rrssb.css",
+            "https:\/\/dongri.github.io\/js/gist.min.js",
+            "https:\/\/dongri.github.io\/js/rrssb.min.js",
+            "//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css"
+          ], { callback:function() {
+              hljs.initHighlighting();
+          }});
+        }
+      });
+    </script>
+	
+  <script src="//insight.nilth.com/js/in.js" type="text/javascript"></script>
+	</body>
+</html>
+

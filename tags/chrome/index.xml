@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chrome on dongri</title>
+    <link>https://dongri.github.io/tags/chrome/</link>
+    <description>Recent content in Chrome on dongri</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Oct 2018 23:55:10 +0900</lastBuildDate>
+    <atom:link href="https://dongri.github.io/tags/chrome/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chromeアドレスバー非表示</title>
+      <link>https://dongri.github.io/2018/10/chrome%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%83%90%E3%83%BC%E9%9D%9E%E8%A1%A8%E7%A4%BA/</link>
+      <pubDate>Sun, 14 Oct 2018 23:55:10 +0900</pubDate>
+      <guid>https://dongri.github.io/2018/10/chrome%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%83%90%E3%83%BC%E9%9D%9E%E8%A1%A8%E7%A4%BA/</guid>
+      <description>&lt;p&gt;ある案件でChromeのアドレスバーを隠す必要があって調べてみたが、以下どれも効かなかった。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Javascriptでwindow.open時toolbar,locationなどをnoにする方法&lt;/li&gt;&#xA;&lt;li&gt;Chromeのショートカットキー作成して、開く方法&lt;/li&gt;&#xA;&lt;li&gt;フルスクリーンモード&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;2018年10月14日時点で、Windows, Macで確実に隠せる方法。&lt;/p&gt;&#xA;&lt;h3 id=&#34;mac&#34;&gt;Mac&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ cd /Applications/Google\ Chrome.app/Contents/MacOS&#xA;$ sudo ./Google\ Chrome --app=&amp;#34;https://google.com&amp;#34; --incognito&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;windows&#34;&gt;Windows&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;gt; cd &amp;#34;C:\Program Files (x86)\Google\Chrome\Application&amp;#34;&#xA;&amp;gt; chrome.exe --app=&amp;#34;https://google.com&amp;#34; --incognito&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Progressive Web Apps</title>
+      <link>https://dongri.github.io/2018/01/progressive-web-apps/</link>
+      <pubDate>Wed, 10 Jan 2018 12:12:06 +0900</pubDate>
+      <guid>https://dongri.github.io/2018/01/progressive-web-apps/</guid>
+      <description>&lt;p&gt;PWA(Progressive Web Apps)とは、WebページをネイティブアプリのようなUXを提供するためのものです。&lt;/p&gt;&#xA;&lt;p&gt;なんでこれを思い出したかと言うと &lt;a href=&#34;https://doper.io&#34;&gt;https://doper.io&lt;/a&gt; というWebサイトを開発していて、iOSクライアントは去年なんとか作りましたが、Androidはなかなか手が出せなくて、今年に入ってなんとかしようと思いPWAがいいんじゃないかと思いました。&lt;/p&gt;&#xA;&lt;h2 id=&#34;条件&#34;&gt;条件&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Webサイトがhttps対応してること&lt;/li&gt;&#xA;&lt;li&gt;Android Chromeが必要&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;対応&#34;&gt;対応&lt;/h2&gt;&#xA;&lt;h3 id=&#34;manifestjson&#34;&gt;manifest.json&lt;/h3&gt;&#xA;&lt;p&gt;manifest.jsonファイル作成します。&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{&#xA;    lang: &amp;#34;ja&amp;#34;,&#xA;    name: &amp;#34;Doper Lite&amp;#34;,&#xA;    short_name: &amp;#34;Doper Lite&amp;#34;,&#xA;    start_url: &amp;#34;/&amp;#34;,&#xA;    display: &amp;#34;standalone&amp;#34;,&#xA;    theme_color: &amp;#34;#24292e&amp;#34;,&#xA;    icons: [&#xA;        {&#xA;            src: &amp;#34;/img/launcher-icon48.png&amp;#34;,&#xA;            sizes: &amp;#34;48x48&amp;#34;,&#xA;            type: &amp;#34;image/png&amp;#34;&#xA;        },&#xA;        {&#xA;            src: &amp;#34;/img/launcher-icon-72.png&amp;#34;,&#xA;            sizes: &amp;#34;72x72&amp;#34;,&#xA;            type: &amp;#34;image/png&amp;#34;&#xA;        },&#xA;        {&#xA;            src: &amp;#34;/img/launcher-icon-96.png&amp;#34;,&#xA;            sizes: &amp;#34;96x96&amp;#34;,&#xA;            type: &amp;#34;image/png&amp;#34;&#xA;        },&#xA;        {&#xA;            src: &amp;#34;/img/launcher-icon-144.png&amp;#34;,&#xA;            sizes: &amp;#34;144x144&amp;#34;,&#xA;            type: &amp;#34;image/png&amp;#34;&#xA;        },&#xA;        {&#xA;            src: &amp;#34;/img/launcher-icon-192.png&amp;#34;,&#xA;            sizes: &amp;#34;192x192&amp;#34;,&#xA;            type: &amp;#34;image/png&amp;#34;&#xA;        }&#xA;    ]&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&#34;https://www.w3.org/TR/appmanifest/&#34;&gt;https://www.w3.org/TR/appmanifest/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
