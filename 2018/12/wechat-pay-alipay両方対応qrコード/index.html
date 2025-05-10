@@ -71,7 +71,7 @@
         },
         "datePublished": "2018-12-08",
         "description": "",
-        "wordCount":  110 
+        "wordCount":  125 
     }
     </script>
     
@@ -125,7 +125,8 @@
 <h2 id="アプリの判別">アプリの判別</h2>
 <p>WeChatからスキャンされたか、AlipayからスキャンされたかはUser Agentで判別します。
 下の図がAlipayとWeChatからスキャンされたときのUser Agentです。</p>
-<!-- raw HTML omitted -->
+<img src="/images/post/2018-12-08/alipay-useragent.png" width="400px;">
+<img src="/images/post/2018-12-08/weixin-useragent.png" width="400px;">
 <pre tabindex="0"><code>if (navigator.userAgent.match(/Alipay/i)) {
   // Alipay
 } else if (navigator.userAgent.match(/MicroMessenger\//i)) {
@@ -141,7 +142,8 @@
 <p>WeChat PayはカスタマURLスキーム形式になっていて、Alipayのようにリダイレクトさせてもアプリが認識してくれませんでした。</p>
 <pre tabindex="0"><code>例: wxp://f2f067yve_yNrmWOKjAmyEeuYcStPZXhjpud
 </code></pre><p>スマートな方法ではないですが、WeChat Payのオリジナル「お金を受け取るQRコード」を表示させて、ユーザーがそれを長押しして「画像内のQRコードをスキャンする」でアプリに認識させる方法があります。</p>
-<!-- raw HTML omitted -->
+<img src="/images/post/2018-12-08/weixin-click.png" width="300px;">
+<img src="/images/post/2018-12-08/weixin-input.png" width="300px;">
 <h2 id="実装">実装</h2>
 <p>簡単な例ですが、こんな感じになります。ここの <code>weixin.png</code> を自分のオリジナルQRコードの画像に置き換えてください。</p>
 <pre tabindex="0"><code>&lt;div id=&#34;weixin&#34; style=&#34;display: none;&#34;&gt;
@@ -158,28 +160,32 @@
     alert(&#34;Only Support WeChat Pay and Alipay&#34;);
   }
 &lt;/script&gt;
-</code></pre><p><!-- raw HTML omitted --><!-- raw HTML omitted -->
+</code></pre><p><img src="https://nilth.com/qrcode/direct/weixin-alipay.png" style="border-radius: 10px;" width="300px;"><br>
 このQRコードをWeChatとAlipayどれからスキャンしても相手に送金する画面に遷移します。（間違って送金しないように）</p>
 <h2 id="各プラットフォームのapiを使う方法">各プラットフォームのAPIを使う方法</h2>
 <p>上の方法はアプリの送金画面にリダイレクトさせる方法で、WeChatの場合はあんまりスマートではないです。そこで現れたのが「收钱吧」みたいなサービスです。</p>
 <p><a href="https://shouqianba.com/pay-code.html">https://shouqianba.com/pay-code.html</a></p>
 <p>彼らの仕組みは店舗情報を登録させて、WeChat、Alipayの情報とあわせてプラットフォームのAPIを使って決済できるようにしてます。各アプリの送金画面に直接遷移させるのではなく、QRコードスキャンすると彼らのページに飛んで金額入力画面を表示させて、API経由でWeChat, Alipayと決済します。どのAPIと通信するかはUser Agentで判別するんでしょうね</p>
-<!-- raw HTML omitted -->
+<img src="/images/post/2018-12-08/shouqianba.png" width="500px;" style="border: 1px solid #aaa;">
 <p>上のQRコードはこんなURLになってます。</p>
 <pre tabindex="0"><code>https://qr.shouqianba.com/18010900256037830890
 </code></pre><h4 id="wechatでスキャン">WeChatでスキャン</h4>
-<!-- raw HTML omitted -->
+<img src="/images/post/2018-12-08/weixin-payment-1.png" width="300px;" style="border: 1px solid #aaa;">
+<img src="/images/post/2018-12-08/weixin-payment-2.png" width="300px;" style="border: 1px solid #aaa;">
 <h4 id="alipayでスキャン">Alipayでスキャン</h4>
-<!-- raw HTML omitted -->
+<img src="/images/post/2018-12-08/alipay-payment-1.png" width="300px;" style="border: 1px solid #aaa;">
+<img src="/images/post/2018-12-08/alipay-payment-2.png" width="300px;" style="border: 1px solid #aaa;">
 <p>アプリに合わせて共通のページを作ってるので、UIなどが統一されてます。この仕組だとWeChat Pay, AlipayだけではなくAPI公開してる決済サービスであればすべて対応可能です。</p>
 <h2 id="wechat-alipay-apiドキュメント">WeChat, Alipay APIドキュメント</h2>
-<p>WeChat Pay<!-- raw HTML omitted -->
+<p>WeChat Pay<br>
 <a href="https://pay.weixin.qq.com/wiki/doc/api/index.html">https://pay.weixin.qq.com/wiki/doc/api/index.html</a></p>
-<p>Alipay<!-- raw HTML omitted -->
+<p>Alipay<br>
 <a href="https://open.alipay.com/developmentDocument.htm">https://open.alipay.com/developmentDocument.htm</a></p>
 <h2 id="先日酒飲んでつぶやいてた">先日酒飲んでつぶやいてた</h2>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<blockquote class="twitter-tweet" data-lang="en"><p lang="ja" dir="ltr">EMVcoのような団体が決済用QRコードの標準を普及するよりプレイヤーがAPI公開して、みんな（自販機業者など）が実装したほうが速い気がする <a href="https://t.co/FTgEHax5nf">https://t.co/FTgEHax5nf</a></p>&mdash; D (@dongrium) <a href="https://twitter.com/dongrium/status/1070679301270302720?ref_src=twsrc%5Etfw">December 6, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="ja" dir="ltr">そこでセキュリティリスクがあるのでAPIを公開しないプレイヤーも絶対いると思うけど、そこはビジョンの違いだな</p>&mdash; D (@dongrium) <a href="https://twitter.com/dongrium/status/1070680462744465408?ref_src=twsrc%5Etfw">December 6, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>日本のQRコード決済プレイヤーも早くAPI公開してくれるいいな</p>
 
     
